@@ -344,9 +344,9 @@ if __name__ == '__main__':
     setArchitecture(ARCH.X86_64)
 
     # Set optimization
-    enableSymbolicOptimization(OPTIMIZATION.ALIGNED_MEMORY, True)
-    #enableSymbolicOptimization(OPTIMIZATION.AST_DICTIONARIES, True)
-    enableSymbolicOptimization(OPTIMIZATION.ONLY_ON_SYMBOLIZED, True)
+    enableMode(MODE.ALIGNED_MEMORY, True)
+    #enableMode(MODE.AST_DICTIONARIES, True)
+    enableMode(MODE.ONLY_ON_SYMBOLIZED, True)
 
     # AST representation as Python syntax
     setAstRepresentationMode(AST_REPRESENTATION.PYTHON)
