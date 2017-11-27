@@ -152,6 +152,12 @@ Basically, this script runs the obfuscated and the deobfuscated binaries with ra
 
 ![Time per trace](pictures/time_per_trace.png)
 
+# Publication
+
+* [french paper](http://shell-storm.org/talks/SSTIC2017-Article-desobfuscation_binaire_reconstruction_de_fonctions_virtualisees-salwan_potet_bardin.pdf)
+* [english slide](http://shell-storm.org/talks/SSTIC2017_Deobfuscation_of_VM_based_software_protection.pdf)
+* [french video](https://static.sstic.org/videos2017/SSTIC_2017-06-07_P08.mp4)
+
 # Credits
 
 * [Adrien Guinet](https://twitter.com/adriengnt) for the Arybo and LLVM parts (Quarkslab)
