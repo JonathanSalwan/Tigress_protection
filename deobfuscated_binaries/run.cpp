@@ -3,7 +3,7 @@
 #include <iostream>
 #include <sstream>
 
-extern "C" uint64_t __arybo(uint64_t a);
+extern "C" uint64_t SECRET(uint64_t a);
 
 int main(int argc, char** argv)
 {
@@ -14,6 +14,6 @@ int main(int argc, char** argv)
   uint64_t n;
   std::istringstream ss(argv[1]);
   ss >> n;
-  std::cout << __arybo(n) << std::endl;
+  std::cout << SECRET(n) << std::endl;
   return 0;
 }

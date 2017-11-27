@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <errno.h>
 
-extern uint64_t __arybo(uint64_t a);
+extern uint64_t SECRET(uint64_t a);
 
 int main(int argc, char** argv)
 {
@@ -16,6 +16,6 @@ int main(int argc, char** argv)
     perror("unable to represent the input as an uint64");
     return 1;
   }
-  printf("%lu\n", __arybo(n));
+  printf("%lu\n", SECRET(n));
   return 0;
 }
