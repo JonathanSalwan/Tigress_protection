@@ -1,7 +1,6 @@
 # Tigress Protections
 
 > [Tigress](http://tigress.cs.arizona.edu/) is a diversifying virtualizer/obfuscator for the C language that supports many novel defenses against both static and dynamic reverse engineering and de-virtualization attacks.
-
 > In particular, Tigress protects against static de-virtualization by generating virtual instruction sets of arbitrary complexity and diversity, by producing interpreters with multiple types of instruction dispatch, and by inserting code for anti alias analysis. Tigress protects against dynamic de-virtualization by merging the real code with bogus functions, by inserting implicit flow, and by creating slowly-executing reenetrant interpreters. Tigress implements its own version of code packing through the use of runtime code generation. Finally, Tigress' dynamic transformation provides a generalized form of continous runtime code modification.
 
 # VMs descriptions
@@ -60,8 +59,6 @@ And all of this with only one generic script :). To do so, we made in the follow
 If you want more information, you can checkout our [solve-vm.py](solve-vm.py) script.
 
 # solve-vm.py
-
-**Prerequisites**: you must clone the branch `dev-319-bis` of Triton, the branch `feature/exprs` of Arybo and the [llvmlite](https://github.com/numba/llvmlite) project.
 
 However, we already pushed all of our results in this repository but if you want to reproduce by yourself this
 analysis, you only have to do execute `solve-vm.py` like this:
@@ -140,17 +137,21 @@ Basically, this script runs the obfuscated and the deobfuscated binaries with ra
 
 # Benchmarks
 
-## Results with only one trace
-
-![With one trace](pictures/result_with_one_trace.png)
-
-## Results with the union of two traces
-
-![With two traces](pictures/result_with_two_traces.png)
-
 ## Time of extraction per trace
 
 ![Time per trace](pictures/time_per_trace.png)
+
+**Edit**: With the new `triton dev-v0.6` branch we are able to solve the `challenge-0004-3` with only 20GB of RAM.
+
+# Solving
+
+We fully solved these following challenges:
+
+* **0000**: 0,1,2,4
+* **0001**: 0,1,2,3,4
+* **0002**: 1,2,3,4
+* **0003**: 0,1,2,3,4
+* **0004**: 0,1,2,3,4
 
 # Publication
 
@@ -158,9 +159,7 @@ Basically, this script runs the obfuscated and the deobfuscated binaries with ra
 * [english slide](http://shell-storm.org/talks/SSTIC2017_Deobfuscation_of_VM_based_software_protection.pdf)
 * [french video](https://static.sstic.org/videos2017/SSTIC_2017-06-07_P08.mp4)
 
-# Credits
+# Thanks to
 
 * [Adrien Guinet](https://twitter.com/adriengnt) for the Arybo and LLVM parts (Quarkslab)
-* [Romain Thomas](https://twitter.com/rh0main) for the Triton part (Quarkslab)
-* [Jonathan Salwan](https://twitter.com/JonathanSalwan) for the Triton part (Quarkslab)
-
+* [Romain Thomas](https://twitter.com/rh0main) for some Triton parts (Quarkslab)
