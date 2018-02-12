@@ -1,0 +1,5 @@
+
+$::cc        = "@CC@";
+$::cilbindir = "@CILHOME@/obj";
+$::default_mode = "@DEFAULT_CIL_MODE@";
+

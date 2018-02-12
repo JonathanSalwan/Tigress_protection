@@ -1,8 +1,8 @@
 ; ModuleID = ""
-target triple = "unknown-unknown-unknown"
+target triple = "x86_64-pc-linux-gnu"
 target datalayout = ""
 
-define i64 @"__arybo"(i64 %"SymVar_0") nounwind
+define i64 @"SECRET"(i64 %"SymVar_0") nounwind
 {
 .3:
   %".4" = sext i64 746348727 to i128

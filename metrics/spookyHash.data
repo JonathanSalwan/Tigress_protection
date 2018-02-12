@@ -1,0 +1,1247 @@
+--------------------------------------------------------------------
+-> sample13-virt-anti-branch-analysis-branchFuns
+	Instructions executed: 4133
+	Unique Instructions executed: 1257
+	Functions simulated: 11
+	Time of analysis: 0.346113 seconds
+	Command being timed: "./solve-vm.py build/virtualization/anti-branch-analysis/branchFuns/sample13-virt-anti-branch-analysis-branchFuns"
+	User time (seconds): 0.80
+	System time (seconds): 0.06
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.88
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 83832
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35914
+	Voluntary context switches: 64
+	Involuntary context switches: 42
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 80
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-max-merge-lenght-10
+	Instructions executed: 1784
+	Unique Instructions executed: 1140
+	Functions simulated: 4
+	Time of analysis: 0.152054 seconds
+	Command being timed: "./solve-vm.py build/virtualization/max-merge-length/10/sample13-virt-max-merge-lenght-10"
+	User time (seconds): 0.63
+	System time (seconds): 0.03
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 82928
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35486
+	Voluntary context switches: 64
+	Involuntary context switches: 31
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-max-merge-lenght-20
+	Instructions executed: 1784
+	Unique Instructions executed: 1140
+	Functions simulated: 4
+	Time of analysis: 0.151263 seconds
+	Command being timed: "./solve-vm.py build/virtualization/max-merge-length/20/sample13-virt-max-merge-lenght-20"
+	User time (seconds): 0.62
+	System time (seconds): 0.04
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.68
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 82964
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35501
+	Voluntary context switches: 64
+	Involuntary context switches: 29
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-max-merge-lenght-0
+	Instructions executed: 1880
+	Unique Instructions executed: 1103
+	Functions simulated: 4
+	Time of analysis: 0.158777 seconds
+	Command being timed: "./solve-vm.py build/virtualization/max-merge-length/0/sample13-virt-max-merge-lenght-0"
+	User time (seconds): 0.60
+	System time (seconds): 0.08
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.70
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 82828
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35505
+	Voluntary context switches: 64
+	Involuntary context switches: 33
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-max-merge-lenght-30
+	Instructions executed: 1784
+	Unique Instructions executed: 1140
+	Functions simulated: 4
+	Time of analysis: 0.152745 seconds
+	Command being timed: "./solve-vm.py build/virtualization/max-merge-length/30/sample13-virt-max-merge-lenght-30"
+	User time (seconds): 0.62
+	System time (seconds): 0.04
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.68
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 82924
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 33959
+	Voluntary context switches: 64
+	Involuntary context switches: 30
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-bogus-functions-1
+	Instructions executed: 2730
+	Unique Instructions executed: 1385
+	Functions simulated: 5
+	Time of analysis: 0.212899 seconds
+	Command being timed: "./solve-vm.py build/virtualization/bogus-functions/1/sample13-virt-bogus-functions-1"
+	User time (seconds): 0.68
+	System time (seconds): 0.05
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.75
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 83208
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35761
+	Voluntary context switches: 38
+	Involuntary context switches: 35
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-bogus-functions-2
+	Instructions executed: 3625
+	Unique Instructions executed: 1422
+	Functions simulated: 6
+	Time of analysis: 0.286357 seconds
+	Command being timed: "./solve-vm.py build/virtualization/bogus-functions/2/sample13-virt-bogus-functions-2"
+	User time (seconds): 0.76
+	System time (seconds): 0.04
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.82
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 83656
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35879
+	Voluntary context switches: 62
+	Involuntary context switches: 37
+	Swaps: 0
+	File system inputs: 64
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-bogus-functions-0
+	Instructions executed: 1880
+	Unique Instructions executed: 1103
+	Functions simulated: 4
+	Time of analysis: 0.158072 seconds
+	Command being timed: "./solve-vm.py build/virtualization/bogus-functions/0/sample13-virt-bogus-functions-0"
+	User time (seconds): 0.64
+	System time (seconds): 0.03
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 82920
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35517
+	Voluntary context switches: 64
+	Involuntary context switches: 30
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-bogus-functions-3
+	Instructions executed: 4014
+	Unique Instructions executed: 1443
+	Functions simulated: 7
+	Time of analysis: 0.307325 seconds
+	Command being timed: "./solve-vm.py build/virtualization/bogus-functions/3/sample13-virt-bogus-functions-3"
+	User time (seconds): 0.78
+	System time (seconds): 0.04
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.84
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 83636
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 34485
+	Voluntary context switches: 64
+	Involuntary context switches: 34
+	Swaps: 0
+	File system inputs: 64
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-operand-stack
+	Instructions executed: 1880
+	Unique Instructions executed: 1103
+	Functions simulated: 4
+	Time of analysis: 0.159177 seconds
+	Command being timed: "./solve-vm.py build/virtualization/operands/stack/sample13-virt-operand-stack"
+	User time (seconds): 0.60
+	System time (seconds): 0.07
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 82688
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35514
+	Voluntary context switches: 64
+	Involuntary context switches: 32
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-operand-registers
+	Instructions executed: 1917
+	Unique Instructions executed: 1127
+	Functions simulated: 4
+	Time of analysis: 0.160656 seconds
+	Command being timed: "./solve-vm.py build/virtualization/operands/registers/sample13-virt-operand-registers"
+	User time (seconds): 0.60
+	System time (seconds): 0.07
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 83056
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35525
+	Voluntary context switches: 64
+	Involuntary context switches: 28
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-add-opaque-to-vpc-true
+	Instructions executed: 2058
+	Unique Instructions executed: 1180
+	Functions simulated: 4
+	Time of analysis: 0.170953 seconds
+	Command being timed: "./solve-vm.py build/virtualization/add-opaque-to-vpc/true/sample13-virt-add-opaque-to-vpc-true"
+	User time (seconds): 0.64
+	System time (seconds): 0.04
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.71
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 82928
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 34028
+	Voluntary context switches: 64
+	Involuntary context switches: 36
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-add-opaque-to-vpc-false
+	Instructions executed: 1880
+	Unique Instructions executed: 1103
+	Functions simulated: 4
+	Time of analysis: 0.158976 seconds
+	Command being timed: "./solve-vm.py build/virtualization/add-opaque-to-vpc/false/sample13-virt-add-opaque-to-vpc-false"
+	User time (seconds): 0.60
+	System time (seconds): 0.08
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 83116
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35525
+	Voluntary context switches: 48
+	Involuntary context switches: 31
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-nested-vm-1
+	Instructions executed: 1880
+	Unique Instructions executed: 1103
+	Functions simulated: 4
+	Time of analysis: 0.160394 seconds
+	Command being timed: "./solve-vm.py build/virtualization/nested-vm/1/sample13-virt-nested-vm-1"
+	User time (seconds): 0.61
+	System time (seconds): 0.06
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 83148
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35506
+	Voluntary context switches: 64
+	Involuntary context switches: 28
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-nested-vm-2
+	Instructions executed: 42208
+	Unique Instructions executed: 1014
+	Functions simulated: 11
+	Time of analysis: 3.522392 seconds
+	Command being timed: "./solve-vm.py build/virtualization/nested-vm/2/sample13-virt-nested-vm-2"
+	User time (seconds): 3.98
+	System time (seconds): 0.06
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.06
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 95628
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 39987
+	Voluntary context switches: 64
+	Involuntary context switches: 52
+	Swaps: 0
+	File system inputs: 64
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-bogus-loop-iterations-1
+	Instructions executed: 48165
+	Unique Instructions executed: 1134
+	Functions simulated: 4
+	Time of analysis: 7.133054 seconds
+	Command being timed: "./solve-vm.py build/virtualization/bogus-loop-iterations/1/sample13-virt-bogus-loop-iterations-1"
+	User time (seconds): 7.58
+	System time (seconds): 0.08
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:07.68
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 120068
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 53655
+	Voluntary context switches: 64
+	Involuntary context switches: 67
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-bogus-loop-iterations-2
+	Instructions executed: 94365
+	Unique Instructions executed: 1134
+	Functions simulated: 4
+	Time of analysis: 14.202764 seconds
+	Command being timed: "./solve-vm.py build/virtualization/bogus-loop-iterations/2/sample13-virt-bogus-loop-iterations-2"
+	User time (seconds): 14.64
+	System time (seconds): 0.09
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:14.76
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 156316
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 70281
+	Voluntary context switches: 54
+	Involuntary context switches: 100
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 80
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-bogus-loop-iterations-0
+	Instructions executed: 1880
+	Unique Instructions executed: 1103
+	Functions simulated: 4
+	Time of analysis: 0.159653 seconds
+	Command being timed: "./solve-vm.py build/virtualization/bogus-loop-iterations/0/sample13-virt-bogus-loop-iterations-0"
+	User time (seconds): 0.64
+	System time (seconds): 0.04
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.70
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 83020
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35543
+	Voluntary context switches: 64
+	Involuntary context switches: 29
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-bogus-loop-iterations-3
+	Instructions executed: 140565
+	Unique Instructions executed: 1134
+	Functions simulated: 4
+	Time of analysis: 21.628008 seconds
+	Command being timed: "./solve-vm.py build/virtualization/bogus-loop-iterations/3/sample13-virt-bogus-loop-iterations-3"
+	User time (seconds): 22.08
+	System time (seconds): 0.09
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:22.20
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 193128
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 88420
+	Voluntary context switches: 64
+	Involuntary context switches: 252
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-super-operators-ratio-0.4
+	Instructions executed: 1880
+	Unique Instructions executed: 1103
+	Functions simulated: 4
+	Time of analysis: 0.159869 seconds
+	Command being timed: "./solve-vm.py build/virtualization/super-operators-ratio/0.4/sample13-virt-super-operators-ratio-0.4"
+	User time (seconds): 0.63
+	System time (seconds): 0.04
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 82968
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35540
+	Voluntary context switches: 64
+	Involuntary context switches: 34
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-super-operators-ratio-0.0
+	Instructions executed: 1882
+	Unique Instructions executed: 1105
+	Functions simulated: 4
+	Time of analysis: 0.159477 seconds
+	Command being timed: "./solve-vm.py build/virtualization/super-operators-ratio/0.0/sample13-virt-super-operators-ratio-0.0"
+	User time (seconds): 0.61
+	System time (seconds): 0.06
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 83168
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 34017
+	Voluntary context switches: 41
+	Involuntary context switches: 45
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-super-operators-ratio-0.6
+	Instructions executed: 1880
+	Unique Instructions executed: 1103
+	Functions simulated: 4
+	Time of analysis: 0.159064 seconds
+	Command being timed: "./solve-vm.py build/virtualization/super-operators-ratio/0.6/sample13-virt-super-operators-ratio-0.6"
+	User time (seconds): 0.61
+	System time (seconds): 0.06
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 83072
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35522
+	Voluntary context switches: 64
+	Involuntary context switches: 29
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-super-operators-ratio-0.8
+	Instructions executed: 1880
+	Unique Instructions executed: 1103
+	Functions simulated: 4
+	Time of analysis: 0.161905 seconds
+	Command being timed: "./solve-vm.py build/virtualization/super-operators-ratio/0.8/sample13-virt-super-operators-ratio-0.8"
+	User time (seconds): 0.62
+	System time (seconds): 0.05
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 82628
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35535
+	Voluntary context switches: 64
+	Involuntary context switches: 40
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-super-operators-ratio-0.2
+	Instructions executed: 1880
+	Unique Instructions executed: 1103
+	Functions simulated: 4
+	Time of analysis: 0.159634 seconds
+	Command being timed: "./solve-vm.py build/virtualization/super-operators-ratio/0.2/sample13-virt-super-operators-ratio-0.2"
+	User time (seconds): 0.62
+	System time (seconds): 0.05
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 82628
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 33980
+	Voluntary context switches: 64
+	Involuntary context switches: 31
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-super-operators-ratio-1.0
+	Instructions executed: 1880
+	Unique Instructions executed: 1103
+	Functions simulated: 4
+	Time of analysis: 0.159127 seconds
+	Command being timed: "./solve-vm.py build/virtualization/super-operators-ratio/1.0/sample13-virt-super-operators-ratio-1.0"
+	User time (seconds): 0.62
+	System time (seconds): 0.05
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 82684
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35535
+	Voluntary context switches: 52
+	Involuntary context switches: 28
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-encode-byte-array-true
+	Instructions executed: 2389
+	Unique Instructions executed: 1118
+	Functions simulated: 4
+	Time of analysis: 0.200971 seconds
+	Command being timed: "./solve-vm.py build/virtualization/encode-byte-array/true/sample13-virt-encode-byte-array-true"
+	User time (seconds): 0.64
+	System time (seconds): 0.06
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.73
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 83296
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 34147
+	Voluntary context switches: 64
+	Involuntary context switches: 48
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-encode-byte-array-false
+	Instructions executed: 1880
+	Unique Instructions executed: 1103
+	Functions simulated: 4
+	Time of analysis: 0.163329 seconds
+	Command being timed: "./solve-vm.py build/virtualization/encode-byte-array/false/sample13-virt-encode-byte-array-false"
+	User time (seconds): 0.58
+	System time (seconds): 0.09
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 83168
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 33998
+	Voluntary context switches: 61
+	Involuntary context switches: 28
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-random-opcodes-true
+	Instructions executed: 1880
+	Unique Instructions executed: 1103
+	Functions simulated: 4
+	Time of analysis: 0.159836 seconds
+	Command being timed: "./solve-vm.py build/virtualization/random-opcodes/true/sample13-virt-random-opcodes-true"
+	User time (seconds): 0.64
+	System time (seconds): 0.03
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 82912
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 33989
+	Voluntary context switches: 64
+	Involuntary context switches: 30
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-random-opcodes-false
+	Instructions executed: 1914
+	Unique Instructions executed: 1089
+	Functions simulated: 4
+	Time of analysis: 0.162355 seconds
+	Command being timed: "./solve-vm.py build/virtualization/random-opcodes/false/sample13-virt-random-opcodes-false"
+	User time (seconds): 0.62
+	System time (seconds): 0.06
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 83184
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 34023
+	Voluntary context switches: 47
+	Involuntary context switches: 33
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-duplicate-opcodes-1
+	Instructions executed: 1880
+	Unique Instructions executed: 1103
+	Functions simulated: 4
+	Time of analysis: 0.160126 seconds
+	Command being timed: "./solve-vm.py build/virtualization/duplicate-opcodes/1/sample13-virt-duplicate-opcodes-1"
+	User time (seconds): 0.62
+	System time (seconds): 0.05
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 82876
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 33983
+	Voluntary context switches: 63
+	Involuntary context switches: 31
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-duplicate-opcodes-2
+	Instructions executed: 1880
+	Unique Instructions executed: 1103
+	Functions simulated: 4
+	Time of analysis: 0.157197 seconds
+	Command being timed: "./solve-vm.py build/virtualization/duplicate-opcodes/2/sample13-virt-duplicate-opcodes-2"
+	User time (seconds): 0.62
+	System time (seconds): 0.05
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.68
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 82628
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 33987
+	Voluntary context switches: 62
+	Involuntary context switches: 27
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 80
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-duplicate-opcodes-0
+	Instructions executed: 1880
+	Unique Instructions executed: 1103
+	Functions simulated: 4
+	Time of analysis: 0.159248 seconds
+	Command being timed: "./solve-vm.py build/virtualization/duplicate-opcodes/0/sample13-virt-duplicate-opcodes-0"
+	User time (seconds): 0.60
+	System time (seconds): 0.08
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 83020
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35519
+	Voluntary context switches: 52
+	Involuntary context switches: 35
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-duplicate-opcodes-3
+	Instructions executed: 1880
+	Unique Instructions executed: 1103
+	Functions simulated: 4
+	Time of analysis: 0.158858 seconds
+	Command being timed: "./solve-vm.py build/virtualization/duplicate-opcodes/3/sample13-virt-duplicate-opcodes-3"
+	User time (seconds): 0.61
+	System time (seconds): 0.06
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 82632
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 33973
+	Voluntary context switches: 48
+	Involuntary context switches: 36
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-obfuscate-decode-byte-array-true
+	Instructions executed: 2854
+	Unique Instructions executed: 788
+	Functions simulated: 11
+	Time of analysis: 0.245244 seconds
+	Command being timed: "./solve-vm.py build/virtualization/obfuscate-decode-byte-array/true/sample13-virt-obfuscate-decode-byte-array-true"
+	User time (seconds): 0.70
+	System time (seconds): 0.06
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.77
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 83380
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35637
+	Voluntary context switches: 64
+	Involuntary context switches: 34
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-obfuscate-decode-byte-array-false
+	Instructions executed: 2854
+	Unique Instructions executed: 788
+	Functions simulated: 11
+	Time of analysis: 0.246042 seconds
+	Command being timed: "./solve-vm.py build/virtualization/obfuscate-decode-byte-array/false/sample13-virt-obfuscate-decode-byte-array-false"
+	User time (seconds): 0.72
+	System time (seconds): 0.04
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.78
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 83464
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 34104
+	Voluntary context switches: 46
+	Involuntary context switches: 31
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-dispatcher-binary
+	Instructions executed: 2990
+	Unique Instructions executed: 1134
+	Functions simulated: 4
+	Time of analysis: 0.261286 seconds
+	Command being timed: "./solve-vm.py build/virtualization/dispatchers/binary/sample13-virt-dispatcher-binary"
+	User time (seconds): 0.71
+	System time (seconds): 0.06
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.79
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 83552
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35753
+	Voluntary context switches: 64
+	Involuntary context switches: 33
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-dispatcher-direct
+	Instructions executed: 1789
+	Unique Instructions executed: 1102
+	Functions simulated: 4
+	Time of analysis: 0.154062 seconds
+	Command being timed: "./solve-vm.py build/virtualization/dispatchers/direct/sample13-virt-dispatcher-direct"
+	User time (seconds): 0.62
+	System time (seconds): 0.05
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 83224
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35550
+	Voluntary context switches: 64
+	Involuntary context switches: 47
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-dispatcher-call
+	Instructions executed: 2247
+	Unique Instructions executed: 1287
+	Functions simulated: 4
+	Time of analysis: 0.183246 seconds
+	Command being timed: "./solve-vm.py build/virtualization/dispatchers/call/sample13-virt-dispatcher-call"
+	User time (seconds): 0.65
+	System time (seconds): 0.04
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.71
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 82928
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35651
+	Voluntary context switches: 61
+	Involuntary context switches: 26
+	Swaps: 0
+	File system inputs: 64
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-dispatcher-interpolation
+	Instructions executed: 3138
+	Unique Instructions executed: 1159
+	Functions simulated: 4
+	Time of analysis: 0.266015 seconds
+	Command being timed: "./solve-vm.py build/virtualization/dispatchers/interpolation/sample13-virt-dispatcher-interpolation"
+	User time (seconds): 0.74
+	System time (seconds): 0.05
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.80
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 83696
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 35771
+	Voluntary context switches: 64
+	Involuntary context switches: 31
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-dispatcher-indirect
+	Instructions executed: 2065
+	Unique Instructions executed: 1128
+	Functions simulated: 4
+	Time of analysis: 0.204429 seconds
+	Command being timed: "./solve-vm.py build/virtualization/dispatchers/indirect/sample13-virt-dispatcher-indirect"
+	User time (seconds): 0.67
+	System time (seconds): 0.04
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.74
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 84252
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 34672
+	Voluntary context switches: 64
+	Involuntary context switches: 36
+	Swaps: 0
+	File system inputs: 72
+	File system outputs: 80
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-dispatcher-switch
+	Instructions executed: 1880
+	Unique Instructions executed: 1103
+	Functions simulated: 4
+	Time of analysis: 0.158785 seconds
+	Command being timed: "./solve-vm.py build/virtualization/dispatchers/switch/sample13-virt-dispatcher-switch"
+	User time (seconds): 0.60
+	System time (seconds): 0.07
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 83132
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 33996
+	Voluntary context switches: 64
+	Involuntary context switches: 38
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-dispatcher-ifnest
+	Instructions executed: 1897
+	Unique Instructions executed: 1096
+	Functions simulated: 4
+	Time of analysis: 0.163217 seconds
+	Command being timed: "./solve-vm.py build/virtualization/dispatchers/ifnest/sample13-virt-dispatcher-ifnest"
+	User time (seconds): 0.62
+	System time (seconds): 0.05
+	Percent of CPU this job got: 97%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.69
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 83104
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 34016
+	Voluntary context switches: 63
+	Involuntary context switches: 29
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample13-virt-dispatcher-linear
+	Instructions executed: 2594
+	Unique Instructions executed: 1105
+	Functions simulated: 4
+	Time of analysis: 0.228673 seconds
+	Command being timed: "./solve-vm.py build/virtualization/dispatchers/linear/sample13-virt-dispatcher-linear"
+	User time (seconds): 0.68
+	System time (seconds): 0.06
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:00.76
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 83308
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 34166
+	Voluntary context switches: 44
+	Involuntary context switches: 32
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 72
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,9 +1,10 @@
-; ModuleID = './llvm_expressions/tigress-4-challenge-3.ll'
+; ModuleID = 'tigress-4-challenge-3.ll'
+source_filename = "tigress-4-challenge-3.ll"
 target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-pc-linux-gnu"
 
 ; Function Attrs: norecurse nounwind readnone
-define i64 @__arybo(i64 %SymVar_0) #0 {
+define i64 @SECRET(i64 %SymVar_0) local_unnamed_addr #0 {
 .3:
   %div = udiv i64 %SymVar_0, 6
   %.35 = mul i64 %div, -432345564227385076

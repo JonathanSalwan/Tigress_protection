@@ -1,0 +1,3 @@
+#!/bin/sh
+
+TIGRESS_HOME=@TIGRESS_DIR@ @TIGRESS_DIR@/tigress $@

@@ -2,3 +2,15 @@
 private/*
 *.pyc
 *.i64
+build/*
+samples/sample17*
+samples/sample18*
+samples/sample19*
+samples/sample20*
+samples/sample21*
+samples/sample22*
+samples/sample23*
+samples/sample24*
+samples/sample25*
+samples/sample26*
+samples/collberg*

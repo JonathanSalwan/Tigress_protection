@@ -1,0 +1,34 @@
+ 
+This is The Tigress Diversifying C Virtualizer.
+
+Copyright 2014-2015, Christian Collberg, collberg@gmail.com,
+and the Regents of the University of Arizona.
+
+To try out Tigress, do the following:
+   *) Download 
+         tigress-ARCH-x86_64-VERSION.zip
+      from http://tigress.cs.arizona.edu/#download
+   *) Unpack:
+            unzip tigress-ARCH-x86_64-VERSION.zip
+   *) Move the tigress-VERSION where you want it, for example
+         mv tigress-VERSION /home/bob/bin
+   *) Set the TIGRESS_HOME environment variable to the directory 
+      in which the tigress binary resides, and add this directory
+      to your path. I.e., if your shell is csh, do
+         setenv TIGRESS_HOME /home/bob/bin/tigress-VERSION
+         setenv PATH "$PATH":/home/bob/bin/tigress-VERSION
+         rehash
+       and if your shell is bash do
+         export TIGRESS_HOME=/home/bob/bin/tigress-VERSION  
+         export PATH=$PATH:/home/bob/bin/tigress-VERSION
+   *) Try it out:
+         tigress --Transform=Virtualize --Functions=main --out=result.c /home/bob/bin/tigress-VERSION/test2.c
+      This should construct a trivial interpreter from test2.c in result.c
+   *) Some useful commands:
+      *) tigress --help     : Show how to use tigress
+      *) tigress --install  : Show how to install Tigress 
+      *) tigress --options  : Show complete list of options to tigress
+      *) tigress --license  : Display the tigress license
+      *) tigress --bibtex   : See how to cite us
+      *) tigress --apple    : See how to get past some Darwin issues
+      *) tigress --version  : Show the current Tigress version

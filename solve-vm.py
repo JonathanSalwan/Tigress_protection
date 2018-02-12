@@ -1,5 +1,8 @@
 #!/usr/bin/env python2
 ## -*- coding: utf-8 -*-
+##
+## Jonathan Salwan
+##
 
 import ctypes
 import os
@@ -10,8 +13,8 @@ import sys
 import time
 import lief
 
-from triton     import *
-from templates  import *
+from triton             import *
+from scripts.templates  import *
 
 from arybo.tools.triton_ import tritonexprs2arybo, tritonast2arybo
 from arybo.lib.exprs_asm import to_llvm_function
@@ -23,6 +26,7 @@ sys.setrecursionlimit(100000)
 # Script options
 DEBUG   = True
 METRICS = True
+OPAQUE  = False
 
 # The debug function
 def debug(s):
@@ -55,6 +59,7 @@ mallocChunkSize         = 0x00010000
 
 # Total of instructions executed
 totalInstructions = 0
+totalUniqueInstructions = {}
 
 # Total of functions simulated
 totalFunctions = 0
@@ -105,6 +110,37 @@ def mallocHandler(ctx):
 
     # Get arguments
     size = ctx.getConcreteRegisterValue(ctx.registers.rdi)
+
+    if size > mallocChunkSize:
+        debug('[+] malloc failed: size too big')
+        sys.exit(-1)
+
+    if mallocCurrentAllocation >= mallocMaxAllocation:
+        debug('[+] malloc failed: too many allocations done')
+        sys.exit(-1)
+
+    area = mallocBase + (mallocCurrentAllocation * mallocChunkSize)
+    mallocCurrentAllocation += 1
+
+    # Return value
+    return area
+
+
+# Simulate the calloc() function
+def callocHandler(ctx):
+    global mallocCurrentAllocation
+    global mallocMaxAllocation
+    global mallocBase
+    global mallocChunkSize
+
+    debug('[+] malloc hooked')
+
+    # Get arguments
+    nmemb = ctx.getConcreteRegisterValue(ctx.registers.rdi)
+    size  = ctx.getConcreteRegisterValue(ctx.registers.rsi)
+
+    # Total size
+    size = nmemb * size
 
     if size > mallocChunkSize:
         debug('[+] malloc failed: size too big')
@@ -218,6 +254,30 @@ def printfHandler(ctx):
     return len(s)
 
 
+# Simulate the putchar() function
+def putcharHandler(ctx):
+    debug('[+] putchar hooked')
+
+    # Get arguments
+    arg1 = ctx.getConcreteRegisterValue(ctx.registers.rdi)
+    sys.stdout.write(chr(arg1) + '\n')
+
+    # Return value
+    return 2
+
+
+# Simulate the puts() function
+def putsHandler(ctx):
+    debug('[+] puts hooked')
+
+    # Get arguments
+    arg1 = getMemoryString(ctx, ctx.getConcreteRegisterValue(ctx.registers.rdi))
+    sys.stdout.write(arg1 + '\n')
+
+    # Return value
+    return len(arg1) + 1
+
+
 # Simulate the printf() function
 def fprintfHandler(ctx):
     global fdHandlers
@@ -238,6 +298,12 @@ def fprintfHandler(ctx):
 
     # Return value
     return len(s)
+
+
+# Simulate the free() function (skip this behavior)
+def freeHandler(ctx):
+    debug('[+] free hooked')
+    return None
 
 
 # Simulate the fopen() function
@@ -304,18 +370,33 @@ def libcMainHandler(ctx):
     return 0
 
 
+def errnoHandler(ctx):
+    debug('[+] __errno_location hooked')
+
+    errno = 0xdeadbeaf
+    ctx.setConcreteMemoryValue(MemoryAccess(errno, CPUSIZE.QWORD), 0)
+
+    return errno
+
+
 customRelocation = [
     ('__libc_start_main', libcMainHandler, BASE_PLT + 0),
-    ('fopen',             fopenHandler,    BASE_PLT + 1),
-    ('fprintf',           fprintfHandler,  BASE_PLT + 2),
-    ('malloc',            mallocHandler,   BASE_PLT + 3),
-    ('memcpy',            memcpyHandler,   BASE_PLT + 4),
-    ('printf',            printfHandler,   BASE_PLT + 5),
-    ('raise',             raiseHandler,    BASE_PLT + 6),
-    ('rand',              randHandler,     BASE_PLT + 7),
-    ('signal',            signalHandler,   BASE_PLT + 8),
-    ('strlen',            strlenHandler,   BASE_PLT + 9),
-    ('strtoul',           strtoulHandler,  BASE_PLT + 10),
+    ('__errno_location',  errnoHandler,    BASE_PLT + 1),
+    ('calloc',            callocHandler,   BASE_PLT + 2),
+    ('fopen',             fopenHandler,    BASE_PLT + 3),
+    ('fprintf',           fprintfHandler,  BASE_PLT + 4),
+    ('free',              freeHandler,     BASE_PLT + 5),
+    ('malloc',            mallocHandler,   BASE_PLT + 6),
+    ('memcpy',            memcpyHandler,   BASE_PLT + 7),
+    ('printf',            printfHandler,   BASE_PLT + 8),
+    ('putchar',           putcharHandler,  BASE_PLT + 9),
+    ('puts',              putsHandler,     BASE_PLT + 10),
+    ('raise',             raiseHandler,    BASE_PLT + 11),
+    ('rand',              randHandler,     BASE_PLT + 12),
+    ('signal',            signalHandler,   BASE_PLT + 13),
+    ('strlen',            strlenHandler,   BASE_PLT + 14),
+    ('strtoul',           strtoulHandler,  BASE_PLT + 15),
+    ('strtoull',          strtoulHandler,  BASE_PLT + 16),
 ]
 
 
@@ -329,8 +410,9 @@ def hookingHandler(ctx):
         if rel[2] == pc:
             # Emulate the routine and the return value
             ret_value = rel[1](ctx)
-            ctx.concretizeRegister(ctx.registers.rax)
-            ctx.setConcreteRegisterValue(ctx.registers.rax, ret_value)
+            if ret_value is not None:
+                ctx.concretizeRegister(ctx.registers.rax)
+                ctx.setConcreteRegisterValue(ctx.registers.rax, ret_value)
 
             # Used for metric
             totalFunctions += 1
@@ -379,6 +461,7 @@ def hookingHandler(ctx):
 def emulate(ctx, pc):
     global condition
     global totalInstructions
+    global totalUniqueInstructions
 
     count = 0
     while pc:
@@ -397,6 +480,17 @@ def emulate(ctx, pc):
 
         count += 1
 
+        #print instruction
+        #if count % 5000 == 0:
+        #    print "(%d, %.02f)" %(count, time.clock() - startTime)
+        #if count >= 200000:
+        #    sys.exit(0)
+
+        if pc in totalUniqueInstructions:
+            totalUniqueInstructions[pc] += 1
+        else:
+            totalUniqueInstructions[pc] = 1
+
         if instruction.getType() == OPCODE.HLT:
             break
 
@@ -411,6 +505,7 @@ def emulate(ctx, pc):
         pc = ctx.getConcreteRegisterValue(ctx.registers.rip)
 
     debug('[+] Instruction executed: %d' %(count))
+    debug('[+] Unique instruction executed: %d' %(len(totalUniqueInstructions)))
     debug('[+] PC len: %d' %(len(condition)))
 
     # Used for metric
@@ -431,13 +526,28 @@ def loadBinary(ctx, binary):
 
 def makeRelocation(ctx, binary):
     # Perform our own relocations
-    for rel in binary.pltgot_relocations:
-        symbolName = rel.symbol.name
-        symbolRelo = rel.address
-        for crel in customRelocation:
-            if symbolName == crel[0]:
-                debug('[+] Hooking %s' %(symbolName))
-                ctx.setConcreteMemoryValue(MemoryAccess(symbolRelo, CPUSIZE.QWORD), crel[2])
+    try:
+        for rel in binary.pltgot_relocations:
+            symbolName = rel.symbol.name
+            symbolRelo = rel.address
+            for crel in customRelocation:
+                if symbolName == crel[0]:
+                    debug('[+] Hooking %s' %(symbolName))
+                    ctx.setConcreteMemoryValue(MemoryAccess(symbolRelo, CPUSIZE.QWORD), crel[2])
+    except:
+        pass
+
+    # Perform our own relocations
+    try:
+        for rel in binary.dynamic_relocations:
+            symbolName = rel.symbol.name
+            symbolRelo = rel.address
+            for crel in customRelocation:
+                if symbolName == crel[0]:
+                    debug('[+] Hooking %s' %(symbolName))
+                    ctx.setConcreteMemoryValue(MemoryAccess(symbolRelo, CPUSIZE.QWORD), crel[2])
+    except:
+        pass
     return
 
 
@@ -449,12 +559,12 @@ def recompile(M):
     M = str(M).replace('unknown-unknown-unknown', 'x86_64-pc-linux-gnu')
     fd.write(M)
     fd.close()
-    os.system("clang++ -O2 -S -emit-llvm -o - %s > %s" %(name, nameO2))
+    os.system("clang -O2 -S -emit-llvm -o - %s > %s" %(name, nameO2))
     debug('[+] LLVM module wrote in %s' %(name))
 
     debug('[+] Recompiling deobfuscated binary...')
     dst = 'deobfuscated_binaries/%s' %(sys.argv[1].split('/')[-1] + '.deobfuscated')
-    os.system("clang++ %s -O2 -std=c++11 deobfuscated_binaries/run.cpp -o %s" %(name, dst))
+    os.system("clang %s -O2 deobfuscated_binaries/run.c -o %s" %(name, dst))
     debug('[+] Deobfuscated binary recompiled: %s' %(dst))
     return
 
@@ -481,6 +591,7 @@ def metrics():
         print '--------------------------------------------------------------------'
         print '->', sys.argv[1].split('/')[-1]
         print '\tInstructions executed:', totalInstructions
+        print '\tUnique Instructions executed:', len(totalUniqueInstructions)
         print '\tFunctions simulated:', totalFunctions
         print '\tTime of analysis:', endTime - startTime, "seconds"
     return
@@ -551,7 +662,7 @@ def main():
     run(ctx, binary)
 
     # we got 100% of code coverage (there is only one path).
-    if len(condition) == 0:
+    if len(condition) == 0 or OPAQUE == True:
         # Generate symbolic epxressions of the first path
         generateSymbolicExpressions(0)
 
@@ -583,8 +694,16 @@ def main():
         if model:
             VM_INPUT = str(model[0].getValue())
         else:
-            debug('[+] No model found!')
-            return -1
+            debug('[+] No model found! Opaque predicate?')
+            # Generate symbolic epxressions of the first path
+            generateSymbolicExpressions(0)
+
+            # Generate llvm of the first path
+            M = generateLLVMExpressions(ctx, 0)
+
+            # Recompile the LLVM-IL
+            recompile(M)
+            return 0
 
         # Re-simulate an execution to take another path
         run(ctx, binary)

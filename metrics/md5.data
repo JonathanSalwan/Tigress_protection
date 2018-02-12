@@ -1,0 +1,1277 @@
+--------------------------------------------------------------------
+-> sample3-virt-anti-branch-analysis-branchFuns
+	Instructions executed: 1747703
+	Unique Instructions executed: 3375
+	Functions simulated: 17
+	Time of analysis: 149.077608 seconds
+	Command being timed: "./solve-md5.py build/virtualization/anti-branch-analysis/branchFuns/sample3-virt-anti-branch-analysis-branchFuns"
+	User time (seconds): 149.62
+	System time (seconds): 0.32
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:29.98
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 611144
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 271894
+	Voluntary context switches: 53
+	Involuntary context switches: 443
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1200
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-max-merge-lenght-10
+	Instructions executed: 187543
+	Unique Instructions executed: 3596
+	Functions simulated: 10
+	Time of analysis: 16.584769 seconds
+	Command being timed: "./solve-md5.py build/virtualization/max-merge-length/10/sample3-virt-max-merge-lenght-10"
+	User time (seconds): 17.26
+	System time (seconds): 0.16
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:17.44
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 269280
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 119407
+	Voluntary context switches: 71
+	Involuntary context switches: 81
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1176
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-max-merge-lenght-20
+	Instructions executed: 199122
+	Unique Instructions executed: 4269
+	Functions simulated: 10
+	Time of analysis: 17.290621 seconds
+	Command being timed: "./solve-md5.py build/virtualization/max-merge-length/20/sample3-virt-max-merge-lenght-20"
+	User time (seconds): 18.00
+	System time (seconds): 0.13
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:18.15
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 273140
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 122868
+	Voluntary context switches: 53
+	Involuntary context switches: 58
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1184
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-max-merge-lenght-0
+	Instructions executed: 461645
+	Unique Instructions executed: 1454
+	Functions simulated: 10
+	Time of analysis: 36.006004 seconds
+	Command being timed: "./solve-md5.py build/virtualization/max-merge-length/0/sample3-virt-max-merge-lenght-0"
+	User time (seconds): 36.66
+	System time (seconds): 0.19
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:36.87
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 361020
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 160983
+	Voluntary context switches: 76
+	Involuntary context switches: 89
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-max-merge-lenght-30
+	Instructions executed: 274811
+	Unique Instructions executed: 4297
+	Functions simulated: 10
+	Time of analysis: 22.537081 seconds
+	Command being timed: "./solve-md5.py build/virtualization/max-merge-length/30/sample3-virt-max-merge-lenght-30"
+	User time (seconds): 23.23
+	System time (seconds): 0.15
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:23.41
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 299052
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 133891
+	Voluntary context switches: 48
+	Involuntary context switches: 72
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1184
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-bogus-functions-1
+	Instructions executed: 1481372
+	Unique Instructions executed: 2330
+	Functions simulated: 254
+	Time of analysis: 117.822072 seconds
+	Command being timed: "./solve-md5.py build/virtualization/bogus-functions/1/sample3-virt-bogus-functions-1"
+	User time (seconds): 118.27
+	System time (seconds): 0.42
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:58.74
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 835628
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 358110
+	Voluntary context switches: 73
+	Involuntary context switches: 444
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1200
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-bogus-functions-2
+	Instructions executed: 2102137
+	Unique Instructions executed: 2262
+	Functions simulated: 615
+	Time of analysis: 152.036859 seconds
+	Command being timed: "./solve-md5.py build/virtualization/bogus-functions/2/sample3-virt-bogus-functions-2"
+	User time (seconds): 152.38
+	System time (seconds): 0.54
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:32.98
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1011968
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 427867
+	Voluntary context switches: 117
+	Involuntary context switches: 998
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1200
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-bogus-functions-0
+	Instructions executed: 461645
+	Unique Instructions executed: 1454
+	Functions simulated: 10
+	Time of analysis: 35.804153 seconds
+	Command being timed: "./solve-md5.py build/virtualization/bogus-functions/0/sample3-virt-bogus-functions-0"
+	User time (seconds): 36.49
+	System time (seconds): 0.16
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:36.68
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 360980
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 155911
+	Voluntary context switches: 62
+	Involuntary context switches: 148
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-bogus-functions-3
+	Instructions executed: 2965118
+	Unique Instructions executed: 2422
+	Functions simulated: 1428
+	Time of analysis: 230.943878 seconds
+	Command being timed: "./solve-md5.py build/virtualization/bogus-functions/3/sample3-virt-bogus-functions-3"
+	User time (seconds): 231.30
+	System time (seconds): 0.55
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:51.91
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1378800
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 577575
+	Voluntary context switches: 111
+	Involuntary context switches: 783
+	Swaps: 0
+	File system inputs: 112
+	File system outputs: 1200
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-operand-stack
+	Instructions executed: 461645
+	Unique Instructions executed: 1454
+	Functions simulated: 10
+	Time of analysis: 36.947734 seconds
+	Command being timed: "./solve-md5.py build/virtualization/operands/stack/sample3-virt-operand-stack"
+	User time (seconds): 37.56
+	System time (seconds): 0.23
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:37.82
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 360416
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 170838
+	Voluntary context switches: 53
+	Involuntary context switches: 110
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 1192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-operand-registers
+	Instructions executed: 505700
+	Unique Instructions executed: 1695
+	Functions simulated: 10
+	Time of analysis: 39.684684 seconds
+	Command being timed: "./solve-md5.py build/virtualization/operands/registers/sample3-virt-operand-registers"
+	User time (seconds): 40.30
+	System time (seconds): 0.22
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:40.54
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 398904
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 190244
+	Voluntary context switches: 64
+	Involuntary context switches: 108
+	Swaps: 0
+	File system inputs: 88
+	File system outputs: 1168
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-add-opaque-to-vpc-true
+	Instructions executed: 780553
+	Unique Instructions executed: 1846
+	Functions simulated: 10
+	Time of analysis: 62.044631 seconds
+	Command being timed: "./solve-md5.py build/virtualization/add-opaque-to-vpc/true/sample3-virt-add-opaque-to-vpc-true"
+	User time (seconds): 62.68
+	System time (seconds): 0.22
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:02.93
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 435588
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 188248
+	Voluntary context switches: 81
+	Involuntary context switches: 139
+	Swaps: 0
+	File system inputs: 64
+	File system outputs: 1200
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-add-opaque-to-vpc-false
+	Instructions executed: 461645
+	Unique Instructions executed: 1454
+	Functions simulated: 10
+	Time of analysis: 36.865427 seconds
+	Command being timed: "./solve-md5.py build/virtualization/add-opaque-to-vpc/false/sample3-virt-add-opaque-to-vpc-false"
+	User time (seconds): 37.45
+	System time (seconds): 0.24
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:37.75
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 361024
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 156868
+	Voluntary context switches: 78
+	Involuntary context switches: 3187
+	Swaps: 0
+	File system inputs: 64
+	File system outputs: 1192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-nested-vm-1
+	Instructions executed: 461645
+	Unique Instructions executed: 1454
+	Functions simulated: 10
+	Time of analysis: 36.561362 seconds
+	Command being timed: "./solve-md5.py build/virtualization/nested-vm/1/sample3-virt-nested-vm-1"
+	User time (seconds): 37.20
+	System time (seconds): 0.20
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:37.45
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 360956
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 160903
+	Voluntary context switches: 61
+	Involuntary context switches: 835
+	Swaps: 0
+	File system inputs: 64
+	File system outputs: 1192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-nested-vm-2
+	Instructions executed: 47927795
+	Unique Instructions executed: 1182
+	Functions simulated: 17
+	Time of analysis: 4226.786787 seconds
+	Command being timed: "./solve-md5.py build/virtualization/nested-vm/2/sample3-virt-nested-vm-2"
+	User time (seconds): 4208.49
+	System time (seconds): 19.46
+	Percent of CPU this job got: 96%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:13:20
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 15580680
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1827004
+	Minor (reclaiming a frame) page faults: 16909566
+	Voluntary context switches: 1832213
+	Involuntary context switches: 20387
+	Swaps: 0
+	File system inputs: 60895472
+	File system outputs: 2032
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-bogus-loop-iterations-1
+	Instructions executed: 3500577
+	Unique Instructions executed: 1718
+	Functions simulated: 10
+	Time of analysis: 323.886165 seconds
+	Command being timed: "./solve-md5.py build/virtualization/bogus-loop-iterations/1/sample3-virt-bogus-loop-iterations-1"
+	User time (seconds): 324.32
+	System time (seconds): 0.44
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:25.02
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 997132
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 512
+	Minor (reclaiming a frame) page faults: 346828
+	Voluntary context switches: 1816
+	Involuntary context switches: 748
+	Swaps: 0
+	File system inputs: 181088
+	File system outputs: 1208
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-bogus-loop-iterations-2
+	Instructions executed: 6443034
+	Unique Instructions executed: 1718
+	Functions simulated: 10
+	Time of analysis: 613.673535 seconds
+	Command being timed: "./solve-md5.py build/virtualization/bogus-loop-iterations/2/sample3-virt-bogus-loop-iterations-2"
+	User time (seconds): 613.85
+	System time (seconds): 0.67
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 10:14.59
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1599332
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 510025
+	Voluntary context switches: 211
+	Involuntary context switches: 980
+	Swaps: 0
+	File system inputs: 384
+	File system outputs: 1216
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-bogus-loop-iterations-0
+	Instructions executed: 461645
+	Unique Instructions executed: 1454
+	Functions simulated: 10
+	Time of analysis: 35.46002 seconds
+	Command being timed: "./solve-md5.py build/virtualization/bogus-loop-iterations/0/sample3-virt-bogus-loop-iterations-0"
+	User time (seconds): 36.08
+	System time (seconds): 0.20
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:36.30
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 360640
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 159359
+	Voluntary context switches: 83
+	Involuntary context switches: 77
+	Swaps: 0
+	File system inputs: 368
+	File system outputs: 1192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-bogus-loop-iterations-3
+	Instructions executed: 9385491
+	Unique Instructions executed: 1718
+	Functions simulated: 10
+	Time of analysis: 908.820001 seconds
+	Command being timed: "./solve-md5.py build/virtualization/bogus-loop-iterations/3/sample3-virt-bogus-loop-iterations-3"
+	User time (seconds): 908.77
+	System time (seconds): 0.92
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 15:09.75
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2199948
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 763473
+	Voluntary context switches: 178
+	Involuntary context switches: 1197
+	Swaps: 0
+	File system inputs: 104
+	File system outputs: 1216
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-super-operators-ratio-0.4
+	Instructions executed: 461645
+	Unique Instructions executed: 1454
+	Functions simulated: 10
+	Time of analysis: 35.292341 seconds
+	Command being timed: "./solve-md5.py build/virtualization/super-operators-ratio/0.4/sample3-virt-super-operators-ratio-0.4"
+	User time (seconds): 35.90
+	System time (seconds): 0.20
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:36.13
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 360608
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 155285
+	Voluntary context switches: 90
+	Involuntary context switches: 81
+	Swaps: 0
+	File system inputs: 624
+	File system outputs: 1192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-super-operators-ratio-0.0
+	Instructions executed: 461645
+	Unique Instructions executed: 1454
+	Functions simulated: 10
+	Time of analysis: 35.485777 seconds
+	Command being timed: "./solve-md5.py build/virtualization/super-operators-ratio/0.0/sample3-virt-super-operators-ratio-0.0"
+	User time (seconds): 36.10
+	System time (seconds): 0.20
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:36.33
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 360792
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 159394
+	Voluntary context switches: 83
+	Involuntary context switches: 81
+	Swaps: 0
+	File system inputs: 104
+	File system outputs: 1192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-super-operators-ratio-0.6
+	Instructions executed: 461645
+	Unique Instructions executed: 1454
+	Functions simulated: 10
+	Time of analysis: 35.279577 seconds
+	Command being timed: "./solve-md5.py build/virtualization/super-operators-ratio/0.6/sample3-virt-super-operators-ratio-0.6"
+	User time (seconds): 35.92
+	System time (seconds): 0.17
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:36.12
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 360628
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 155278
+	Voluntary context switches: 86
+	Involuntary context switches: 77
+	Swaps: 0
+	File system inputs: 104
+	File system outputs: 1192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-super-operators-ratio-0.8
+	Instructions executed: 461645
+	Unique Instructions executed: 1454
+	Functions simulated: 10
+	Time of analysis: 35.889405 seconds
+	Command being timed: "./solve-md5.py build/virtualization/super-operators-ratio/0.8/sample3-virt-super-operators-ratio-0.8"
+	User time (seconds): 36.52
+	System time (seconds): 0.18
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:36.74
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 360636
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 160931
+	Voluntary context switches: 82
+	Involuntary context switches: 180
+	Swaps: 0
+	File system inputs: 96
+	File system outputs: 1192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-super-operators-ratio-2.0
+	Instructions executed: 330590
+	Unique Instructions executed: 5503
+	Functions simulated: 10
+	Time of analysis: 26.332214 seconds
+	Command being timed: "./solve-md5.py build/virtualization/super-operators-ratio/2.0/sample3-virt-super-operators-ratio-2.0"
+	User time (seconds): 26.97
+	System time (seconds): 0.18
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:27.17
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 318320
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 147872
+	Voluntary context switches: 52
+	Involuntary context switches: 69
+	Swaps: 0
+	File system inputs: 936
+	File system outputs: 1192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-super-operators-ratio-0.2
+	Instructions executed: 461645
+	Unique Instructions executed: 1454
+	Functions simulated: 10
+	Time of analysis: 35.507376 seconds
+	Command being timed: "./solve-md5.py build/virtualization/super-operators-ratio/0.2/sample3-virt-super-operators-ratio-0.2"
+	User time (seconds): 36.17
+	System time (seconds): 0.16
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:36.35
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 360404
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 172433
+	Voluntary context switches: 68
+	Involuntary context switches: 81
+	Swaps: 0
+	File system inputs: 96
+	File system outputs: 1192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-super-operators-ratio-1.0
+	Instructions executed: 461645
+	Unique Instructions executed: 1454
+	Functions simulated: 10
+	Time of analysis: 35.886455 seconds
+	Command being timed: "./solve-md5.py build/virtualization/super-operators-ratio/1.0/sample3-virt-super-operators-ratio-1.0"
+	User time (seconds): 36.48
+	System time (seconds): 0.22
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:36.73
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 360460
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 170893
+	Voluntary context switches: 68
+	Involuntary context switches: 83
+	Swaps: 0
+	File system inputs: 96
+	File system outputs: 1192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-encode-byte-array-true
+	Instructions executed: 541522
+	Unique Instructions executed: 1469
+	Functions simulated: 10
+	Time of analysis: 42.362815 seconds
+	Command being timed: "./solve-md5.py build/virtualization/encode-byte-array/true/sample3-virt-encode-byte-array-true"
+	User time (seconds): 42.96
+	System time (seconds): 0.22
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:43.21
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 411020
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 195743
+	Voluntary context switches: 68
+	Involuntary context switches: 249
+	Swaps: 0
+	File system inputs: 96
+	File system outputs: 1200
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-encode-byte-array-false
+	Instructions executed: 461645
+	Unique Instructions executed: 1454
+	Functions simulated: 10
+	Time of analysis: 35.889444 seconds
+	Command being timed: "./solve-md5.py build/virtualization/encode-byte-array/false/sample3-virt-encode-byte-array-false"
+	User time (seconds): 36.53
+	System time (seconds): 0.18
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:36.74
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 360732
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 170898
+	Voluntary context switches: 66
+	Involuntary context switches: 184
+	Swaps: 0
+	File system inputs: 80
+	File system outputs: 1200
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-random-opcodes-true
+	Instructions executed: 461645
+	Unique Instructions executed: 1454
+	Functions simulated: 10
+	Time of analysis: 35.522934 seconds
+	Command being timed: "./solve-md5.py build/virtualization/random-opcodes/true/sample3-virt-random-opcodes-true"
+	User time (seconds): 36.15
+	System time (seconds): 0.20
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:36.37
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 360848
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 171016
+	Voluntary context switches: 71
+	Involuntary context switches: 79
+	Swaps: 0
+	File system inputs: 88
+	File system outputs: 1192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-random-opcodes-false
+	Instructions executed: 461645
+	Unique Instructions executed: 1454
+	Functions simulated: 10
+	Time of analysis: 35.438357 seconds
+	Command being timed: "./solve-md5.py build/virtualization/random-opcodes/false/sample3-virt-random-opcodes-false"
+	User time (seconds): 36.12
+	System time (seconds): 0.14
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:36.28
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 360980
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 159426
+	Voluntary context switches: 82
+	Involuntary context switches: 79
+	Swaps: 0
+	File system inputs: 72
+	File system outputs: 1192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-duplicate-opcodes-1
+	Instructions executed: 461645
+	Unique Instructions executed: 1454
+	Functions simulated: 10
+	Time of analysis: 35.128816 seconds
+	Command being timed: "./solve-md5.py build/virtualization/duplicate-opcodes/1/sample3-virt-duplicate-opcodes-1"
+	User time (seconds): 35.76
+	System time (seconds): 0.18
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:35.97
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 360972
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 156900
+	Voluntary context switches: 81
+	Involuntary context switches: 234
+	Swaps: 0
+	File system inputs: 80
+	File system outputs: 1192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-duplicate-opcodes-2
+	Instructions executed: 461645
+	Unique Instructions executed: 1621
+	Functions simulated: 10
+	Time of analysis: 35.25548 seconds
+	Command being timed: "./solve-md5.py build/virtualization/duplicate-opcodes/2/sample3-virt-duplicate-opcodes-2"
+	User time (seconds): 35.85
+	System time (seconds): 0.22
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:36.10
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 360612
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 159512
+	Voluntary context switches: 82
+	Involuntary context switches: 180
+	Swaps: 0
+	File system inputs: 80
+	File system outputs: 1200
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-duplicate-opcodes-0
+	Instructions executed: 461645
+	Unique Instructions executed: 1454
+	Functions simulated: 10
+	Time of analysis: 35.387549 seconds
+	Command being timed: "./solve-md5.py build/virtualization/duplicate-opcodes/0/sample3-virt-duplicate-opcodes-0"
+	User time (seconds): 36.07
+	System time (seconds): 0.13
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:36.23
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 360404
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 155371
+	Voluntary context switches: 80
+	Involuntary context switches: 78
+	Swaps: 0
+	File system inputs: 80
+	File system outputs: 1192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-duplicate-opcodes-3
+	Instructions executed: 461645
+	Unique Instructions executed: 1621
+	Functions simulated: 10
+	Time of analysis: 36.543889 seconds
+	Command being timed: "./solve-md5.py build/virtualization/duplicate-opcodes/3/sample3-virt-duplicate-opcodes-3"
+	User time (seconds): 37.15
+	System time (seconds): 0.21
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:37.39
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 360864
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 172620
+	Voluntary context switches: 79
+	Involuntary context switches: 84
+	Swaps: 0
+	File system inputs: 80
+	File system outputs: 1192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-obfuscate-decode-byte-array-true
+	Instructions executed: 541991
+	Unique Instructions executed: 1145
+	Functions simulated: 17
+	Time of analysis: 41.828623 seconds
+	Command being timed: "./solve-md5.py build/virtualization/obfuscate-decode-byte-array/true/sample3-virt-obfuscate-decode-byte-array-true"
+	User time (seconds): 42.46
+	System time (seconds): 0.18
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:42.68
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 411196
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 181670
+	Voluntary context switches: 88
+	Involuntary context switches: 245
+	Swaps: 0
+	File system inputs: 88
+	File system outputs: 1200
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-obfuscate-decode-byte-array-false
+	Instructions executed: 541985
+	Unique Instructions executed: 1139
+	Functions simulated: 17
+	Time of analysis: 42.32936 seconds
+	Command being timed: "./solve-md5.py build/virtualization/obfuscate-decode-byte-array/false/sample3-virt-obfuscate-decode-byte-array-false"
+	User time (seconds): 42.97
+	System time (seconds): 0.18
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:43.18
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 411572
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 181643
+	Voluntary context switches: 85
+	Involuntary context switches: 89
+	Swaps: 0
+	File system inputs: 80
+	File system outputs: 1200
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-dispatcher-binary
+	Instructions executed: 2825379
+	Unique Instructions executed: 1499
+	Functions simulated: 10
+	Time of analysis: 280.274776 seconds
+	Command being timed: "./solve-md5.py build/virtualization/dispatchers/binary/sample3-virt-dispatcher-binary"
+	User time (seconds): 280.60
+	System time (seconds): 0.52
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:41.19
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1243312
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 490148
+	Voluntary context switches: 135
+	Involuntary context switches: 1143
+	Swaps: 0
+	File system inputs: 88
+	File system outputs: 1200
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-dispatcher-direct
+	Instructions executed: 285899
+	Unique Instructions executed: 1548
+	Functions simulated: 11
+	Time of analysis: 24.204656 seconds
+	Command being timed: "./solve-md5.py build/virtualization/dispatchers/direct/sample3-virt-dispatcher-direct"
+	User time (seconds): 24.85
+	System time (seconds): 0.17
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:25.04
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 327916
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 144624
+	Voluntary context switches: 61
+	Involuntary context switches: 62
+	Swaps: 0
+	File system inputs: 192
+	File system outputs: 1184
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+Offset: 0x62697a38 is bigger than the binary size
+--------------------------------------------------------------------
+-> sample3-virt-dispatcher-call
+	Instructions executed: 799507
+	Unique Instructions executed: 6506
+	Functions simulated: 10
+	Time of analysis: 62.167636 seconds
+	Command being timed: "./solve-md5.py build/virtualization/dispatchers/call/sample3-virt-dispatcher-call"
+	User time (seconds): 62.79
+	System time (seconds): 0.20
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:03.02
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 470876
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 202100
+	Voluntary context switches: 76
+	Involuntary context switches: 120
+	Swaps: 0
+	File system inputs: 144
+	File system outputs: 1200
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-dispatcher-interpolation
+	Instructions executed: 2592206
+	Unique Instructions executed: 1528
+	Functions simulated: 10
+	Time of analysis: 240.649308 seconds
+	Command being timed: "./solve-md5.py build/virtualization/dispatchers/interpolation/sample3-virt-dispatcher-interpolation"
+	User time (seconds): 241.02
+	System time (seconds): 0.47
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:01.52
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1097820
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 433461
+	Voluntary context switches: 113
+	Involuntary context switches: 344
+	Swaps: 0
+	File system inputs: 72
+	File system outputs: 1200
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-dispatcher-indirect
+	Instructions executed: 333276
+	Unique Instructions executed: 1693
+	Functions simulated: 10
+	Time of analysis: 26.023023 seconds
+	Command being timed: "./solve-md5.py build/virtualization/dispatchers/indirect/sample3-virt-dispatcher-indirect"
+	User time (seconds): 26.68
+	System time (seconds): 0.16
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:26.86
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 358560
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 160897
+	Voluntary context switches: 67
+	Involuntary context switches: 63
+	Swaps: 0
+	File system inputs: 80
+	File system outputs: 1184
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-dispatcher-switch
+	Instructions executed: 461645
+	Unique Instructions executed: 1454
+	Functions simulated: 10
+	Time of analysis: 35.135876 seconds
+	Command being timed: "./solve-md5.py build/virtualization/dispatchers/switch/sample3-virt-dispatcher-switch"
+	User time (seconds): 35.69
+	System time (seconds): 0.26
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:35.98
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 360536
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 160994
+	Voluntary context switches: 84
+	Involuntary context switches: 161
+	Swaps: 0
+	File system inputs: 592
+	File system outputs: 1192
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-dispatcher-ifnest
+	Instructions executed: 1105845
+	Unique Instructions executed: 1541
+	Functions simulated: 10
+	Time of analysis: 102.440441 seconds
+	Command being timed: "./solve-md5.py build/virtualization/dispatchers/ifnest/sample3-virt-dispatcher-ifnest"
+	User time (seconds): 102.88
+	System time (seconds): 0.39
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:43.30
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 766920
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 330127
+	Voluntary context switches: 101
+	Involuntary context switches: 167
+	Swaps: 0
+	File system inputs: 72
+	File system outputs: 1200
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+--------------------------------------------------------------------
+-> sample3-virt-dispatcher-linear
+	Instructions executed: 5804990
+	Unique Instructions executed: 1470
+	Functions simulated: 10
+	Time of analysis: 647.711867 seconds
+	Command being timed: "./solve-md5.py build/virtualization/dispatchers/linear/sample3-virt-dispatcher-linear"
+	User time (seconds): 647.31
+	System time (seconds): 1.29
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 10:48.67
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2688700
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1048093
+	Voluntary context switches: 209
+	Involuntary context switches: 847
+	Swaps: 0
+	File system inputs: 72
+	File system outputs: 1216
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

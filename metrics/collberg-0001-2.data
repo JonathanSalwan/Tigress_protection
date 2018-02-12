@@ -1,0 +1,2795 @@
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x004838
+[+] Loading 0x204dd8 - 0x205f88
+[+] Loading 0x204df0 - 0x204fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x004678 - 0x0046cc
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x204dd8 - 0x205000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/anti-branch-analysis/branchFuns/sample19-virt-anti-branch-analysis-branchFuns
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0x13ba: hlt
+[+] Instruction executed: 72976
+[+] Unique instruction executed: 1910
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-anti-branch-analysis-branchFuns.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-anti-branch-analysis-branchFuns.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-anti-branch-analysis-branchFuns.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-anti-branch-analysis-branchFuns
+	Instructions executed: 72976
+	Unique Instructions executed: 1910
+	Functions simulated: 11
+	Time of analysis: 6.037034 seconds
+	Command being timed: "./solve-vm.py build/virtualization/anti-branch-analysis/branchFuns/sample19-virt-anti-branch-analysis-branchFuns"
+	User time (seconds): 6.52
+	System time (seconds): 0.06
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.60
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 108236
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 46386
+	Voluntary context switches: 62
+	Involuntary context switches: 80
+	Swaps: 0
+	File system inputs: 64
+	File system outputs: 128
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x004a18
+[+] Loading 0x204dd8 - 0x205a28
+[+] Loading 0x204df0 - 0x204fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x004880 - 0x0048cc
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x204dd8 - 0x205000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/max-merge-length/10/sample19-virt-max-merge-lenght-10
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 8630
+[+] Unique instruction executed: 3073
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-max-merge-lenght-10.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-max-merge-lenght-10.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-max-merge-lenght-10.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-max-merge-lenght-10
+	Instructions executed: 8630
+	Unique Instructions executed: 3073
+	Functions simulated: 4
+	Time of analysis: 0.769753 seconds
+	Command being timed: "./solve-vm.py build/virtualization/max-merge-length/10/sample19-virt-max-merge-lenght-10"
+	User time (seconds): 1.25
+	System time (seconds): 0.05
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.32
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 93312
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 39135
+	Voluntary context switches: 47
+	Involuntary context switches: 29
+	Swaps: 0
+	File system inputs: 64
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x005ee8
+[+] Loading 0x206dd8 - 0x2079f0
+[+] Loading 0x206df0 - 0x206fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x005d54 - 0x005da0
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x206dd8 - 0x207000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/max-merge-length/20/sample19-virt-max-merge-lenght-20
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 7458
+[+] Unique instruction executed: 4262
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-max-merge-lenght-20.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-max-merge-lenght-20.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-max-merge-lenght-20.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-max-merge-lenght-20
+	Instructions executed: 7458
+	Unique Instructions executed: 4262
+	Functions simulated: 4
+	Time of analysis: 0.675019 seconds
+	Command being timed: "./solve-vm.py build/virtualization/max-merge-length/20/sample19-virt-max-merge-lenght-20"
+	User time (seconds): 1.14
+	System time (seconds): 0.06
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.22
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 93016
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 39162
+	Voluntary context switches: 64
+	Involuntary context switches: 40
+	Swaps: 0
+	File system inputs: 80
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002428
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x002294 - 0x0022e0
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/max-merge-length/0/sample19-virt-max-merge-lenght-0
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 20935
+[+] Unique instruction executed: 996
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-max-merge-lenght-0.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-max-merge-lenght-0.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-max-merge-lenght-0.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-max-merge-lenght-0
+	Instructions executed: 20935
+	Unique Instructions executed: 996
+	Functions simulated: 4
+	Time of analysis: 1.652051 seconds
+	Command being timed: "./solve-vm.py build/virtualization/max-merge-length/0/sample19-virt-max-merge-lenght-0"
+	User time (seconds): 2.12
+	System time (seconds): 0.06
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.20
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 96236
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 40652
+	Voluntary context switches: 56
+	Involuntary context switches: 39
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 120
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x006ca8
+[+] Loading 0x206dd8 - 0x2079e0
+[+] Loading 0x206df0 - 0x206fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x006b14 - 0x006b60
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x206dd8 - 0x207000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/max-merge-length/30/sample19-virt-max-merge-lenght-30
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 7099
+[+] Unique instruction executed: 5043
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-max-merge-lenght-30.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-max-merge-lenght-30.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-max-merge-lenght-30.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-max-merge-lenght-30
+	Instructions executed: 7099
+	Unique Instructions executed: 5043
+	Functions simulated: 4
+	Time of analysis: 0.656153 seconds
+	Command being timed: "./solve-vm.py build/virtualization/max-merge-length/30/sample19-virt-max-merge-lenght-30"
+	User time (seconds): 1.13
+	System time (seconds): 0.05
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.20
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 93624
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 39277
+	Voluntary context switches: 45
+	Involuntary context switches: 37
+	Swaps: 0
+	File system inputs: 80
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x003308
+[+] Loading 0x203dd8 - 0x2058f0
+[+] Loading 0x203df0 - 0x203fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x003168 - 0x0031b4
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x203dd8 - 0x204000
+[+] Hooking printf
+[+] Hooking fprintf
+[+] Hooking malloc
+[+] Hooking fopen
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/bogus-functions/1/sample19-virt-bogus-functions-1
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] fopen hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xbaa: hlt
+[+] Instruction executed: 64483
+[+] Unique instruction executed: 1800
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-bogus-functions-1.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-bogus-functions-1.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-bogus-functions-1.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-bogus-functions-1
+	Instructions executed: 64483
+	Unique Instructions executed: 1800
+	Functions simulated: 11
+	Time of analysis: 4.859348 seconds
+	Command being timed: "./solve-vm.py build/virtualization/bogus-functions/1/sample19-virt-bogus-functions-1"
+	User time (seconds): 5.31
+	System time (seconds): 0.10
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.43
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 124100
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 55654
+	Voluntary context switches: 64
+	Involuntary context switches: 49
+	Swaps: 0
+	File system inputs: 64
+	File system outputs: 128
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x003560
+[+] Loading 0x203dd8 - 0x206528
+[+] Loading 0x203df0 - 0x203fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x0033c4 - 0x003410
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x203dd8 - 0x204000
+[+] Hooking printf
+[+] Hooking fprintf
+[+] Hooking malloc
+[+] Hooking fopen
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/bogus-functions/2/sample19-virt-bogus-functions-2
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] fopen hooked
+[+] fopen hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xbaa: hlt
+[+] Instruction executed: 90344
+[+] Unique instruction executed: 1926
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-bogus-functions-2.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-bogus-functions-2.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-bogus-functions-2.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-bogus-functions-2
+	Instructions executed: 90344
+	Unique Instructions executed: 1926
+	Functions simulated: 37
+	Time of analysis: 6.20241 seconds
+	Command being timed: "./solve-vm.py build/virtualization/bogus-functions/2/sample19-virt-bogus-functions-2"
+	User time (seconds): 6.70
+	System time (seconds): 0.05
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:06.77
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 125204
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 56053
+	Voluntary context switches: 56
+	Involuntary context switches: 64
+	Swaps: 0
+	File system inputs: 72
+	File system outputs: 120
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002428
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x002294 - 0x0022e0
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/bogus-functions/0/sample19-virt-bogus-functions-0
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 20935
+[+] Unique instruction executed: 996
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-bogus-functions-0.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-bogus-functions-0.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-bogus-functions-0.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-bogus-functions-0
+	Instructions executed: 20935
+	Unique Instructions executed: 996
+	Functions simulated: 4
+	Time of analysis: 1.659423 seconds
+	Command being timed: "./solve-vm.py build/virtualization/bogus-functions/0/sample19-virt-bogus-functions-0"
+	User time (seconds): 2.12
+	System time (seconds): 0.08
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.23
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 96556
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 42182
+	Voluntary context switches: 64
+	Involuntary context switches: 47
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x003638
+[+] Loading 0x203dd8 - 0x207158
+[+] Loading 0x203df0 - 0x203fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x00349c - 0x0034e8
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x203dd8 - 0x204000
+[+] Hooking printf
+[+] Hooking fprintf
+[+] Hooking malloc
+[+] Hooking fopen
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/bogus-functions/3/sample19-virt-bogus-functions-3
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] fopen hooked
+[+] fopen hooked
+[+] fopen hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] fprintf hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xbaa: hlt
+[+] Instruction executed: 117145
+[+] Unique instruction executed: 1853
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-bogus-functions-3.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-bogus-functions-3.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-bogus-functions-3.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-bogus-functions-3
+	Instructions executed: 117145
+	Unique Instructions executed: 1853
+	Functions simulated: 57
+	Time of analysis: 7.781118 seconds
+	Command being timed: "./solve-vm.py build/virtualization/bogus-functions/3/sample19-virt-bogus-functions-3"
+	User time (seconds): 8.27
+	System time (seconds): 0.08
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:08.37
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 136764
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 60293
+	Voluntary context switches: 55
+	Involuntary context switches: 76
+	Swaps: 0
+	File system inputs: 72
+	File system outputs: 136
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002428
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x002294 - 0x0022e0
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/operands/stack/sample19-virt-operand-stack
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 20935
+[+] Unique instruction executed: 996
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-operand-stack.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-operand-stack.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-operand-stack.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-operand-stack
+	Instructions executed: 20935
+	Unique Instructions executed: 996
+	Functions simulated: 4
+	Time of analysis: 1.658198 seconds
+	Command being timed: "./solve-vm.py build/virtualization/operands/stack/sample19-virt-operand-stack"
+	User time (seconds): 2.11
+	System time (seconds): 0.08
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.21
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 96324
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 40639
+	Voluntary context switches: 64
+	Involuntary context switches: 42
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002648
+[+] Loading 0x202dd8 - 0x205330
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x0024b4 - 0x002500
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/operands/registers/sample19-virt-operand-registers
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 22758
+[+] Unique instruction executed: 1113
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-operand-registers.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-operand-registers.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-operand-registers.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-operand-registers
+	Instructions executed: 22758
+	Unique Instructions executed: 1113
+	Functions simulated: 4
+	Time of analysis: 1.773449 seconds
+	Command being timed: "./solve-vm.py build/virtualization/operands/registers/sample19-virt-operand-registers"
+	User time (seconds): 2.22
+	System time (seconds): 0.09
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.33
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 98712
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 41925
+	Voluntary context switches: 54
+	Involuntary context switches: 44
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 120
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002750
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x0025b8 - 0x002604
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/add-opaque-to-vpc/true/sample19-virt-add-opaque-to-vpc-true
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 29981
+[+] Unique instruction executed: 1204
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-add-opaque-to-vpc-true.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-add-opaque-to-vpc-true.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-add-opaque-to-vpc-true.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-add-opaque-to-vpc-true
+	Instructions executed: 29981
+	Unique Instructions executed: 1204
+	Functions simulated: 4
+	Time of analysis: 2.374408 seconds
+	Command being timed: "./solve-vm.py build/virtualization/add-opaque-to-vpc/true/sample19-virt-add-opaque-to-vpc-true"
+	User time (seconds): 2.84
+	System time (seconds): 0.06
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.93
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 99600
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 42056
+	Voluntary context switches: 64
+	Involuntary context switches: 50
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002428
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x002294 - 0x0022e0
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/add-opaque-to-vpc/false/sample19-virt-add-opaque-to-vpc-false
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 20935
+[+] Unique instruction executed: 996
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-add-opaque-to-vpc-false.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-add-opaque-to-vpc-false.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-add-opaque-to-vpc-false.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-add-opaque-to-vpc-false
+	Instructions executed: 20935
+	Unique Instructions executed: 996
+	Functions simulated: 4
+	Time of analysis: 1.64868 seconds
+	Command being timed: "./solve-vm.py build/virtualization/add-opaque-to-vpc/false/sample19-virt-add-opaque-to-vpc-false"
+	User time (seconds): 2.14
+	System time (seconds): 0.07
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.23
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 96396
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 42172
+	Voluntary context switches: 64
+	Involuntary context switches: 231
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002428
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x002294 - 0x0022e0
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/nested-vm/1/sample19-virt-nested-vm-1
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 20935
+[+] Unique instruction executed: 996
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-nested-vm-1.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-nested-vm-1.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-nested-vm-1.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-nested-vm-1
+	Instructions executed: 20935
+	Unique Instructions executed: 996
+	Functions simulated: 4
+	Time of analysis: 1.727721 seconds
+	Command being timed: "./solve-vm.py build/virtualization/nested-vm/1/sample19-virt-nested-vm-1"
+	User time (seconds): 2.20
+	System time (seconds): 0.07
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.31
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 96524
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 42165
+	Voluntary context switches: 64
+	Involuntary context switches: 1212
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x0021e8
+[+] Loading 0x202dd8 - 0x206700
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x002050 - 0x00209c
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/nested-vm/2/sample19-virt-nested-vm-2
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xb5a: hlt
+[+] Instruction executed: 2132169
+[+] Unique instruction executed: 788
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-nested-vm-2.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-nested-vm-2.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-nested-vm-2.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-nested-vm-2
+	Instructions executed: 2132169
+	Unique Instructions executed: 788
+	Functions simulated: 11
+	Time of analysis: 182.053014 seconds
+	Command being timed: "./solve-vm.py build/virtualization/nested-vm/2/sample19-virt-nested-vm-2"
+	User time (seconds): 182.38
+	System time (seconds): 0.53
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 3:02.94
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 899528
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 431051
+	Voluntary context switches: 57
+	Involuntary context switches: 933
+	Swaps: 0
+	File system inputs: 72
+	File system outputs: 144
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002678
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x0024e4 - 0x002530
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/bogus-loop-iterations/1/sample19-virt-bogus-loop-iterations-1
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 168426
+[+] Unique instruction executed: 1139
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-bogus-loop-iterations-1.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-bogus-loop-iterations-1.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-bogus-loop-iterations-1.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-bogus-loop-iterations-1
+	Instructions executed: 168426
+	Unique Instructions executed: 1139
+	Functions simulated: 4
+	Time of analysis: 18.463079 seconds
+	Command being timed: "./solve-vm.py build/virtualization/bogus-loop-iterations/1/sample19-virt-bogus-loop-iterations-1"
+	User time (seconds): 18.92
+	System time (seconds): 0.09
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:19.04
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 133720
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 62935
+	Voluntary context switches: 65
+	Involuntary context switches: 212
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002678
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x0024e4 - 0x002530
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/bogus-loop-iterations/2/sample19-virt-bogus-loop-iterations-2
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 311800
+[+] Unique instruction executed: 1139
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-bogus-loop-iterations-2.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-bogus-loop-iterations-2.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-bogus-loop-iterations-2.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-bogus-loop-iterations-2
+	Instructions executed: 311800
+	Unique Instructions executed: 1139
+	Functions simulated: 4
+	Time of analysis: 36.450283 seconds
+	Command being timed: "./solve-vm.py build/virtualization/bogus-loop-iterations/2/sample19-virt-bogus-loop-iterations-2"
+	User time (seconds): 36.87
+	System time (seconds): 0.18
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:37.12
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 170332
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 84266
+	Voluntary context switches: 49
+	Involuntary context switches: 2651
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 120
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002428
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x002294 - 0x0022e0
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/bogus-loop-iterations/0/sample19-virt-bogus-loop-iterations-0
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 20935
+[+] Unique instruction executed: 996
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-bogus-loop-iterations-0.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-bogus-loop-iterations-0.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-bogus-loop-iterations-0.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-bogus-loop-iterations-0
+	Instructions executed: 20935
+	Unique Instructions executed: 996
+	Functions simulated: 4
+	Time of analysis: 1.695778 seconds
+	Command being timed: "./solve-vm.py build/virtualization/bogus-loop-iterations/0/sample19-virt-bogus-loop-iterations-0"
+	User time (seconds): 2.20
+	System time (seconds): 0.06
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.28
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 96260
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 40647
+	Voluntary context switches: 54
+	Involuntary context switches: 304
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 120
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002678
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x0024e4 - 0x002530
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/bogus-loop-iterations/3/sample19-virt-bogus-loop-iterations-3
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 455174
+[+] Unique instruction executed: 1139
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-bogus-loop-iterations-3.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-bogus-loop-iterations-3.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-bogus-loop-iterations-3.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-bogus-loop-iterations-3
+	Instructions executed: 455174
+	Unique Instructions executed: 1139
+	Functions simulated: 4
+	Time of analysis: 48.891259 seconds
+	Command being timed: "./solve-vm.py build/virtualization/bogus-loop-iterations/3/sample19-virt-bogus-loop-iterations-3"
+	User time (seconds): 49.28
+	System time (seconds): 0.19
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:49.49
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 206016
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 101402
+	Voluntary context switches: 64
+	Involuntary context switches: 278
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 120
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002428
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x002294 - 0x0022e0
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/super-operators-ratio/0.4/sample19-virt-super-operators-ratio-0.4
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 20935
+[+] Unique instruction executed: 996
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-super-operators-ratio-0.4.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-super-operators-ratio-0.4.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-super-operators-ratio-0.4.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-super-operators-ratio-0.4
+	Instructions executed: 20935
+	Unique Instructions executed: 996
+	Functions simulated: 4
+	Time of analysis: 1.641972 seconds
+	Command being timed: "./solve-vm.py build/virtualization/super-operators-ratio/0.4/sample19-virt-super-operators-ratio-0.4"
+	User time (seconds): 2.11
+	System time (seconds): 0.07
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.20
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 96300
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 42183
+	Voluntary context switches: 36
+	Involuntary context switches: 45
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 120
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002438
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x0022a4 - 0x0022f0
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/super-operators-ratio/0.0/sample19-virt-super-operators-ratio-0.0
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 20935
+[+] Unique instruction executed: 996
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-super-operators-ratio-0.0.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-super-operators-ratio-0.0.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-super-operators-ratio-0.0.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-super-operators-ratio-0.0
+	Instructions executed: 20935
+	Unique Instructions executed: 996
+	Functions simulated: 4
+	Time of analysis: 1.651135 seconds
+	Command being timed: "./solve-vm.py build/virtualization/super-operators-ratio/0.0/sample19-virt-super-operators-ratio-0.0"
+	User time (seconds): 2.10
+	System time (seconds): 0.08
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.20
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 96324
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 40651
+	Voluntary context switches: 64
+	Involuntary context switches: 41
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002428
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x002294 - 0x0022e0
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/super-operators-ratio/0.6/sample19-virt-super-operators-ratio-0.6
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 20935
+[+] Unique instruction executed: 996
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-super-operators-ratio-0.6.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-super-operators-ratio-0.6.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-super-operators-ratio-0.6.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-super-operators-ratio-0.6
+	Instructions executed: 20935
+	Unique Instructions executed: 996
+	Functions simulated: 4
+	Time of analysis: 1.653137 seconds
+	Command being timed: "./solve-vm.py build/virtualization/super-operators-ratio/0.6/sample19-virt-super-operators-ratio-0.6"
+	User time (seconds): 2.13
+	System time (seconds): 0.06
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.21
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 96528
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 42175
+	Voluntary context switches: 54
+	Involuntary context switches: 34
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 120
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002428
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x002294 - 0x0022e0
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/super-operators-ratio/0.8/sample19-virt-super-operators-ratio-0.8
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 20935
+[+] Unique instruction executed: 996
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-super-operators-ratio-0.8.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-super-operators-ratio-0.8.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-super-operators-ratio-0.8.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-super-operators-ratio-0.8
+	Instructions executed: 20935
+	Unique Instructions executed: 996
+	Functions simulated: 4
+	Time of analysis: 1.641614 seconds
+	Command being timed: "./solve-vm.py build/virtualization/super-operators-ratio/0.8/sample19-virt-super-operators-ratio-0.8"
+	User time (seconds): 2.12
+	System time (seconds): 0.05
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.19
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 96820
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 42179
+	Voluntary context switches: 64
+	Involuntary context switches: 38
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002428
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x002294 - 0x0022e0
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/super-operators-ratio/0.2/sample19-virt-super-operators-ratio-0.2
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 20935
+[+] Unique instruction executed: 996
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-super-operators-ratio-0.2.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-super-operators-ratio-0.2.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-super-operators-ratio-0.2.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-super-operators-ratio-0.2
+	Instructions executed: 20935
+	Unique Instructions executed: 996
+	Functions simulated: 4
+	Time of analysis: 1.646241 seconds
+	Command being timed: "./solve-vm.py build/virtualization/super-operators-ratio/0.2/sample19-virt-super-operators-ratio-0.2"
+	User time (seconds): 2.13
+	System time (seconds): 0.04
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.20
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 96656
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 42201
+	Voluntary context switches: 50
+	Involuntary context switches: 39
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002428
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x002294 - 0x0022e0
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/super-operators-ratio/1.0/sample19-virt-super-operators-ratio-1.0
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 20935
+[+] Unique instruction executed: 996
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-super-operators-ratio-1.0.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-super-operators-ratio-1.0.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-super-operators-ratio-1.0.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-super-operators-ratio-1.0
+	Instructions executed: 20935
+	Unique Instructions executed: 996
+	Functions simulated: 4
+	Time of analysis: 1.637211 seconds
+	Command being timed: "./solve-vm.py build/virtualization/super-operators-ratio/1.0/sample19-virt-super-operators-ratio-1.0"
+	User time (seconds): 2.12
+	System time (seconds): 0.04
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.18
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 96296
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 42188
+	Voluntary context switches: 64
+	Involuntary context switches: 41
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002478
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x0022e4 - 0x002330
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/encode-byte-array/true/sample19-virt-encode-byte-array-true
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 58428
+[+] Unique instruction executed: 1011
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-encode-byte-array-true.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-encode-byte-array-true.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-encode-byte-array-true.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-encode-byte-array-true
+	Instructions executed: 58428
+	Unique Instructions executed: 1011
+	Functions simulated: 4
+	Time of analysis: 4.684408 seconds
+	Command being timed: "./solve-vm.py build/virtualization/encode-byte-array/true/sample19-virt-encode-byte-array-true"
+	User time (seconds): 5.15
+	System time (seconds): 0.07
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.25
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 120004
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 52269
+	Voluntary context switches: 64
+	Involuntary context switches: 377
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002428
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x002294 - 0x0022e0
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/encode-byte-array/false/sample19-virt-encode-byte-array-false
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 20935
+[+] Unique instruction executed: 996
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-encode-byte-array-false.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-encode-byte-array-false.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-encode-byte-array-false.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-encode-byte-array-false
+	Instructions executed: 20935
+	Unique Instructions executed: 996
+	Functions simulated: 4
+	Time of analysis: 1.684019 seconds
+	Command being timed: "./solve-vm.py build/virtualization/encode-byte-array/false/sample19-virt-encode-byte-array-false"
+	User time (seconds): 2.17
+	System time (seconds): 0.06
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.25
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 96704
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 40643
+	Voluntary context switches: 64
+	Involuntary context switches: 353
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 120
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002428
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x002294 - 0x0022e0
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/random-opcodes/true/sample19-virt-random-opcodes-true
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 20935
+[+] Unique instruction executed: 996
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-random-opcodes-true.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-random-opcodes-true.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-random-opcodes-true.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-random-opcodes-true
+	Instructions executed: 20935
+	Unique Instructions executed: 996
+	Functions simulated: 4
+	Time of analysis: 1.658664 seconds
+	Command being timed: "./solve-vm.py build/virtualization/random-opcodes/true/sample19-virt-random-opcodes-true"
+	User time (seconds): 2.16
+	System time (seconds): 0.05
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.23
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 96664
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 40640
+	Voluntary context switches: 54
+	Involuntary context switches: 142
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x0020a8
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x001f14 - 0x001f60
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/random-opcodes/false/sample19-virt-random-opcodes-false
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 20935
+[+] Unique instruction executed: 996
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-random-opcodes-false.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-random-opcodes-false.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-random-opcodes-false.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-random-opcodes-false
+	Instructions executed: 20935
+	Unique Instructions executed: 996
+	Functions simulated: 4
+	Time of analysis: 1.644779 seconds
+	Command being timed: "./solve-vm.py build/virtualization/random-opcodes/false/sample19-virt-random-opcodes-false"
+	User time (seconds): 2.10
+	System time (seconds): 0.07
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.19
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 96484
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 40869
+	Voluntary context switches: 64
+	Involuntary context switches: 58
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 120
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002428
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x002294 - 0x0022e0
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/duplicate-opcodes/1/sample19-virt-duplicate-opcodes-1
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 20935
+[+] Unique instruction executed: 996
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-duplicate-opcodes-1.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-duplicate-opcodes-1.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-duplicate-opcodes-1.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-duplicate-opcodes-1
+	Instructions executed: 20935
+	Unique Instructions executed: 996
+	Functions simulated: 4
+	Time of analysis: 1.663686 seconds
+	Command being timed: "./solve-vm.py build/virtualization/duplicate-opcodes/1/sample19-virt-duplicate-opcodes-1"
+	User time (seconds): 2.14
+	System time (seconds): 0.06
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.21
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 96240
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 42168
+	Voluntary context switches: 50
+	Involuntary context switches: 39
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x0027a0
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x002608 - 0x002654
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/duplicate-opcodes/2/sample19-virt-duplicate-opcodes-2
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 20967
+[+] Unique instruction executed: 1172
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-duplicate-opcodes-2.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-duplicate-opcodes-2.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-duplicate-opcodes-2.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-duplicate-opcodes-2
+	Instructions executed: 20967
+	Unique Instructions executed: 1172
+	Functions simulated: 4
+	Time of analysis: 1.677662 seconds
+	Command being timed: "./solve-vm.py build/virtualization/duplicate-opcodes/2/sample19-virt-duplicate-opcodes-2"
+	User time (seconds): 2.14
+	System time (seconds): 0.08
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.23
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 96920
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 42280
+	Voluntary context switches: 63
+	Involuntary context switches: 64
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 120
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002428
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x002294 - 0x0022e0
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/duplicate-opcodes/0/sample19-virt-duplicate-opcodes-0
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 20935
+[+] Unique instruction executed: 996
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-duplicate-opcodes-0.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-duplicate-opcodes-0.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-duplicate-opcodes-0.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-duplicate-opcodes-0
+	Instructions executed: 20935
+	Unique Instructions executed: 996
+	Functions simulated: 4
+	Time of analysis: 1.662362 seconds
+	Command being timed: "./solve-vm.py build/virtualization/duplicate-opcodes/0/sample19-virt-duplicate-opcodes-0"
+	User time (seconds): 2.12
+	System time (seconds): 0.07
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.21
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 96496
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 42166
+	Voluntary context switches: 54
+	Involuntary context switches: 47
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002798
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x002604 - 0x002650
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/duplicate-opcodes/3/sample19-virt-duplicate-opcodes-3
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 20967
+[+] Unique instruction executed: 1172
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-duplicate-opcodes-3.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-duplicate-opcodes-3.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-duplicate-opcodes-3.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-duplicate-opcodes-3
+	Instructions executed: 20967
+	Unique Instructions executed: 1172
+	Functions simulated: 4
+	Time of analysis: 1.658814 seconds
+	Command being timed: "./solve-vm.py build/virtualization/duplicate-opcodes/3/sample19-virt-duplicate-opcodes-3"
+	User time (seconds): 2.13
+	System time (seconds): 0.06
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.22
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 96568
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 42469
+	Voluntary context switches: 64
+	Involuntary context switches: 42
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 120
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x001f20
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x001d88 - 0x001dd4
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/obfuscate-decode-byte-array/true/sample19-virt-obfuscate-decode-byte-array-true
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 58967
+[+] Unique instruction executed: 697
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-obfuscate-decode-byte-array-true.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-obfuscate-decode-byte-array-true.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-obfuscate-decode-byte-array-true.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-obfuscate-decode-byte-array-true
+	Instructions executed: 58967
+	Unique Instructions executed: 697
+	Functions simulated: 11
+	Time of analysis: 4.676405 seconds
+	Command being timed: "./solve-vm.py build/virtualization/obfuscate-decode-byte-array/true/sample19-virt-obfuscate-decode-byte-array-true"
+	User time (seconds): 5.10
+	System time (seconds): 0.12
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.24
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 120700
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 52358
+	Voluntary context switches: 64
+	Involuntary context switches: 74
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 120
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x001ee8
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x001d54 - 0x001da0
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/obfuscate-decode-byte-array/false/sample19-virt-obfuscate-decode-byte-array-false
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 58955
+[+] Unique instruction executed: 685
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-obfuscate-decode-byte-array-false.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-obfuscate-decode-byte-array-false.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-obfuscate-decode-byte-array-false.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-obfuscate-decode-byte-array-false
+	Instructions executed: 58955
+	Unique Instructions executed: 685
+	Functions simulated: 11
+	Time of analysis: 4.77675 seconds
+	Command being timed: "./solve-vm.py build/virtualization/obfuscate-decode-byte-array/false/sample19-virt-obfuscate-decode-byte-array-false"
+	User time (seconds): 5.24
+	System time (seconds): 0.08
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:05.34
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 120460
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 52346
+	Voluntary context switches: 53
+	Involuntary context switches: 54
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 120
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002380
+[+] Loading 0x202dd8 - 0x203e58
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x0021ec - 0x002238
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/dispatchers/binary/sample19-virt-dispatcher-binary
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xd5a: hlt
+[+] Instruction executed: 100370
+[+] Unique instruction executed: 1038
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-dispatcher-binary.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-dispatcher-binary.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-dispatcher-binary.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-dispatcher-binary
+	Instructions executed: 100370
+	Unique Instructions executed: 1038
+	Functions simulated: 4
+	Time of analysis: 9.730808 seconds
+	Command being timed: "./solve-vm.py build/virtualization/dispatchers/binary/sample19-virt-dispatcher-binary"
+	User time (seconds): 10.16
+	System time (seconds): 0.11
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:10.30
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 128268
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 55994
+	Voluntary context switches: 59
+	Involuntary context switches: 194
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 120
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x006780
+[+] Loading 0x206dd8 - 0x209290
+[+] Loading 0x206df0 - 0x206fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x0065ec - 0x006638
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x206dd8 - 0x207000
+[+] Hooking printf
+[+] Hooking memcpy
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/dispatchers/direct/sample19-virt-dispatcher-direct
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] memcpy hooked
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0x512a: hlt
+[+] Instruction executed: 13402
+[+] Unique instruction executed: 1047
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-dispatcher-direct.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-dispatcher-direct.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-dispatcher-direct.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-dispatcher-direct
+	Instructions executed: 13402
+	Unique Instructions executed: 1047
+	Functions simulated: 5
+	Time of analysis: 1.196456 seconds
+	Command being timed: "./solve-vm.py build/virtualization/dispatchers/direct/sample19-virt-dispatcher-direct"
+	User time (seconds): 1.69
+	System time (seconds): 0.04
+	Percent of CPU this job got: 98%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.75
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 96896
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 42619
+	Voluntary context switches: 52
+	Involuntary context switches: 40
+	Swaps: 0
+	File system inputs: 88
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x006ae0
+[+] Loading 0x206dd8 - 0x207050
+[+] Loading 0x206df0 - 0x206fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x0064c4 - 0x0065f8
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x206dd8 - 0x207000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/dispatchers/call/sample19-virt-dispatcher-call
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0x15ea: hlt
+[+] Instruction executed: 37990
+[+] Unique instruction executed: 3298
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-dispatcher-call.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-dispatcher-call.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-dispatcher-call.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-dispatcher-call
+	Instructions executed: 37990
+	Unique Instructions executed: 3298
+	Functions simulated: 4
+	Time of analysis: 2.897547 seconds
+	Command being timed: "./solve-vm.py build/virtualization/dispatchers/call/sample19-virt-dispatcher-call"
+	User time (seconds): 3.38
+	System time (seconds): 0.05
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.45
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 103456
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 45528
+	Voluntary context switches: 64
+	Involuntary context switches: 77
+	Swaps: 0
+	File system inputs: 80
+	File system outputs: 128
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x0023e0
+[+] Loading 0x202dd8 - 0x203e58
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x00224c - 0x002298
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/dispatchers/interpolation/sample19-virt-dispatcher-interpolation
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xd5a: hlt
+[+] Instruction executed: 93860
+[+] Unique instruction executed: 1064
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-dispatcher-interpolation.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-dispatcher-interpolation.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-dispatcher-interpolation.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-dispatcher-interpolation
+	Instructions executed: 93860
+	Unique Instructions executed: 1064
+	Functions simulated: 4
+	Time of analysis: 8.6934 seconds
+	Command being timed: "./solve-vm.py build/virtualization/dispatchers/interpolation/sample19-virt-dispatcher-interpolation"
+	User time (seconds): 9.16
+	System time (seconds): 0.08
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:09.26
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 124292
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 55594
+	Voluntary context switches: 64
+	Involuntary context switches: 89
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 120
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x003a90
+[+] Loading 0x203dd8 - 0x2054a8
+[+] Loading 0x203df0 - 0x203fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x0038fc - 0x003948
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x203dd8 - 0x204000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/dispatchers/indirect/sample19-virt-dispatcher-indirect
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0x22da: hlt
+[+] Instruction executed: 15710
+[+] Unique instruction executed: 1125
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-dispatcher-indirect.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-dispatcher-indirect.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-dispatcher-indirect.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-dispatcher-indirect
+	Instructions executed: 15710
+	Unique Instructions executed: 1125
+	Functions simulated: 4
+	Time of analysis: 1.317877 seconds
+	Command being timed: "./solve-vm.py build/virtualization/dispatchers/indirect/sample19-virt-dispatcher-indirect"
+	User time (seconds): 1.80
+	System time (seconds): 0.06
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.87
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 97336
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 42776
+	Voluntary context switches: 64
+	Involuntary context switches: 39
+	Swaps: 0
+	File system inputs: 56
+	File system outputs: 120
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002428
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x002294 - 0x0022e0
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/dispatchers/switch/sample19-virt-dispatcher-switch
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 20935
+[+] Unique instruction executed: 996
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-dispatcher-switch.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-dispatcher-switch.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-dispatcher-switch.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-dispatcher-switch
+	Instructions executed: 20935
+	Unique Instructions executed: 996
+	Functions simulated: 4
+	Time of analysis: 1.658991 seconds
+	Command being timed: "./solve-vm.py build/virtualization/dispatchers/switch/sample19-virt-dispatcher-switch"
+	User time (seconds): 2.14
+	System time (seconds): 0.04
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:02.20
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 96352
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 42164
+	Voluntary context switches: 41
+	Involuntary context switches: 68
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002110
+[+] Loading 0x202dd8 - 0x203ca0
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x001f7c - 0x001fc8
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/dispatchers/ifnest/sample19-virt-dispatcher-ifnest
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xada: hlt
+[+] Instruction executed: 31772
+[+] Unique instruction executed: 1039
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-dispatcher-ifnest.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-dispatcher-ifnest.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-dispatcher-ifnest.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-dispatcher-ifnest
+	Instructions executed: 31772
+	Unique Instructions executed: 1039
+	Functions simulated: 4
+	Time of analysis: 2.875071 seconds
+	Command being timed: "./solve-vm.py build/virtualization/dispatchers/ifnest/sample19-virt-dispatcher-ifnest"
+	User time (seconds): 3.36
+	System time (seconds): 0.06
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.45
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 104940
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 44719
+	Voluntary context switches: 64
+	Involuntary context switches: 42
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+[+] Loading 0x000040 - 0x000238
+[+] Loading 0x000238 - 0x000254
+[+] Loading 0x000000 - 0x002300
+[+] Loading 0x202dd8 - 0x203e58
+[+] Loading 0x202df0 - 0x202fd0
+[+] Loading 0x000254 - 0x000274
+[+] Loading 0x00216c - 0x0021b8
+[+] Loading 0x000000 - 0x000000
+[+] Loading 0x202dd8 - 0x203000
+[+] Hooking printf
+[+] Hooking malloc
+[+] Hooking strtoul
+[+] Hooking __libc_start_main
+[+] Starting emulation.
+[+] __libc_start_main hooked
+[+] argv[0] = build/virtualization/dispatchers/linear/sample19-virt-dispatcher-linear
+[+] argv[1] = 1234
+[+] strtoul hooked
+[+] Symbolizing the strtoul return
+[+] malloc hooked
+[+] printf hooked
+18446744072806803045
+[+] Slicing end-point user expression
+[-] Instruction not supported: 0xd5a: hlt
+[+] Instruction executed: 112584
+[+] Unique instruction executed: 1010
+[+] PC len: 1
+[+] Emulation done.
+[+] Generating symbolic_expressions/sample19-virt-dispatcher-linear.py
+[+] Converting symbolic expressions to an LLVM module...
+[+] LLVM module wrote in llvm_expressions/sample19-virt-dispatcher-linear.ll
+[+] Recompiling deobfuscated binary...
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/sample19-virt-dispatcher-linear.deobfuscated
+--------------------------------------------------------------------
+-> sample19-virt-dispatcher-linear
+	Instructions executed: 112584
+	Unique Instructions executed: 1010
+	Functions simulated: 4
+	Time of analysis: 12.287155 seconds
+	Command being timed: "./solve-vm.py build/virtualization/dispatchers/linear/sample19-virt-dispatcher-linear"
+	User time (seconds): 12.77
+	System time (seconds): 0.07
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:12.86
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 140712
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 62251
+	Voluntary context switches: 64
+	Involuntary context switches: 88
+	Swaps: 0
+	File system inputs: 48
+	File system outputs: 112
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

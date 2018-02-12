@@ -1,0 +1,1321 @@
+#!/bin/bash
+
+########################################################################################
+# Help
+########################################################################################
+if [ "$1" == "--help" ] || [ "$1" == "--h" ] || [ "$1" == "-h" ] || [ "$1" == "-help" ] || [ -z "$1" ]
+then
+cat <<"End-of-message"
+Tigress is invoked like this:
+
+tigress    --Transform=TRANSFORM --Functions=IDENTSPEC [EXTRA_OPTS...] \ # First transformation
+           --Transform=TRANSFORM --Functions=IDENTSPEC [EXTRA_OPTS...] \ # Second transformation
+                      ....
+           --Transform=TRANSFORM --Functions=IDENTSPEC [EXTRA_OPTS...] \ # Last transformation
+           --out=OUTFILE.c FILE.c                                      \ # Output and input files
+        
+This is a typical, simple, invokation:
+
+tigress --Transform=InitOpaque   --Functions=main \                   # First transformation
+        --Transform=UpdateOpaque --Functions=f \                      # Second transformation
+        --Transform=AddOpaque    --Functions=f --AddOpaqueCount=2 \   # Third transformation
+        --out=x.c simple1.c                                           # Output and input file
+
+Note that Tigress accepts exactly one C file as input. If your project has
+multiple files you must first merge them together into one: 
+
+$TIGRESS_HOME/cilly --merge -c x1.c -o x1.o
+$TIGRESS_HOME/cilly --merge -c x2.c -o x2.o
+$TIGRESS_HOME/cilly --merge -c x3.c -o x4.o
+$TIGRESS_HOME/cilly --merge  --keepmerged x1.o x2.o x3.o -o merged --mergedout=merged.c 
+
+The first three commands are replacements, essentially, for 
+compiling each of the source file. If, for example, 
+you need  to pass different options when compiling the
+different files, you'd do it here. The merged source file merged.c
+can subsequently be passed to Tigress for transformation. See 
+http://kerneis.github.io/cil/doc/html/cil/merger.html#sec-merger
+to learn more about the merging process. 
+
+Useful commands:
+   *) tigress --help     : Show this message
+   *) tigress --install  : Show how to install Tigress 
+   *) tigress --test     : Show how to run tests to ensure proper installation 
+   *) tigress --options  : Show complete list of options to tigress
+   *) tigress --license  : Display the tigress license
+   *) tigress --bibtex   : See how to cite us
+   *) tigress --apple    : How to get past some Darwin issues
+   *) tigress --version  : Show the current Tigress version
+End-of-message
+
+   exit 0
+fi
+
+########################################################################################
+# BibTeX
+########################################################################################
+if [ "$1" == "--bibtex" ] || [ "$1" == "--BibTex" ] || [ "$1" == "-bibtex" ] || [ "$1" == "-BibTeX" ]
+then
+cat <<End-of-message
+@inproceedings{Collberg2012Distributed,
+   author = {Christian Collberg and Sam Martin and Jonathan Myers and Jasvir Nagra},
+   title = {Distributed Application Tamper Detection via Continuous Software Updates},
+   booktitle = {Proceedings of the 28th Annual Computer Security Applications Conference},
+   series = {ACSAC '12},
+   year = {2012},
+   isbn = {978-1-4503-1312-4},
+   location = {Orlando, Florida},
+   pages = {319--328},
+   url = {http://doi.acm.org/10.1145/2420950.2420997},
+   doi = {10.1145/2420950.2420997},
+   publisher = {ACM},
+   address = {New York, NY, USA},
+} 
+End-of-message
+   exit 0
+fi
+
+########################################################################################
+# License
+########################################################################################
+if [ "$1" == "--license" ] || [ "$1" == "--License" ] || [ "$1" == "-license" ] || [ "$1" == "-License" ]
+then
+cat <<End-of-message
+End-User License Agreement
+
+PROGRAM: Tigress University of Arizona Tech Transfer File: UA14-135
+
+IMPORTANT – READ CAREFULLY: This Agreement is a legal agreement
+between ("LICENSEE") (defined below in Paragraph 2) and The Arizona
+Board of Regents on behalf of the University of Arizona,
+("ARIZONA"). By installing, copying, downloading, accessing or
+otherwise using the PROGRAM, LICENSEE agrees to be bound by the terms
+of this Agreement. If LICENSEE does not agree with the terms of this
+Agreement, do not install, access or use the PROGRAM.
+
+BACKGROUND
+
+1. The University of Arizona through its Computer Science Department
+has developed a proprietary software application and related
+documentation, known as Tigress, a virtualizer for the C computer
+language that provides computer defenses against de-virtualization
+attacks, and further defined in ARIZONA Tech Transfer Arizona file
+UA14-135, (hereinafter referred to as "PROGRAM").
+
+2. LICENSEE is either: (i) yourself if you accept the Agreement; or
+(ii) the legal entity you are authorized to represent in accepting
+this Agreement.  You represent you have the authority to bind LICENSEE
+to this Agreement.
+
+3. LICENSEE desires to obtain and ARIZONA, consistent with its mission
+of education and research, desires to grant a license to access and
+use PROGRAM subject to the terms and conditions set forth below.
+
+The parties therefore agree as follows:
+
+I.  LICENSE ARIZONA hereby grants to LICENSEE a non-exclusive,
+	non-transferable right to access and use the PROGRAM
+	internally for the sole purpose of assessing Tigress
+	virtualization software and subject to the terms and
+	conditions of this Agreement.
+
+II. LIMITATION OF LICENSE AND RESTRICTIONS A. Except as expressly
+permitted by this agreement, no other use of PROGRAM is permitted,
+including, but not limited to: (i) use or access for the benefit of,
+on behalf of, or upon the request of any other party; (ii)
+reproduction, adaptations, and/or preparation of derivative works;
+(iii) sale, renting or loaning access to PROGRAM, passwords, or
+usernames: or (iv) the reverse engineering, decompiling,
+disassembling, or attempting to otherwise access any source code for
+any software program. LICENSEE covenants that the contents of PROGRAM
+are for LICENSEE'S use, and may not be resold, republished, or
+otherwise distributed to third parties in any form including, but not
+limited to, via an internet, intranet, or extranet site.
+
+B. LICENSEE shall not assign this Agreement, and any attempt by
+LICENSEE to assign it shall be void from the beginning.  LICENSEE
+agrees to secure and protect access to PROGRAM in a manner consistent
+with the maintenance of ARIZONA'S rights in PROGRAM and to take
+appropriate action by instruction or agreement with its and LICENSEE’S
+employees who are permitted access to PROGRAM in order to satisfy
+LICENSEE'S obligations under this Agreement.
+
+III. TITLE AND OWNERSHIP No ownership rights of ARIZONA in the PROGRAM
+	are conferred upon LICENSEE by this Agreement.
+
+IV. DISCLAIMER OF WARRANTY AND LIMITATION OF LIABILITY A. PROGRAM IS
+PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR
+IMPLIED, INCLUDING WITHOUT LIMITATION THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE OR ANY WARRANTY
+THAT THE PROGRAM DOES NOT INFRINGE ANY THIRD PARTY RIGHTS.  ARIZONA
+DOES NOT WARRANT THAT THE DATA AND FUNCTIONS CONTAINED IN PROGRAM ARE
+COMPLETE, ACCURATE OR ERROR-FREE; THAT THEY WILL MEET LICENSEE'S
+REQUIREMENTS; OR THAT OPERATION WILL BE UNINTERRUPTED OR ERROR FREE.
+ARIZONA shall not be liable for special, indirect, incidental, or
+consequential damages with respect to any claim on account of or
+arising from this Agreement or use of PROGRAM, even if ARIZONA has
+been or is hereafter advised of the possibility of such damages.
+Because some states do not allow certain exclusions or limitations on
+implied warranties or of liability for consequential or incidental
+damages, the above exclusions may not apply to LICENSEE.  In no event,
+however, will ARIZONA be liable to LICENSEE, under any theory of
+recovery, in an amount in excess of the license fee paid by LICENSEE
+under this Agreement.
+
+B. LICENSEE agrees that ARIZONA has no obligation to provide to
+LICENSEE any maintenance, support, or update services. Should ARIZONA
+provide access to and use of any revised versions of PROGRAM, LICENSEE
+agrees that this Agreement shall apply to such revised versions.
+
+C. Without limiting in anyway any of ARIZONA'S disclaimers of warranty
+and limitations of liability, LICENSEE covenants that it will
+carefully review any documentation or instructional material provided
+by ARIZONA and acknowledges that it is aware that PROGRAM is intended
+to be an educational tool.
+
+D. For clarity, LICENSEE acknowledges THAT ARIZONA SHALL NOT BE LIABLE
+FOR ANY LOSS OF DATA CONTAINED OR ENTERED IN THE PROGRAM OR ANY
+DAMAGES OR COSTS ASSOCIATED WITH THAT LOSS.
+
+V. TERM AND TERMINATION A. If LICENSEE at any time fails to abide by
+the terms of this Agreement, ARIZONA shall have the right to
+immediately terminate the license granted herein, require the return
+or destruction of all copies of the PROGRAM from LICENSEE and
+certification in writing as to such return or destruction, and pursue
+any other legal or equitable remedies available.
+
+B. This Agreement is renewable upon the written agreement of both
+parties, which may be accomplished by LICENSEE's renewal request to
+ARIZONA.
+
+VI.  MISCELLANEOUS A. This Agreement shall be interpreted pursuant to
+the laws of the State of ARIZONA. Any arbitration or litigation
+between the Parties shall be conducted in Pima County, ARIZONA, and
+Company hereby submits to venue and jurisdiction in Pima County,
+ARIZONA.
+
+B. The parties agree that should a dispute arise between them
+concerning this Agreement and no party seeks affirmative relief other
+than money damages in the amount of Fifty Thousand Dollars ($50,000)
+or less, exclusive of interest, costs and attorneys' fees, the parties
+may be required submit the matter to arbitration pursuant to the
+Revised Uniform Arbitration Act, A.R.S §12-3001 et seq. (the “Act”),
+whose rules shall govern the interpretation, enforcement, and
+proceedings pursuant to this section. Except as otherwise provided in
+the Act, the decision of the arbitrator(s) shall be final and binding
+upon the parties.  C. The Parties agree to be bound by state and
+federal laws and regulations governing equal opportunity and
+non-discrimination and immigration.  D. THIS AGREEMENT REPRESENTS THE
+COMPLETE AND EXCLUSIVE STATEMENT OF THE AGREEMENT BETWEEN ARIZONA AND
+LICENSEE AND SUPERSEDES ALL PRIOR AGREEMENTS, PROPOSALS,
+REPRESENTATIONS AND OTHER COMMUNICATIONS, VERBAL OR WRITTEN, BETWEEN
+THEM WITH RESPECT TO USE OF THE PROGRAM.  THIS AGREEMENT MAY BE
+MODIFIED ONLY WITH THE MUTUAL WRITTEN APPROVAL OF AUTHORIZED
+REPRESENTATIVES OF THE PARTIES.
+
+E. The terms and conditions of this Agreement shall prevail
+notwithstanding any different, conflicting, or additional terms or
+conditions which may appear in any purchase order or other document
+submitted by LICENSEE.  LICENSEE agrees that such additional or
+inconsistent terms are deemed rejected by ARIZONA.
+
+F. Unless otherwise exempt therefrom, LICENSEE agrees that it will be
+responsible for any sales, use or excise taxes imposed by any
+governmental unit in this transaction except income taxes.
+
+G. LICENSEE acknowledges that the PROGRAM is of United States
+origin. Licensee agrees to comply with all applicable international
+and national laws that apply to the PROGRAM, including the United
+States Export Administration Regulations, as well as end-user,
+end-use, and destination restrictions issued by the United States.
+
+VII. - STATE OF ARIZONA REQUIRED CLAUSES
+
+The PARTIES will comply with their applicable state and federal
+statutes and regulations governing equal employment opportunity,
+nondiscrimination, and immigration.  Pursuant to the provisions of
+A.R.S. §38-511, the Arizona Board of Regents may cancel this Agreement
+by written notice if any person substantially involved in obtaining,
+drafting, or procuring this Agreement for or on behalf of the Arizona
+Board of Regents becomes an employee or consultant in any capacity of
+UNIVERSITY.  The PARTIES recognize that performance by ARIZONA may be
+dependent upon the appropriation of funds by the State Legislature of
+Arizona. Should the Legislature fail to appropriate the necessary
+funds, the Arizona Board of Regents may cancel its future obligations
+under this Agreement without further duty or obligation. ARIZONA
+agrees to notify UNIVERSITY as soon as reasonably possible after the
+unavailability of such funds comes to its attention.  In the event of
+a dispute hereunder that involves the sum of Fifty Thousand Dollars
+($50,000) or less, in money damages only, exclusive of interest, costs
+and attorneys' fees, the PARTIES will submit the matter to binding
+arbitration pursuant to the Arizona Arbitration Act, ARS 12-1501 et
+seq. (the "Act") whose rules shall govern the interpretation,
+enforcement and proceedings pursuant to this paragraph. Except as
+otherwise provided in the Arizona Arbitration Act, the decision of the
+arbitrator(s) shall be final and binding upon the PARTIES.
+
+
+End-of-message
+
+   exit 0
+fi
+
+########################################################################################
+# Version
+########################################################################################
+if [ "$1" == "--version" ] || [ "$1" == "--Version" ] || [ "$1" == "-version" ] || [ "$1" == "-Version" ]
+then
+cat <<End-of-message
+Tigress Linux-x86_64-2.1, revision 2128, build 2017-04-11 16:56:50+00:00
+End-of-message
+
+   exit 0
+fi
+
+########################################################################################
+# Apple weirdness
+########################################################################################
+if [ "$1" == "--apple" ] || [ "$1" == "--Apple" ] || [ "$1" == "-apple" ] || [ "$1" == "-Apple" ]
+then
+cat <<End-of-message
+If you are on Mac OS X, include the following at the top of your C file, to get past 
+CIL not properly handling some OS X extensions:
+
+#ifdef __APPLE__
+#include<Availability.h>
+#include<sys/cdefs.h>
+#undef __OSX_AVAILABLE_STARTING
+#define __OSX_AVAILABLE_STARTING(_mac, _iphone)
+#undef __OSX_AVAILABLE_BUT_DEPRECATED
+#define __OSX_AVAILABLE_BUT_DEPRECATED(_osxIntro, _osxDep, _iosIntro, _iosDep)
+#undef __OSX_AVAILABLE_BUT_DEPRECATED_MSG
+#define __OSX_AVAILABLE_BUT_DEPRECATED_MSG(_osxIntro, _osxDep, _iosIntro, _iosDep, _msg)
+#undef __OSX_DEPRECATED
+#define __OSX_DEPRECATED(_start, _dep, _msg)
+#undef __IOS_DEPRECATED
+#define __IOS_DEPRECATED(_start, _dep, _msg)
+#undef __TVOS_DEPRECATED
+#define __TVOS_DEPRECATED(_start, _dep, _msg)
+#undef __WATCHOS_DEPRECATED
+#define __WATCHOS_DEPRECATED(_start, _dep, _msg)
+#undef __OSX_AVAILABLE
+#define __OSX_AVAILABLE(_arg)
+#undef __IOS_AVAILABLE
+#define __IOS_AVAILABLE(_arg)
+#undef __TVOS_AVAILABLE
+#define __TVOS_AVAILABLE(_arg)
+#undef __WATCHOS_AVAILABLE
+#define __WATCHOS_AVAILABLE(_arg)
+#undef __OSX_PROHIBITED
+#define __OSX_PROHIBITED
+#undef __IOS_PROHIBITED
+#define __IOS_PROHIBITED
+#undef __TVOS_PROHIBITED
+#define __TVOS_PROHIBITED
+#undef __WATCHOS_PROHIBITED
+#define __WATCHOS_PROHIBITED
+#undef __OS_AVAILABILITY_MSG
+#define __OS_AVAILABILITY_MSG(a,b,c)
+#undef __BLOCKS__
+#undef _Nullable
+#define _Nullable
+#undef _Nonnull
+#define _Nonnull
+#undef __swift_unavailable
+#define __swift_unavailable(_msg)
+#endif
+
+Compile with 
+   -fgnu89-inline -Wno-builtin-requires-header 
+to get past other bugs.
+End-of-message
+   exit 0
+fi
+
+########################################################################################
+# Options
+########################################################################################
+if [ "$1" == "--options" ] || [ "$1" == "--Options" ] || [ "$1" == "-options" ] || [ "$1" == "-Options" ]
+then
+cat <<End-of-message
+
+Top Level Options
+   --Environment                      string             A string that describes the
+                                                         architecture, operating system,
+                                                         and compiler being used. We
+                                                         currently recognize the
+                                                         following strings:
+                                                         x86_64:Linux:Gcc:4.6,
+                                                         x86_64:Darwin:Clang:5.1,
+                                                         armv7:Linux:gcc:4.6,
+                                                         armv8:Linux:gcc:4.6. This is
+                                                         mostly necessary because Clang
+                                                         does not support some features
+                                                         (most notably asm goto) that
+                                                         Gcc does. In the future we will
+                                                         use this to provide better
+                                                         support for 32-bit binaries.
+                                                         Default=0.
+   --out                              file.c             The file to write to.
+   --Seed                             INTSPEC            The randomization seed.
+                                                         --Seed=0 makes Tigress generate
+                                                         its own seed.
+   --FilePrefix                       AUTO, NONE, string Use this if you intend to run
+                                                         tigress multiple times on each
+                                                         file to avoid name clashes.
+                                                         Only set this option once.
+                                                         Default=NONE. AUTO=generate a
+                                                         prefix to add to all symbols;
+                                                         NONE=don't add any prefix;
+                                                         string=add this prefix
+   --Verbosity                        int                Tigress' chattiness level.
+                                                         --Verbosity=0 makes Tigress
+                                                         quiet. --Verbosity=1 prints
+                                                         each transformation as it is
+                                                         being applied. Default=0.
+   --Input                            INPUTSPEC          Specify invariants over the
+                                                         command line arguments, such
+                                                         the range of integer values a
+                                                         particular argument may take,
+                                                         the range of lengths of an
+                                                         argument, or the string value
+                                                         of an argument. These are used
+                                                         by the input opaque predicate,
+                                                         which is created by
+                                                         --InitOpaque=input. Default=0.
+
+
+Argument Specfications
+   INTSPEC                            ?, int?int, int    The INTSPEC notation allows
+                                                         randomized selection of integer
+                                                         valued options. ?=select a
+                                                         32-bit random number;
+                                                         int?int=select a random integer
+                                                         value in the range [int,int];
+                                                         int=select this value
+   FRACSPEC                           *, int, int?int,   The FRACSPEC notation allows
+                                      %int               the selection of a fraction of
+                                                         a set of elements. *=100%;
+                                                         int=select exactly this number
+                                                         of elements (if they exist);
+                                                         int?int=a?b selects a random
+                                                         number of elements in the rage
+                                                         [a,b] (if they exist);
+                                                         %int=select this fraction of
+                                                         available elements
+   BOOLSPEC                           ?, true, false     The BOOLSPEC notation allows
+                                                         randomized selection of boolean
+                                                         valued options. ?=select a
+                                                         random boolean value;
+                                                         true=select true; false=select
+                                                         false
+   IDENTSPEC                          *, ?int, %int,     Many transformations require
+                                      /regexp/, string   you to specify the set of
+                                                         functions to which they should
+                                                         be applied. Trivally, you can
+                                                         say --Functions=foo to apply
+                                                         the obfuscation only to foo,
+                                                         but frequently you need more
+                                                         flexibility than that. The
+                                                         IDENTSPEC notation provides
+                                                         this functionality. Some
+                                                         transformations also use
+                                                         identifier specifications to
+                                                         specify variables, as in
+                                                         --UpdateEntropyVar=\* which
+                                                         would select all variables of a
+                                                         function. *=select all
+                                                         available identifiers;
+                                                         ?int=randomly select int number
+                                                         of identifiers; %int=randomly
+                                                         select int percent of available
+                                                         identifiers; /regexp/=select
+                                                         the identifiers that match the
+                                                         regular expression;
+                                                         string=select this identifier
+   LOCALSPEC                                             The LOCALSPEC notation is used
+                                                         to specify a set of local
+                                                         variables and formal
+                                                         parameters. For example,
+                                                         --LocalVariables='main:i,j;foo:\*'=\*
+                                                         would select all variables of
+                                                         foo and i and j of main. The
+                                                         notation is a
+                                                         semicolon-separated list of
+                                                         IDENTSPEC:IDENTSPEC.
+   INPUTSPEC                          int, ?int, int?,   The --Input=... switch allows
+                                      int?int, +int,     you to specify invariants over
+                                      -int, "int",       the command line arguments.
+                                      "string", "length" These are used when you set
+                                                         --AddOpaqueStructs=input and
+                                                         --VirtualizeOpaqueStructs=input
+                                                         to create opaque constructs
+                                                         that appear to depend on input.
+                                                         An input specification is a
+                                                         coomma-separated list of
+                                                         3-tuples: position:kind:value.
+                                                         I.e.,
+                                                         --Input=position:kind:value,position:kind:value,.../tt>
+                                                         For example, consider the input
+                                                         specification
+                                                         --InputSpec=+1:int:34?56,-1:length:1?
+                                                         The first tuple specifies that
+                                                         the first command line argument
+                                                         must evaluate to an integer in
+                                                         the range 34-56, and the last
+                                                         argument has a length of
+                                                         exactly 1 character.
+                                                         Specifically, position=/+n|-n/,
+                                                         i.e. the n:th command line
+                                                         argument from the beginning or
+                                                         end of the line. The second
+                                                         part of the 3-tuple, kind is
+                                                         /int|string|length/, specifying
+                                                         that an invariant over a
+                                                         command line argument is a
+                                                         range of integer values, a
+                                                         particular string value, or the
+                                                         length (in characters) of an
+                                                         argument. The last part of the
+                                                         3-tuple, value, allows you to
+                                                         specify four types of ranges:
+                                                         /[0-9]+/, /?[0-9]+/, /[0-9]+?/,
+                                                         and /[0-9]+?[0-9]+/,/[0-9]*?/,
+                                                         for a specfic value n, a range
+                                                         [n,..], a range [..,n], and a
+                                                         range [n..m]. n (a single
+                                                         integer) specifies a specific
+                                                         value, n? specifies a range
+                                                         starting at n int=range
+                                                         specification: matches a
+                                                         particular integer; ?int=range
+                                                         specification: matches any
+                                                         value from int and up;
+                                                         int?=range specification:
+                                                         matches any value up to int;
+                                                         int?int=range specification:
+                                                         matches values in the range.;
+                                                         +int=position specification:
+                                                         argument number int from the
+                                                         left on the command line;
+                                                         -int=position specification:
+                                                         argument number int from the
+                                                         right on the command line;
+                                                         "int"=invariant specification:
+                                                         match the integer value of a
+                                                         command line argument;
+                                                         "string"=invariant
+                                                         specification: match the string
+                                                         value of a command line
+                                                         argument; "length"=invariant
+                                                         specification: match the length
+                                                         of a string argument
+
+
+Options Valid for Each Transformation
+   --Prefix                           string             Add this prefix to each new
+                                                         generated symbol. This is in
+                                                         addition to the --filePrefix.
+                                                         Default is "_number_" where
+                                                         number is the order number of
+                                                         the transformation given on the
+                                                         command line. You can set this
+                                                         for every transformation.
+                                                         Default=_number_.
+   --Exclude                          string-list        Comma-separated list of the
+                                                         functions to exclude from
+                                                         obfuscation. Useful after an
+                                                         --Functions=* or
+                                                         --Functions=?int option, like
+                                                         this: --Functions=*
+                                                         --Exclude=main
+   --Functions                        IDENTSPEC          The functions to which the
+                                                         transformation should be
+                                                         applied. See below for how to
+                                                         specify a set of functions.
+   --GlobalVariables                  IDENTSPEC          The global variables to which
+                                                         the transformation should be
+                                                         applied. Currently only used
+                                                         for the --Transform=EncodeData
+                                                         transformation.
+   --LocalVariables                   LOCALSPEC          The local variables and formal
+                                                         parameters to which the
+                                                         transformation should be
+                                                         applied. Currently only used
+                                                         for the --Transform=EncodeData
+                                                         transformation.
+
+--Transform=Virtualize                                   Turn a function into an
+                                                         interpreter.
+
+   --VirtualizeShortIdents            bool               Generate shorter identifiers to
+                                                         produce interpreters suitable
+                                                         for publication. Default=false.
+   --VirtualizeIsWindows              bool               Set this to true if you're on
+                                                         Windows rather than a Unix
+                                                         system. Currently only relevant
+                                                         when generating bogus
+                                                         functions.
+   --VirtualizeDispatch               switch, direct,    Select the interpreter's
+                                      indirect, call,    dispatch method.
+                                      ifnest, linear,    Default=switch. switch=dispatch
+                                      binary,            by while(){switch(next){...}};
+                                      interpolation, ?   direct=dispatch by direct
+                                                         threading; indirect=dispatch by
+                                                         indirect threading;
+                                                         call=dispatch by call
+                                                         threading; ifnest=dispatch by
+                                                         nested if-statements;
+                                                         linear=dispatch by searching a
+                                                         table using linear search;
+                                                         binary=dispatch by searching a
+                                                         table using binary search;
+                                                         interpolation=dispatch by
+                                                         searching a table using
+                                                         interpolation search; ?=Pick a
+                                                         random dispatch method
+   --VirtualizeOperands               stack, registers,  Comma-separated list of the
+                                      *, ?               types of operands allowed in
+                                                         the ISA. Default=stack.
+                                                         stack=use stack arguments to
+                                                         instructions; registers=use
+                                                         register arguments to
+                                                         instructions; *=same as
+                                                         stack,registers; ?=select one
+                                                         an argument type at random.
+   --VirtualizeMaxDuplicateOps        INTSPEC            Number of ADD instructions, for
+                                                         example, with different
+                                                         signatures. Default=0.
+   --VirtualizeRandomOps              bool               Should opcodes be randomized,
+                                                         or go from 0..n? Default=true.
+   --VirtualizeSuperOpsRatio          Float>0.0          Desired number of super
+                                                         operators. Default=0.0.
+   --VirtualizeMaxMergeLength         INTSPEC            Longest sequence of
+                                                         instructions to be merged into
+                                                         one. Default=0.
+   --VirtualizeMaxOpaque              INTSPEC            Number of opaques to add to
+                                                         each instruction handler.
+                                                         Default=0.
+   --VirtualizeNumberOfBogusFuns      INTSPEC            Weave the execution of random
+                                                         functions into the execution of
+                                                         the original program. This
+                                                         makes certain kinds of
+                                                         pattern-based dynamic analysis
+                                                         more difficult. Default=0.
+   --VirtualizeBogusFunKinds          trivial, arithSeq, The kind of bogus function to
+                                      collatz, *         generate. Comma-separated list.
+                                                         Default=arithSeq,collatz.
+                                                         trivial=insert a trivial
+                                                         computation; arithSeq=insert a
+                                                         simple arithmetic loop;
+                                                         collatz=insert a computation of
+                                                         the Collatz sequence; *=select
+                                                         all options
+   --VirtualizeBogusLoopKinds         trivial, arithSeq, Insert a bogus loop for each
+                                      collatz, *         instruction list. This will
+                                                         extend the length of the trace,
+                                                         making dynamic analysis more
+                                                         difficult. Default=collatz.
+                                                         trivial=insert a trivial
+                                                         computation; arithSeq=insert a
+                                                         simple arithmetic loop;
+                                                         collatz=insert a computation of
+                                                         the Collatz sequence; *=select
+                                                         all options
+   --VirtualizeBogusLoopIterations    INTSPEC            Adjust this value to balance
+                                                         performance and trace length.
+                                                         Default=0.
+   --VirtualizeReentrant              bool               Make the function reentrant.
+                                                         Default=false.
+   --VirtualizeOptimizeBody           BOOLSPEC           Clean up after superoperator
+                                                         generation by optimizing the
+                                                         body of the generated function.
+                                                         Default=false.
+   --VirtualizeOptimizeTreeCode       BOOLSPEC           Do constant folding etc. prior
+                                                         to interpreter generation.
+                                                         Default=false.
+   --VirtualizeTrace                  bool               Insert tracing code to show the
+                                                         stack and the virtual
+                                                         instructions executing.
+                                                         Default=false.
+   --VirtualizeComment                bool               Insert comments in the
+                                                         generated interpreter.
+                                                         Default=false.
+   --VirtualizeDump                   tree, ISA, instrs, Dump internal data structures
+                                      types, vars,       used by the virtualizer.
+                                      strings, calls,    Comma-separated list.
+                                      bytes, array,      Default=dump nothing. tree=dump
+                                      stack, *           the expression trees generated
+                                                         from the CIL representation;
+                                                         ISA=dump the Instruction Set
+                                                         Architecture; instrs=dump the
+                                                         generated virtual instructions;
+                                                         types=dump the types found;
+                                                         vars=dump the local variables
+                                                         found; strings=dump the strings
+                                                         found; calls=dump the function
+                                                         calls found; bytes=dump the
+                                                         bytecode array; array=dump the
+                                                         instruction array; stack=dump
+                                                         the evaluation stack; *=select
+                                                         all options
+   --VirtualizeImplicitFlow           PCInit, PCUpdate, *Insert implicit flow between
+                                                         the virtual program counter and
+                                                         instruction dispatcher.
+                                                         Default=none. PCInit=insert
+                                                         implcit flow between the
+                                                         computation of the VPC address
+                                                         and the first load;
+                                                         PCUpdate=insert implcit flow
+                                                         for each VPC load (potentially
+                                                         very slow); *=select all
+                                                         options
+   --VirtualizeCopyKinds              counter, unrolled, Comma-separated list of the
+                                      loop, *            kinds of implicit flow to
+                                                         insert between the program
+                                                         counter and the instruction
+                                                         dispatcher. Default=all
+                                                         options. counter=Copy a
+                                                         variable by counting up to its
+                                                         value.; unrolled=Copy a
+                                                         variable bit-by-bit, each bit
+                                                         tested by an if-statement.;
+                                                         loop=Loop over the bits in a
+                                                         variable, and copy each bit by
+                                                         testing in an if-statement.;
+                                                         *=Same as all options turned
+                                                         on.
+
+--Transform=Flatten                                      Flatten a function using Chenxi
+                                                         Wang's algorithm
+
+   --FlattenDispatch                  switch, goto,      Dispatch method.
+                                      indirect, ?        Default=switch. switch=dispatch
+                                                         by while(1) {switch (next)
+                                                         {blocks}}; goto=dispatch by
+                                                         {labl1: block1; goto block2;};
+                                                         indirect=dispatch by goto*
+                                                         (jtab[next]); ?=select an
+                                                         dispatch method at random.
+   --FlattenObfuscateNext             BOOLSPEC           Whether the dispatch variable
+                                                         should be obfuscated with
+                                                         opaque expressions or not.
+                                                         Default=true.
+   --FlattenOpaqueStructs             list, array, *     Type of opaque predicate to
+                                                         use. Traditionally, for this
+                                                         transformation, array is used.
+                                                         Default=array. list=Generate
+                                                         opaque expressions using linked
+                                                         lists; array=Generate opaque
+                                                         expressions using arrays;
+                                                         *=Same as list,array
+   --FlattenSplitBasicBlocks          BOOLSPEC           If true, then basic blocks
+                                                         (sequences of assignment and
+                                                         call statements without
+                                                         intervening branches) will be
+                                                         split up into indiviual blocks.
+                                                         If false, they will be kept
+                                                         intact. Default=true.
+   --FlattenTrace                     bool               Print a message before each
+                                                         block gets executed. Useful for
+                                                         debugging. Default=false.
+
+--Transform=Jit                                          Turn a function into a sequence
+                                                         of instructions that
+                                                         dynamically builds up the
+                                                         function at runtime.
+
+   --JitFrequency                     INTSPEC            How often to jit the code at
+                                                         runtime. 0=only the first time;
+                                                         n>0=Every n:th time the
+                                                         function is called.
+                                                         Default=true.
+   --JitOptimizeBinary                INTSPEC            Optimize the jitted binary
+                                                         code. 1=omit frame pointer,
+                                                         2=omit unused assignments,
+                                                         4=merge ADDs and MULs.
+                                                         Default=1|4=5.
+   --JitImplicitFlow                  BOOLSPEC           Insert implicit flow to the
+                                                         generated function handle.
+                                                         Default=false.
+   --JitCopyKinds                     counter,           Comma-separated list of the
+                                      counter_signal,    kinds of implicit flow to
+                                      bitcopy_unrolled,  insert. counter_signal and
+                                      bitcopy_loop,      bitcopy_signal require that
+                                      bitcopy_signal, *  --Transform=InitImplicitFlow
+                                                         --InitImplicitFlowCount=... has
+                                                         been called to create the
+                                                         signal handlers. Default=all
+                                                         options. counter=Copy a
+                                                         variable by counting up to its
+                                                         value.; counter_signal=Copy a
+                                                         variable by counting up to its
+                                                         value in a signal handler.;
+                                                         bitcopy_unrolled=Copy a
+                                                         variable bit-by-bit, each bit
+                                                         tested by an if-statement.;
+                                                         bitcopy_loop=Loop over the bits
+                                                         in a variable and copy each bit
+                                                         by testing in an if-statement.;
+                                                         bitcopy_signal=Loop over the
+                                                         bits in a variable and copy
+                                                         each bit in a signal handler.;
+                                                         *=Same as all options turned
+                                                         on.
+   --JitObfuscateHandle               BOOLSPEC           Add an opaque predicate to the
+                                                         generated function handle.
+                                                         Default=false.
+   --JitObfuscateArguments            BOOLSPEC           Add bogus arguments and opaque
+                                                         predicates to the jit_add_op
+                                                         function calls. Default=false.
+   --JitDumpOpcodes                   BOOLSPEC           Print the jitter's bytecode.
+                                                         Default=false.
+   --JitDumpTree                      BOOLSPEC           Print the tree representation
+                                                         of the function, prior to
+                                                         generating the jitting code."
+                                                         Default=false.
+   --JitDumpIntermediate              BOOLSPEC           Print the generated
+                                                         intermediate code at
+                                                         translation time."
+                                                         Default=false.
+   --JitDumpBinary                    BOOLSPEC           Print the generated machine
+                                                         code. Useful for debugging.
+                                                         Requires 'objdump' to be
+                                                         installed. Default=false.
+   --JitTrace                         BOOLSPEC           Insert runtime tracing of
+                                                         instructions. Default=false.
+
+--Transform=Split                                        Outline pieces of a function
+
+   --SplitKinds                       top, block, deep,  Comma-separated list specifying
+                                      recursive          the order in which different
+                                                         split methods are attempted.
+                                                         Default=top,block,deep,recursive.
+                                                         top=split the top-level list of
+                                                         statements into two functions
+                                                         funcname_split_1 and
+                                                         funcname_split_2.; block=split
+                                                         a basic block (list of
+                                                         assignment and call statements)
+                                                         into two functions.; deep=split
+                                                         out a nested control structure
+                                                         of at least height>2 into its
+                                                         own function funcname_split_1.;
+                                                         recursive=same as block, but
+                                                         calls to split functions are
+                                                         also allowed to be split out.
+   --SplitCount                       INTSPEC            How many times to attempt the
+                                                         split. Default=1.
+   --SplitName                        string             If set, the split out functions
+                                                         will be named
+                                                         prefix_name_number, otherwise
+                                                         they will be named
+                                                         prefix_originalName_split_number.
+
+--Transform=Merge                                        Merge of two or more functions.
+                                                         Two different types of merge
+                                                         are supported: simple merge (if
+                                                         () function1 else if ()
+                                                         function2 else ...) and flatten
+                                                         merge, where the functions are
+                                                         first flattened, and then the
+                                                         resulting blocks are woven
+                                                         together. This transformation
+                                                         modifies the signature of the
+                                                         function (an extra formal
+                                                         selector argument is added that
+                                                         selects between the constituent
+                                                         functions at runtime), and this
+                                                         cannot be done for functions
+                                                         whose address is taken.
+                                                         --Functions=\* merges together
+                                                         all functions in the program
+                                                         whose signatures can be
+                                                         changed, --Functions=%50 merges
+                                                         together about half of them,
+                                                         etc. It is a good idea to
+                                                         follow this transform by a
+                                                         RndArgs transform to hide the
+                                                         extra selector argument.
+
+   --MergeName                        string             If set, the merged function
+                                                         will be named prefix_name,
+                                                         otherwise it will be named
+                                                         prefix_originalName1_originalName2.
+                                                         Note that it's unpredictable
+                                                         which function will be the
+                                                         first and the second, so it's
+                                                         better to set the merged named
+                                                         explicitly.
+   --MergeObfuscateSelect             BOOLSPEC           Whether the extra parameter
+                                                         passed to the merged function
+                                                         should be obfuscated with
+                                                         opaque expressions or not.
+                                                         Default=true.
+   --MergeOpaqueStructs               list, array, *     Type of opaque predicate to
+                                                         use. Traditionally, for this
+                                                         transformation, array is used.
+                                                         Default=array. list=Generate
+                                                         opaque expressions using linked
+                                                         lists; array=Generate opaque
+                                                         expressions using arrays;
+                                                         *=Same as list,array
+   --MergeFlatten                     BOOLSPEC           Whether to flatten before
+                                                         merging or not. Default=true.
+   --MergeFlattenDispatch             switch, goto,      Dispatch method used for
+                                      indirect, ?        flattened merge.
+                                                         Default=switch. switch=dispatch
+                                                         by while(1) {switch (next)
+                                                         {blocks}}; goto=dispatch by
+                                                         {labl1: block1; goto block2;};
+                                                         indirect=dispatch by goto*
+                                                         (jtab[next]); ?=select an
+                                                         dispatch method at random.
+
+--Transform=RndArgs                                      Randomize the order of
+                                                         arguments to a function and add
+                                                         extra bogus arguments.
+
+   --RndArgsBogusNo                   INTSPEC            Number of bogus arguments to
+                                                         add. Default=0.
+
+--Transform=InitOpaque                                   Add opaque initialization code.
+                                                         This initialization code has to
+                                                         be added to a function that
+                                                         gets called before any uses of
+                                                         opaque predicates, usually, but
+                                                         not necessarily, to main.
+
+   --InitOpaqueStructs                list, array, *     Comma-separated list of the
+                                                         kinds of opaque constructs to
+                                                         add. Default=list,array.
+                                                         list=Generate opaque
+                                                         expressions using linked lists;
+                                                         array=Generate opaque
+                                                         expressions using arrays;
+                                                         *=Same as list,array
+   --InitOpaqueCount                  INTSPEC            How many opaque data structures
+                                                         (lists or arrays) to add to the
+                                                         program. They will be split
+                                                         roughly evenly between the
+                                                         different declared opaque
+                                                         structures. Default=1.
+   --InitOpaqueSize                   INTSPEC            Size of opaque arrays.
+                                                         Default=30.
+
+--Transform=AddOpaque                                    Add opaque predicates to split
+                                                         up control-flow.
+
+   --AddOpaqueCount                   INTSPEC            How many opaques to add to each
+                                                         function. Default=1.
+   --AddOpaqueKinds                   call, bug, true,   Comma-separated list of the
+                                      junk, fake, *      types of insertions of bogus
+                                                         computation allowed.
+                                                         Default=<tt>call,bug,true,junk</tt>.
+                                                         call=if (false)
+                                                         RandomFunction(); bug=if
+                                                         (false) BuggyStatement else
+                                                         RealStatement; true=if (true)
+                                                         RealStatement; junk=if (false)
+                                                         asm(".byte random bytes");
+                                                         fake=if (False)
+                                                         NonExistingFunction(); *=Turns
+                                                         all options on.
+
+--Transform=UpdateOpaque                                 Add code that makes updates to
+                                                         opaque predicates.
+
+   --UpdateOpaqueCount                INTSPEC            How many updates to opaque data
+                                                         structures to add to the
+                                                         function. Default=1.
+   --UpdateOpaqueAllowAddNodes        bool               Is it safe to malloc new nodes
+                                                         for the opaque data structure
+                                                         in this function? Only set to
+                                                         true if the function is called
+                                                         sparingly. Default=false.
+
+--Transform=InitEntropy                                  Add initialization of the
+                                                         entropy variables.
+
+
+--Transform=UpdateEntropy                                Add updates to the entropy
+                                                         variables.
+
+   --UpdateEntropyVar                 IDENTSPEC          Add to the entropy variables
+                                                         from these variables.
+                                                         Default=*.
+
+--Transform=EncodeLiterals                               Replace literal integers and
+                                                         strings with less obvious
+                                                         expressions.
+
+   --EncodeLiteralsKinds              integer, string, * Specify the types of literals
+                                                         to encode
+                                                         Default=integer,string.
+                                                         integer=Replace literal
+                                                         integers with opaque
+                                                         expressions; string=Replace
+                                                         literal strings with calls to a
+                                                         function that generates them;
+                                                         *=Same as integer,string
+   --EncodeLiteralsEncoderName        string             The name of the generated
+                                                         encoder function (only for
+                                                         encoded strings). Default=None.
+
+--Transform=EncodeArithmetic                             Replace integer arithmetic with
+                                                         more complex expressions.
+
+   --EncodeArithmeitKinds             integer            Specify the types to encode.
+                                                         Currently, only integer is
+                                                         available. Default=integer.
+                                                         integer=Replace integer
+                                                         arithmetic.
+
+--Transform=EncodeData                                   Replace integer variables with
+                                                         a different encoding. Use
+                                                         --GlobalVariables and
+                                                         --LocalVariables to specify the
+                                                         variables that should be
+                                                         transformed. In addition to the
+                                                         variables specifed, any other
+                                                         variables that are related
+                                                         through aliasing will be
+                                                         transformed. Only integer
+                                                         variables, arrays of integers,
+                                                         and pointers to integers are
+                                                         currently supported. Avoid
+                                                         structs, since our alias
+                                                         analysis algorithm conflates
+                                                         all fields.
+
+   --EncodeDataCodecs                 poly1, xor, add, * Comma-separated list of the
+                                                         kinds of codecs that may be
+                                                         used. Only poly1 currently
+                                                         makes sense; avoid the others.
+                                                         Default=poly1. poly1=Linear
+                                                         transformation of the form
+                                                         a*x+b.; xor=Exclusive-or with a
+                                                         constant.; add=Add a constant
+                                                         and promote to next largest
+                                                         integer type. Will fail for the
+                                                         largest integer type.; *=Same
+                                                         as poly1,xor,add
+
+--Transform=InitBranchFuns                               Create branch functions.
+
+   --InitBranchFunsOpaqueStructs      list, array, *     Comma-separated list of the
+                                                         kinds of opaque constructs to
+                                                         use for branch functions.
+                                                         Default=list,array.
+                                                         list=Generate opaque
+                                                         expressions using linked lists;
+                                                         array=Generate opaque
+                                                         expressions using arrays;
+                                                         *=Same as list,array
+   --InitBranchFunsCount              INTSPEC            How many branch functions to
+                                                         create. Default=1.
+   --InitBranchFunsObfuscate          BOOLSPEC           Obfuscate the branch function.
+                                                         Default=true.
+
+--Transform=AntiBranchAnalysis                           Replace branches with other
+                                                         constructs.
+
+   --AntiBranchAnalysisKinds          branchFuns,        Comma-separated list of the
+                                      goto2call,         kinds of constructs branches
+                                      goto2push, *       can be replaced with.
+                                                         Default=branchFuns.
+                                                         branchFuns=Generate calls to
+                                                         branch functions.
+                                                         --Transform=InitBranchFuns must
+                                                         be given prior to this
+                                                         transform; goto2call=Replace
+                                                         goto L with push L; call lab;
+                                                         ret; lab: ret;
+                                                         goto2push=Replace goto L with
+                                                         push L; ret; *=Same as
+                                                         branchFuns,goto2call,goto2push
+   --AntiBranchAnalysisBranchFunOpaqueStructslist, array, *Comma-separated list of the
+                                                         kinds of opaque constructs to
+                                                         use in a call to a branch
+                                                         function. Default=list,array.
+                                                         list=Generate opaque
+                                                         expressions using linked lists;
+                                                         array=Generate opaque
+                                                         expressions using arrays;
+                                                         *=Same as list,array
+   --AntiBranchAnalysisObfuscateBranchFunCallBOOLSPEC    Obfuscate the branch function
+                                                         call Default=true.
+   --AntiBranchAnalysisBranchFunFlattenBOOLSPEC          Flatten before replacing jumps.
+                                                         This opens up more
+                                                         opportunities for replacing
+                                                         unconditional branches.
+                                                         Default=true.
+   --AntiBranchAnalysisBranchFunAddressOffsetinteger     The offset (in bytes) of the
+                                                         return address on the stack,
+                                                         for branch functions. May
+                                                         differ based on operating
+                                                         system, word size, and
+                                                         compiler. Default=8.
+
+--Transform=InitImplicitFlow                             Call this before
+                                                         --Transform=AntiTaintAnalysis,
+                                                         in case you want to use the
+                                                         implicit flow copy kinds
+                                                         counter_signal and
+                                                         bitcopy_signal. This
+                                                         transformation inserts the
+                                                         requisite signal handlers.
+
+   --InitImplicitFlowCount            INTSPEC            How many signal handlers to
+                                                         insert. Default=0.
+
+--Transform=AntiTaintAnalysis                            Transform the code by inserting
+                                                         implicit flow such that dynamic
+                                                         taint analysis becomes less
+                                                         precise.
+
+   --AntiTaintAnalysisKinds           untaintArgv,       Comma-separated list of the
+                                      untaintSysCalls, * kinds of anti-taint analysis
+                                                         transformations to employ.
+                                                         Default=none.
+                                                         untaintArgv=Insert implicit
+                                                         flow from argv and argc in
+                                                         main.; untaintSysCalls=Insert
+                                                         implicit flow from output
+                                                         variables of common system
+                                                         calls.; *=Same as all options
+                                                         turned on.
+   --AntiTaintAnalysisSysCalls        getpid, scanf, *   Comma-separated list of the
+                                                         system calls whose output
+                                                         should be passed through
+                                                         implicit flow. Only two calls
+                                                         are currently implemented.
+                                                         Default=all system calls.
+                                                         getpid=Insert implicit flow to
+                                                         the output of getpid.;
+                                                         scanf=Insert implicit flow to
+                                                         the output of scanf.; *=Same as
+                                                         all options turned on.
+   --AntiTaintAnalysisCopyKinds       counter,           Comma-separated list of the
+                                      counter_signal,    kinds of implicit flow to
+                                      bitcopy_unrolled,  insert. counter_signal and
+                                      bitcopy_loop,      bitcopy_signal require that
+                                      bitcopy_signal, *  --Transform=InitImplicitFlow
+                                                         --InitImplicitFlowCount=... has
+                                                         been called to create the
+                                                         signal handlers. Default=all
+                                                         options. counter=Copy a
+                                                         variable by counting up to its
+                                                         value.; counter_signal=Copy a
+                                                         variable by counting up to its
+                                                         value in a signal handler.;
+                                                         bitcopy_unrolled=Copy a
+                                                         variable bit-by-bit, each bit
+                                                         tested by an if-statement.;
+                                                         bitcopy_loop=Loop over the bits
+                                                         in a variable and copy each bit
+                                                         by testing in an if-statement.;
+                                                         bitcopy_signal=Loop over the
+                                                         bits in a variable and copy
+                                                         each bit in a signal handler.;
+                                                         *=Same as all options turned
+                                                         on.
+
+--Transform=AntiAliasAnalysis                            Transform the code by replacing
+                                                         direct function calls with
+                                                         indirect ones, making alias
+                                                         analysis become less precise.
+
+   --AntiAliasAnalysisObfuscateIndex  BOOLSPEC           Use opaque expressions to
+                                                         compute function addresses.
+                                                         Default=true.
+   --AntiAliasAnalysisBogusEntries    BOOLSPEC           Add bogus function addresses,
+                                                         and bogus updates to them.
+                                                         Default=true.
+
+--Transform=RandomFuns                                   Generate a random function
+                                                         useful as an attack target.
+
+   --RandomFunsInputSize              INTSPEC            Size of input. Default=1.
+   --RandomFunsStateSize              INTSPEC            Size of internal state.
+                                                         Default=1.
+   --RandomFunsOutputSize             INTSPEC            Size of output. Default=1.
+   --RandomFunsCodeSize               INTSPEC            Size of the generated code.
+                                                         Currently only 0 (empty body)
+                                                         and 1 (arbitrary non-zero size)
+                                                         make sense. Default=1.
+   --RandomFunsType                   int, long, float,  Type of input/output/state.
+                                      double             Default=long. int=C int type;
+                                                         long=C long type; float=C float
+                                                         type; double=C double type
+   --RandomFunsName                   string             The name of the generated
+                                                         function.
+   --RandomFunsFailureKind            message, abort,    The manner in which a triggered
+                                      segv               asset may fail. Comma-separated
+                                                         list. Default=segv.
+                                                         message=Print a message.;
+                                                         abort=Call the abort function.;
+                                                         segv=Die with a segmentation
+                                                         fault.
+   --RandomFunsActivationCode         int                The code the user has to enter
+                                                         (as the first command line
+                                                         arguments) to be allowed to run
+                                                         the program. Default=42.
+   --RandomFunsPassword               string             The password the user has to
+                                                         enter (read from standar input)
+                                                         to be allowed to run the
+                                                         program. Default="42".
+   --RandomFunsTimeCheckCount         int                The number of checks for
+                                                         expired time (gettimeofday() >
+                                                         someTimeInThePast) to be
+                                                         inserted in the program.
+                                                         Default=0.
+   --RandomFunsActivationCodeCheckCountint               The number of checks for
+                                                         correct activation code to be
+                                                         inserted in the program.
+                                                         Default=0.
+   --RandomFunsPasswordCheckCount     int                The number of checks for
+                                                         correct password to be inserted
+                                                         in the program. Probably only 0
+                                                         and 1 make sense here, since
+                                                         the user will be prompted for a
+                                                         password once for every check.
+                                                         Default=0.
+
+
+Transformation: Leak
+
+--Transform=CleanUp                                      Transformation to run last, to
+                                                         clean up the generated code.
+
+   --CleanUpKinds                     names, annotations,Specify types of cleanup to
+                                      constants,         perform
+                                      randomize, *       Default=names,annotations,constants.
+                                                         names=Replace identifiers with
+                                                         less obvious ones;
+                                                         annotations=Remove annotations
+                                                         that Tigress uses internally.
+                                                         Tigress should not be called
+                                                         again on a file that has had
+                                                         annotations removed;
+                                                         constants=Fold constant
+                                                         expressions; randomize=Randomly
+                                                         reorder functions in the output
+                                                         file; *=Same as
+                                                         names,annotations,constants
+
+--Transform=Info                                         Print internal information.
+
+   --InfoKind                         cfg, fun, linear,  Information to print. For cfg,
+                                      WS, DG, CG, alias, fun, and linear use
+                                      global             --Functions, as usual, to
+                                                         specify which functions to
+                                                         print. cfg=Control Flow Graph;
+                                                         fun=Function in internal
+                                                         format; linear=Function in
+                                                         internal linearized block
+                                                         format (used as a starting
+                                                         point for flattening and branch
+                                                         functions); WS=Working Set;
+                                                         DG=Dependency Graph; CG=Call
+                                                         Graph; alias=Print the
+                                                         pointer-graphs; global=List of
+                                                         global symbols in the original
+                                                         program.
+
+End-of-message
+
+   exit 0
+fi
+
+########################################################################################
+# Install
+########################################################################################
+if [ "$1" == "--install" ] || [ "$1" == "--Install" ] || [ "$1" == "-install" ] || [ "$1" == "-Install" ]
+then
+cat <<"End-of-message"
+Set the TIGRESS_HOME environment variable to the directory in which the tigress binary resides.
+Also put this directory on your PATH.
+In the C-shell, you can do
+   > setenv TIGRESS_HOME /PATH_TO/tigress-unstable
+   > setenv PATH /PATH_TO/tigress-unstable:$PATH
+You can put these in your .cshrc file.
+
+In the Bourne shell, you can do
+   > export TIGRESS_HOME=/PATH_TO/tigress-unstable  
+   > export PATH=$PATH:/PATH_TO/tigress-unstable
+End-of-message
+
+   exit 0
+fi
+
+########################################################################################
+# Testing
+########################################################################################
+if [ "$1" == "--test" ] || [ "$1" == "--Test" ] || [ "$1" == "-test" ] || [ "$1" == "-Test" ]
+then
+cat <<"End-of-message"
+Tigress comes with a suite of simple test cases that you can run to ensure
+proper installation on your platform:
+   > cd $TIGRESS_HOME
+   > unzip simple-tests.zip
+   > cd simple
+   > make
+Please report if any tests fail on your system.
+End-of-message
+
+   exit 0
+fi
+
+########################################################################################
+# Check that environment vars have been set properly.
+########################################################################################
+if [ "$OSTYPE" == "darwin" ]
+then
+   OPTIONS="-fgnu89-inline -Wno-builtin-requires-header"
+else
+   OPTIONS=""
+fi
+
+if [ -z "$TIGRESS_HOME" ]
+then
+   echo "Please set the TIGRESS_HOME environment variable to the directory in which the tigress binary resides."
+   echo "Also put this directory on your PATH."
+   exit -1
+fi
+
+########################################################################################
+# Generate random operators for the jitter.
+########################################################################################
+opcodes=(JIT_ADD JIT_ADDC JIT_ADDX JIT_ALLOCA JIT_AND JIT_BEQ JIT_BGE JIT_BGT JIT_BLE JIT_BLT JIT_BMC JIT_BMS JIT_BNE JIT_BOADD JIT_BOSUB JIT_BNOADD JIT_BNOSUB JIT_CALL JIT_CEIL JIT_CODESTART JIT_DECL_ARG JIT_DIV JIT_EQ JIT_EXT JIT_FADD JIT_FBEQ JIT_FBGE JIT_FBGT JIT_FBLE JIT_FBLT JIT_FBNE JIT_FDIV JIT_FLD JIT_FLDX JIT_FLOOR JIT_FMOV JIT_FMUL JIT_FNEG JIT_FPUTARG JIT_FRET JIT_FRETVAL JIT_FRSB JIT_FST JIT_FSTX JIT_FSUB JIT_GE JIT_GETARG JIT_GT JIT_HMUL JIT_JMP JIT_LABEL JIT_LD JIT_LDX JIT_LE JIT_LREG JIT_LSH JIT_LT JIT_MOD JIT_MOV JIT_MSG JIT_MUL JIT_NE JIT_NEG JIT_NOP JIT_NOT JIT_OR JIT_PATCH JIT_PREPARE JIT_PROLOG JIT_PUTARG JIT_RENAMEREG JIT_RET JIT_RETVAL JIT_ROUND JIT_RSB JIT_RSH JIT_ST JIT_STX JIT_SUB JIT_SUBC JIT_SUBX JIT_SYNCREG JIT_TRUNC JIT_UREG JIT_XOR JIT_X86_STI JIT_X86_STXI JIT_X86_ADDMUL JIT_X86_ADDIMM JIT_DATA_BYTE JIT_DATA_BYTES JIT_DATA_REF_CODE JIT_DATA_REF_DATA JIT_CODE_ALIGN JIT_REF_CODE JIT_REF_DATA JIT_FULL_SPILL JIT_COMMENT JIT_FORCE_SPILL JIT_FORCE_ASSOC JIT_TRACE JIT_MEMCPY JIT_MEMSET JIT_MARK JIT_TOUCH JIT_TRANSFER JIT_TRANSFER_CPY JIT_TRANSFER_XOR JIT_TRANSFER_AND JIT_TRANSFER_OR JIT_TRANSFER_ADD JIT_TRANSFER_ADDS JIT_TRANSFER_SUB JIT_TRANSFER_SUBS)
+
+
+size=${#opcodes[*]}
+max=$(( 32768 / size * size ))
+
+for ((i=size-1; i>0; i--)); do
+   while (( (rand=$RANDOM) >= max )); do :; done
+   rand=$(( rand % (i+1) ))
+   tmp=${opcodes[i]} opcodes[i]=${opcodes[rand]} opcodes[rand]=$tmp
+done
+
+echo "typedef enum JIT_OPCODE {" > "$TIGRESS_HOME/opcodes.c"
+for ((i=0; i<size; i++)); do
+   echo "   ${opcodes[i]} = $i << 3," >> "$TIGRESS_HOME/opcodes.c"
+done
+echo "} jit_opcode;" >> "$TIGRESS_HOME/opcodes.c"
+echo "jit_opcode dummy_opcode;" >> "$TIGRESS_HOME/opcodes.c"
+cat "$TIGRESS_HOME/opcodes.c" "$TIGRESS_HOME/jitter_template-i386.c" > "$TIGRESS_HOME/jitter-i386.c"
+cat "$TIGRESS_HOME/opcodes.c" "$TIGRESS_HOME/jitter_template-amd64.c" > "$TIGRESS_HOME/jitter-amd64.c"
+cat "$TIGRESS_HOME/opcodes.c" "$TIGRESS_HOME/jitter_template-sparc.c" > "$TIGRESS_HOME/jitter-sparc.c"
+cat "$TIGRESS_HOME/opcodes.c" "$TIGRESS_HOME/jitter_template-arm32.c" > "$TIGRESS_HOME/jitter-arm32.c"
+
+
+########################################################################################
+# Call cilly with the appropriate options.
+########################################################################################
+#$TIGRESS_HOME/cilly --bytecode --doObf $OPTIONS "$@"
+$TIGRESS_HOME/cilly --doObf $OPTIONS "$@"
+
+
+

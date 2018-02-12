@@ -1,0 +1,29 @@
+--------------------------------------------------------------------
+-> tigress-4-challenge-3
+	Instructions executed: 77813377
+	Unique Instructions executed: 3894
+	Functions simulated: 14
+	Time of analysis: 7378.923646 seconds
+	Command being timed: "./solve-vm.py ./tigress-challenges/tigress-4-challenge-3"
+	User time (seconds): 7368.82
+	System time (seconds): 31.90
+	Percent of CPU this job got: 96%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:08:27
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 15578556
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 3448496
+	Minor (reclaiming a frame) page faults: 22649640
+	Voluntary context switches: 3457974
+	Involuntary context switches: 134775
+	Swaps: 0
+	File system inputs: 94400864
+	File system outputs: 64
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

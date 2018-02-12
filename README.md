@@ -3,7 +3,7 @@
 > [Tigress](http://tigress.cs.arizona.edu/) is a diversifying virtualizer/obfuscator for the C language that supports many novel defenses against both static and dynamic reverse engineering and de-virtualization attacks.
 > In particular, Tigress protects against static de-virtualization by generating virtual instruction sets of arbitrary complexity and diversity, by producing interpreters with multiple types of instruction dispatch, and by inserting code for anti alias analysis. Tigress protects against dynamic de-virtualization by merging the real code with bogus functions, by inserting implicit flow, and by creating slowly-executing reenetrant interpreters. Tigress implements its own version of code packing through the use of runtime code generation. Finally, Tigress' dynamic transformation provides a generalized form of continous runtime code modification.
 
-# VMs descriptions
+# Tigress Challenge
 
 Tigress team has provided some [challenges](http://tigress.cs.arizona.edu/challenges.html#current) where we can find different kind of protections
 
@@ -15,7 +15,7 @@ Tigress team has provided some [challenges](http://tigress.cs.arizona.edu/challe
 * **VM-5**: One level of virtualization, one level of jitting, implicit flow.
 * **VM-6**: Two levels of jitting, implicit flow.
 
-# Challenge
+# Challenge Format
 
 All challenges take as input a number and return a hash. Example:
 
@@ -43,20 +43,21 @@ Our goals were to:
 
 * Symbolically extract the hash algorithm
 * Simplify these symbolic expressions
-* Provide python scripts where we can get the hash from a given input **and** get input collisions from a given hash
 * Provide a new simplified version of the binary
 
 And all of this with only one generic script :). To do so, we made in the following order:
 
+* Parse protected binaries with [LIEF](https://github.com/lief-project/LIEF/)
 * Symbolically emulate the obfuscated binary with [Triton](https://github.com/JonathanSalwan/Triton)
 * Concretize everything which are not related to the user input.
-* Extract the hash algorithm and create `input->hash` and `hash->inputs` using [templates](templates.py)
 * Convert Triton's expressions to the [Arybo's](https://github.com/quarkslab/arybo) expressions
 * Convert Arybo's expressions to the LLVM-IR representation
 * Apply LLVM optimizations (O2)
 * Rebuild a simplified binary version
 
 If you want more information, you can checkout our [solve-vm.py](solve-vm.py) script.
+
+![Deobfuscation Process](misc/deobfuscation_process.png)
 
 # solve-vm.py
 
@@ -70,9 +71,7 @@ $ ./solve-vm.py ./obfuscated_binaries/_binary_
 Example:
 
 <pre>
-$ ./solve-vm.py ./obfuscated_binaries/tigress-0-challenge-0
-./solve-vm.py:441: SyntaxWarning: name 'VM_INPUT' is assigned to before global declaration
-  global VM_INPUT
+$ ./solve-vm.py ./tigress-challenges/tigress-0-challenge-0
 [+] Loading 0x400040 - 0x400238
 [+] Loading 0x400238 - 0x400254
 [+] Loading 0x400000 - 0x400f14
@@ -87,27 +86,23 @@ $ ./solve-vm.py ./obfuscated_binaries/tigress-0-challenge-0
 [+] Hooking strtoul
 [+] Starting emulation.
 [+] __libc_start_main hooked
-[+] argv[0] = ./obfuscated_binaries/tigress-0-challenge-0
+[+] argv[0] = ./tigress-challenges/tigress-0-challenge-0
 [+] argv[1] = 1234
 [+] strtoul hooked
 [+] Symbolizing the strtoul return
 [+] printf hooked
 3035321144166078008
 [+] Slicing end-point user expression
-[+] Instruction executed: 39817
+[-] Instruction not supported: 0x400539: hlt
+[+] Instruction executed: 39816
+[+] Unique instruction executed: 458
 [+] PC len: 0
 [+] Emulation done.
-[+] Generating symbolic_expressions/./tigress-0-challenge-0_input_to_hash.py
-[+] Generating symbolic_expressions/./tigress-0-challenge-0_hash_to_input.py
+[+] Generating symbolic_expressions/tigress-0-challenge-0.py
 [+] Converting symbolic expressions to an LLVM module...
-warning: overriding the module target triple with x86_64-pc-linux-gnu [-Woverride-module]
-1 warning generated.
-[+] LLVM module wrote in llvm_expressions/./tigress-0-challenge-0.ll
+[+] LLVM module wrote in llvm_expressions/tigress-0-challenge-0.ll
 [+] Recompiling deobfuscated binary...
-warning: overriding the module target triple with x86_64-pc-linux-gnu [-Woverride-module]
-1 warning generated.
-[+] Deobfuscated binary recompiled: deobfuscated_binaries/./tigress-0-challenge-0.deobfuscated
-$
+[+] Deobfuscated binary recompiled: deobfuscated_binaries/tigress-0-challenge-0.deobfuscated
 </pre>
 
 Then, symbolic expressions can be found [here](symbolic_expressions), LLVM representations can be found [here](llvm_expressions)
@@ -115,10 +110,10 @@ and recompiled binaries can be found [here](deobfuscated_binaries).
 
 # Testing our simplified binaries
 
-As we simplified and recompiled new binaries, we must provide the same behavior of the original binaries. So, to test our binary versions we use this [script](testing_equality.py).
+As we simplified and recompiled new binaries, we must provide the same behavior of the original binaries. So, to test our binary versions we use this [script](scripts/testing_equality.py).
 
 <pre>
-$ ./testing_equality.py ./obfuscated_binaries/tigress-0-challenge-0 ./deobfuscated_binaries/tigress-0-challenge-0.deobfuscated
+$ ./scripts/testing_equality.py ./tigress-challenges/tigress-0-challenge-0 ./deobfuscated_binaries/tigress-0-challenge-0.deobfuscated
 [...]
 [+] Success with 272966812638982633
 [+] Success with 2304147855662358786
@@ -135,17 +130,9 @@ $ ./testing_equality.py ./obfuscated_binaries/tigress-0-challenge-0 ./deobfuscat
 
 Basically, this script runs the obfuscated and the deobfuscated binaries with random inputs and checks if they have the same output results.
 
-# Benchmarks
+# Regarding the Tigress challenge, what did we solve?
 
-## Time of extraction per trace
-
-![Time per trace](pictures/time_per_trace.png)
-
-**Edit**: With the new `triton dev-v0.6` branch we are able to solve the `challenge-0004-3` with only 20GB of RAM.
-
-# Solving
-
-We fully solved these following challenges:
+We fully solved these following Tigress challenges:
 
 * **0000**: 0,1,2,4
 * **0001**: 0,1,2,3,4
@@ -153,11 +140,45 @@ We fully solved these following challenges:
 * **0003**: 0,1,2,3,4
 * **0004**: 0,1,2,3,4
 
+# Testing our approach on others binaries
+
+We also pick up 20 hash algorithms (10 well-known, 10 from the Tigress challenge) and we protected each one of these algorithms
+using 46 different Tigress protections (see next section). At the end, we have a test bench of 920 protected binaries. Each one of these protected
+binaries has been successfully devirtualized using the `solve-vm.py` script. These hash algorithms can be found in the [samples](samples)
+directory and their devirtualized versions into the [deobfuscated_binaries](deobfuscated_binaries) directory. The following table is a summary of
+our results regarding our 920 samples.
+
+![Summary of results](misc/summary_of_results.png)
+
+# Regarding Tigress protections, what did we break?
+
+* Anti Branch Analysis (options: goto2push, goto2call, branchFuns)
+* Max Merge Length (options: 0, 10, 20, 30)
+* Bogus Function (options: 0, 1, 2, 3)
+* Kind of Operands (options: stack, registers)
+* Opaque to VPC (options: true, false)
+* Bogus Loop Iterations (options: 0, 1, 2, 3)
+* Super Operator Ratio (options: 0, 0.2, 0.4, 0.6, 0.8, 1.0)
+* Random Opcodes (options: true, false)
+* Duplicate Opcodes (options: 0, 1, 2, 3)
+* Dispatcher (options: binary, direct, call, interpolation, indirect, switch, ifnest, linear)
+* Encode Byte Array (options: true, false)
+* Obfuscate Decoder (options: true, false)
+* Nested VMs (options: 1, 2, 3)
+
+For more information about these options see pages [1](http://tigress.cs.arizona.edu/options.html) and [2](http://tigress.cs.arizona.edu/transformPage/docs/virtualize/index.html).
+
 # Publication
 
-* [french paper](http://shell-storm.org/talks/SSTIC2017-Article-desobfuscation_binaire_reconstruction_de_fonctions_virtualisees-salwan_potet_bardin.pdf)
-* [english slide](http://shell-storm.org/talks/SSTIC2017_Deobfuscation_of_VM_based_software_protection.pdf)
-* [french video](https://static.sstic.org/videos2017/SSTIC_2017-06-07_P08.mp4)
+* [SSTIC - french paper](http://shell-storm.org/talks/SSTIC2017-Article-desobfuscation_binaire_reconstruction_de_fonctions_virtualisees-salwan_potet_bardin.pdf)
+* [SSTIC - english slide](http://shell-storm.org/talks/SSTIC2017_Deobfuscation_of_VM_based_software_protection.pdf)
+* [SSTIC - french video](https://static.sstic.org/videos2017/SSTIC_2017-06-07_P08.mp4)
+
+# Authors
+
+* [Sébastien Bardin](http://sebastien.bardin.free.fr/) (CEA-LIST)
+* [Marie-Laure Potet](https://www-verimag.imag.fr/~potet/) (VERIMAG)
+* [Jonathan Salwan](https://twitter.com/JonathanSalwan) (Quarkslab)
 
 # Thanks to
 

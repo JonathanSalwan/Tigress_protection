@@ -1,0 +1,30 @@
+The file "jitter.c" is a slightly modified version of
+myJit, which can be downloaded from here:
+   http://sourceforge.net/projects/myjit/
+
+MyJit's website is here:
+   http://myjit.sourceforge.net
+
+MyJit is published under the 
+   GNU Library or Lesser General Public License version 2.0 (LGPLv2)
+Our modified source file "jitter.c" is therefore released 
+under the same license.
+
+/*
+ * MyJIT 
+ * Copyright (C) 2010 Petr Krajca, <krajcap@inf.upol.cz>
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 3 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ */

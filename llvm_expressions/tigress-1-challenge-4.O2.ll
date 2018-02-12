@@ -1,9 +1,10 @@
-; ModuleID = 'llvm_expressions/./tigress-1-challenge-4.ll'
+; ModuleID = 'llvm_expressions/tigress-1-challenge-4.ll'
+source_filename = "llvm_expressions/tigress-1-challenge-4.ll"
 target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-pc-linux-gnu"
 
 ; Function Attrs: norecurse nounwind readnone
-define i64 @__arybo(i64 %SymVar_0) #0 {
+define i64 @SECRET(i64 %SymVar_0) local_unnamed_addr #0 {
 .3:
   %.6 = lshr i64 %SymVar_0, 3
   %.9 = shl i64 %SymVar_0, 61
@@ -14,8 +15,8 @@ define i64 @__arybo(i64 %SymVar_0) #0 {
   %.14 = lshr i64 %.13, 32
   %.52 = and i64 %.14, 16711680
   %.53 = and i64 %.14, 16777215
-  %.5520 = lshr i64 %.13, 56
-  %.58 = shl nuw nsw i64 %.5520, 24
+  %.5518 = lshr i64 %.13, 56
+  %.58 = shl nuw nsw i64 %.5518, 24
   %.59 = or i64 %.53, %.58
   %.82 = shl i64 %.13, 32
   %.83 = and i64 %.82, 1095216660480
@@ -27,8 +28,8 @@ define i64 @__arybo(i64 %SymVar_0) #0 {
   %.98 = lshr i64 %.13, 24
   %.101 = shl i64 %.98, 56
   %.102 = or i64 %.96, %.101
-  %.115 = shl i64 %SymVar_0, 4
-  %.116 = add i64 %.115, 32
+  %.114 = shl i64 %SymVar_0, 4
+  %.116 = add i64 %.114, 32
   %.119 = and i64 %.116, 1008
   %.120 = or i64 %.102, %.119
   %.122 = and i64 %.120, 255
@@ -47,8 +48,8 @@ define i64 @__arybo(i64 %SymVar_0) #0 {
   %.181 = or i64 %.176, %.170
   %.182 = lshr i64 %.11, 32
   %.221 = and i64 %.182, 16777215
-  %.22339 = lshr i64 %.11, 56
-  %.226 = shl nuw nsw i64 %.22339, 24
+  %.22333 = lshr i64 %.11, 56
+  %.226 = shl nuw nsw i64 %.22333, 24
   %.227 = or i64 %.221, %.226
   %.250 = shl i64 %.11, 32
   %.251 = and i64 %.250, 1095216660480
