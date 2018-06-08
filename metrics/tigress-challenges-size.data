@@ -1,0 +1,74 @@
+=== Binary size (whole binary in KB) ==================
+
+./challenge-0000:
+ 11K org-input-0 | 12K obf-input-0 | 11K deobf-input-0
+ 11K org-input-1 | 14K obf-input-1 | 11K deobf-input-1
+ 11K org-input-2 | 14K obf-input-2 | 11K deobf-input-2
+ 11K org-input-3 | 12K obf-input-3 | 11K deobf-input-3
+ 11K org-input-4 | 14K obf-input-4 | 11K deobf-input-4
+
+./challenge-0001:
+ 11K org-input-0 |  90K obf-input-0 | 11K deobf-input-0
+ 11K org-input-1 | 106K obf-input-1 | 11K deobf-input-1
+ 11K org-input-2 | 180K obf-input-2 | 11K deobf-input-2
+ 11K org-input-3 | 126K obf-input-3 | 11K deobf-input-3
+ 11K org-input-4 | 102K obf-input-4 | 11K deobf-input-4
+
+./challenge-0002:
+ 11K org-input-0 | 21K obf-input-0 | 11K deobf-input-0
+ 11K org-input-1 | 19K obf-input-1 | 11K deobf-input-1
+ 11K org-input-2 | 18K obf-input-2 | 11K deobf-input-2
+ 11K org-input-3 | 20K obf-input-3 | 11K deobf-input-3
+ 11K org-input-4 | 19K obf-input-4 | 11K deobf-input-4
+
+./challenge-0003:
+ 15K org-input-0 | 45K obf-input-0 | 11K deobf-input-0
+ 11K org-input-1 | 43K obf-input-1 | 11K deobf-input-1
+ 11K org-input-2 | 69K obf-input-2 | 11K deobf-input-2
+ 11K org-input-3 | 29K obf-input-3 | 11K deobf-input-3
+ 11K org-input-4 | 46K obf-input-4 | 11K deobf-input-4
+
+./challenge-0004:
+ 11K org-input-0 |  65K obf-input-0 | 11K deobf-input-0
+ 11K org-input-1 | 237K obf-input-1 | 11K deobf-input-1
+ 11K org-input-2 |  49K obf-input-2 | 11K deobf-input-2
+ 11K org-input-3 |  45K obf-input-3 | 11K deobf-input-3
+ 11K org-input-4 |  70K obf-input-4 | 11K deobf-input-4
+
+=== Binary size (SECRET function by instructions) ======
+
+./challenge-0000:
+27  inst org-input-0 | 23  inst deobf-input-0
+76  inst org-input-1 | 83  inst deobf-input-1
+115 inst org-input-2 | 85  inst deobf-input-2
+29  inst org-input-3 | 26  inst deobf-input-3
+85  inst org-input-4 | 119 inst deobf-input-4
+
+./challenge-0001:
+95  inst org-input-0 | 39 inst deobf-input-0
+105 inst org-input-1 | 64 inst deobf-input-1
+171 inst org-input-2 | 46 inst deobf-input-2
+123 inst org-input-3 | 28 inst deobf-input-3
+112 inst org-input-4 | 60 inst deobf-input-4
+
+./challenge-0002:
+167 inst org-input-0 | 50 inst deobf-input-0
+138 inst org-input-1 | 40 inst deobf-input-1
+106 inst org-input-2 | 55 inst deobf-input-2
+62  inst org-input-3 | 87 inst deobf-input-3
+128 inst org-input-4 | 54 inst deobf-input-4
+
+./challenge-0003:
+272 inst org-input-0 | 301 inst deobf-input-0
+112 inst org-input-1 | 132 inst deobf-input-1
+107 inst org-input-2 | 168 inst deobf-input-2
+122 inst org-input-3 | 57  inst deobf-input-3
+197 inst org-input-4 | 87  inst deobf-input-4
+
+./challenge-0004:
+140 inst org-input-0 | 114 inst deobf-input-0
+72  inst org-input-1 | 28  inst deobf-input-1
+147 inst org-input-2 | 104 inst deobf-input-2
+101 inst org-input-3 | 38  inst deobf-input-3
+203 inst org-input-4 | 108 inst deobf-input-4
+
