@@ -535,7 +535,7 @@ class Trace(object):
                 if rel[0] == 'strtoul':
                     debug('[+] Symbolizing the strtoul return')
                     var = self.ctx.convertRegisterToSymbolicVariable(self.ctx.registers.rax)
-                    self.ctx.setConcreteSymbolicVariableValue(var, VM_INPUT)
+                    self.ctx.setConcreteVariableValue(var, VM_INPUT)
 
                 # tigress user input
                 if rel[0] == 'printf':
@@ -568,7 +568,7 @@ class Trace(object):
                 'comment':          argc.getComment(),
                 'id':               argc.getId(),
                 'memory address':   argc.getKindValue(),
-                'model result':     self.ctx.getConcreteSymbolicVariableValue(argc),
+                'model result':     self.ctx.getConcreteVariableValue(argc),
                 'name':             argc.getName(),
                 'src':              None,
                 'dst':              None,

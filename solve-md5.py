@@ -380,18 +380,18 @@ def hookingHandler(ctx):
                 debug('[+] Symbolizing the strtoul return')
                 var1 = ctx.convertRegisterToSymbolicVariable(ctx.registers.rax)
                 var0 = ctx.getSymbolicVariableFromId(0)
-                ctx.setConcreteSymbolicVariableValue(var0, ctx.getConcreteSymbolicVariableValue(var1))
-                rax = ctx.getSymbolicExpressionFromId(ctx.getSymbolicRegisterId(ctx.registers.rax))
+                ctx.setConcreteVariableValue(var0, ctx.getConcreteVariableValue(var1))
+                rax = ctx.getSymbolicRegister(ctx.registers.rax)
                 ast = ctx.getAstContext()
                 rax.setAst(ast.variable(var0))
 
             # tigress user end-point
             if rel[0] == 'printf':
                 debug('[+] Slicing end-point user expression')
-                slices.append(ctx.sliceExpressions(ctx.getSymbolicExpressionFromId(ctx.getSymbolicRegisterId(ctx.registers.rsi))))
-                slices.append(ctx.sliceExpressions(ctx.getSymbolicExpressionFromId(ctx.getSymbolicRegisterId(ctx.registers.rdx))))
-                slices.append(ctx.sliceExpressions(ctx.getSymbolicExpressionFromId(ctx.getSymbolicRegisterId(ctx.registers.rcx))))
-                slices.append(ctx.sliceExpressions(ctx.getSymbolicExpressionFromId(ctx.getSymbolicRegisterId(ctx.registers.r8))))
+                slices.append(ctx.sliceExpressions(ctx.getSymbolicRegister(ctx.registers.rsi)))
+                slices.append(ctx.sliceExpressions(ctx.getSymbolicRegister(ctx.registers.rdx)))
+                slices.append(ctx.sliceExpressions(ctx.getSymbolicRegister(ctx.registers.rcx)))
+                slices.append(ctx.sliceExpressions(ctx.getSymbolicRegister(ctx.registers.r8)))
 
             # Get the return address
             ret_addr = ctx.getConcreteMemoryValue(MemoryAccess(ctx.getConcreteRegisterValue(ctx.registers.rsp), CPUSIZE.QWORD))
@@ -444,7 +444,7 @@ def emulate(ctx, pc):
             break
 
         if ctx.isRegisterSymbolized(ctx.registers.rip) and len(condition) == 0:
-            exprs = ctx.sliceExpressions(ctx.getSymbolicExpressionFromId(ctx.getSymbolicRegisterId(ctx.registers.rip)))
+            exprs = ctx.sliceExpressions(ctx.getSymbolicRegister(ctx.registers.rip))
             condition.append((instruction.isConditionTaken(), exprs))
 
         # Simulate routines
