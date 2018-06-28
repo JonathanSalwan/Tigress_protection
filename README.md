@@ -130,15 +130,9 @@ $ ./scripts/testing_equality.py ./tigress-challenges/tigress-0-challenge-0 ./deo
 
 Basically, this script runs the obfuscated and the deobfuscated binaries with random inputs and checks if they have the same output results.
 
-# Regarding the Tigress challenge, what did we solve?
+# Regarding the Tigress challenge, what are results?
 
-We fully solved these following Tigress challenges:
-
-* **0000**: 0,1,2,4
-* **0001**: 0,1,2,3,4
-* **0002**: 1,2,3,4
-* **0003**: 0,1,2,3,4
-* **0004**: 0,1,2,3,4
+![Tigress results](misc/tigress_challenges.png)
 
 # Testing our approach on others binaries
 
