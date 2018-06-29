@@ -164,9 +164,11 @@ For more information about these options see pages [1](http://tigress.cs.arizona
 
 # Publication
 
-* [SSTIC - french paper](http://shell-storm.org/talks/SSTIC2017-Article-desobfuscation_binaire_reconstruction_de_fonctions_virtualisees-salwan_potet_bardin.pdf)
-* [SSTIC - english slide](http://shell-storm.org/talks/SSTIC2017_Deobfuscation_of_VM_based_software_protection.pdf)
-* [SSTIC - french video](https://static.sstic.org/videos2017/SSTIC_2017-06-07_P08.mp4)
+* [DIMVA 2018 - paper](http://shell-storm.org/talks/DIMVA2018-deobfuscation-salwan-bardin-potet.pdf)
+* [DIMVA 2018 - slide](http://shell-storm.org/talks/DIMVA2018-slide-deobfuscation-salwan-bardin-potet.pdf)
+* [SSTIC 2017 - french paper](http://shell-storm.org/talks/SSTIC2017-Article-desobfuscation_binaire_reconstruction_de_fonctions_virtualisees-salwan_potet_bardin.pdf)
+* [SSTIC 2017 - english slide](http://shell-storm.org/talks/SSTIC2017_Deobfuscation_of_VM_based_software_protection.pdf)
+* [SSTIC 2017 - french video](https://static.sstic.org/videos2017/SSTIC_2017-06-07_P08.mp4)
 
 # Authors
 
