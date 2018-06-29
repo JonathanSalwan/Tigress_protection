@@ -134,6 +134,11 @@ Basically, this script runs the obfuscated and the deobfuscated binaries with ra
 
 ![Tigress results](misc/tigress_challenges.png)
 
+Concerning the table of ratios, after solved Tigress challenges we asked to Christian Collberg the sources of its
+challenges in order to compare the size the original sources and our devirtualized versions. Note that at the request
+of Christian, we cannot provide sources of the Tigress challenges, if you want these sources please directly ask
+to him :).
+
 # Testing our approach on others binaries
 
 We also pick up 20 hash algorithms (10 well-known, 10 from the Tigress challenge) and we protected each one of these algorithms
