@@ -72,3 +72,30 @@
 101 inst org-input-3 | 38  inst deobf-input-3
 203 inst org-input-4 | 108 inst deobf-input-4
 
+=== Binary size (by instructions via objdump on whole binary) =================
+
+deobf-tigress-0-challenge-0 : 242 inst | obf-tigress-0-challenge-0 : 675 inst
+deobf-tigress-0-challenge-1 : 309 inst | obf-tigress-0-challenge-1 : 754 inst
+deobf-tigress-0-challenge-2 : 275 inst | obf-tigress-0-challenge-2 : 838 inst
+deobf-tigress-0-challenge-3 : 245 inst | obf-tigress-0-challenge-3 : 668 inst
+deobf-tigress-0-challenge-4 : 343 inst | obf-tigress-0-challenge-4 : 792 inst
+deobf-tigress-1-challenge-0 : 257 inst | obf-tigress-1-challenge-0 : 11690 inst
+deobf-tigress-1-challenge-1 : 283 inst | obf-tigress-1-challenge-1 : 11864 inst
+deobf-tigress-1-challenge-2 : 266 inst | obf-tigress-1-challenge-2 : 16506 inst
+deobf-tigress-1-challenge-3 : 247 inst | obf-tigress-1-challenge-3 : 13721 inst
+deobf-tigress-1-challenge-4 : 284 inst | obf-tigress-1-challenge-4 : 11585 inst
+deobf-tigress-2-challenge-0 : 257 inst | obf-tigress-2-challenge-0 : 1356 inst
+deobf-tigress-2-challenge-1 : 260 inst | obf-tigress-2-challenge-1 : 1742 inst
+deobf-tigress-2-challenge-2 : 274 inst | obf-tigress-2-challenge-2 : 1717 inst
+deobf-tigress-2-challenge-3 : 310 inst | obf-tigress-2-challenge-3 : 1399 inst
+deobf-tigress-2-challenge-4 : 279 inst | obf-tigress-2-challenge-4 : 1345 inst
+deobf-tigress-3-challenge-0 : 534 inst | obf-tigress-3-challenge-0 : 10135 inst
+deobf-tigress-3-challenge-1 : 354 inst | obf-tigress-3-challenge-1 : 9996 inst
+deobf-tigress-3-challenge-2 : 396 inst | obf-tigress-3-challenge-2 : 17812 inst
+deobf-tigress-3-challenge-3 : 276 inst | obf-tigress-3-challenge-3 : 6039 inst
+deobf-tigress-3-challenge-4 : 312 inst | obf-tigress-3-challenge-4 : 10504 inst
+deobf-tigress-4-challenge-0 : 337 inst | obf-tigress-4-challenge-0 : 10776 inst
+deobf-tigress-4-challenge-1 : 249 inst | obf-tigress-4-challenge-1 : 5980 inst
+deobf-tigress-4-challenge-2 : 327 inst | obf-tigress-4-challenge-2 : 6304 inst
+deobf-tigress-4-challenge-3 : 258 inst | obf-tigress-4-challenge-3 : 6773 inst
+deobf-tigress-4-challenge-4 : 338 inst | obf-tigress-4-challenge-4 : 11480 inst
