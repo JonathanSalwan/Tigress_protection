@@ -63,64 +63,64 @@
 ##----------------------------------------------------------------------------
 #
 #echo "1 sur 20"
-#/usr/bin/time -v ./solve-vm.py ./samples/sample4
+#/usr/bin/time -v ./solve-vm.py ./samples/sample4-unprotected.bin
 #
 #echo "2 sur 20"
-#/usr/bin/time -v ./solve-vm.py ./samples/sample5
+#/usr/bin/time -v ./solve-vm.py ./samples/sample5-unprotected.bin
 #
 #echo "3 sur 20"
-#/usr/bin/time -v ./solve-vm.py ./samples/sample8
+#/usr/bin/time -v ./solve-vm.py ./samples/sample8-unprotected.bin
 #
 #echo "4 sur 20"
-#/usr/bin/time -v ./solve-vm.py ./samples/sample10
+#/usr/bin/time -v ./solve-vm.py ./samples/sample10-unprotected.bin
 #
 #echo "5 sur 20"
-#/usr/bin/time -v ./solve-vm.py ./samples/sample11
+#/usr/bin/time -v ./solve-vm.py ./samples/sample11-unprotected.bin
 #
 #echo "6 sur 20"
-#/usr/bin/time -v ./solve-vm.py ./samples/sample12
+#/usr/bin/time -v ./solve-vm.py ./samples/sample12-unprotected.bin
 #
 #echo "7 sur 20"
-#/usr/bin/time -v ./solve-vm.py ./samples/sample13
+#/usr/bin/time -v ./solve-vm.py ./samples/sample13-unprotected.bin
 #
 #echo "8 sur 20"
-#/usr/bin/time -v ./solve-vm.py ./samples/sample14
+#/usr/bin/time -v ./solve-vm.py ./samples/sample14-unprotected.bin
 #
 #echo "9 sur 20"
-#/usr/bin/time -v ./solve-vm.py ./samples/sample15
+#/usr/bin/time -v ./solve-vm.py ./samples/sample15-unprotected.bin
 #
 #echo "10 sur 20"
-#/usr/bin/time -v ./solve-vm.py ./samples/sample17
+#/usr/bin/time -v ./solve-vm.py ./samples/sample17-unprotected.bin
 #
 #echo "11 sur 20"
-#/usr/bin/time -v ./solve-vm.py ./samples/sample18
+#/usr/bin/time -v ./solve-vm.py ./samples/sample18-unprotected.bin
 #
 #echo "12 sur 20"
-#/usr/bin/time -v ./solve-vm.py ./samples/sample19
+#/usr/bin/time -v ./solve-vm.py ./samples/sample19-unprotected.bin
 #
 #echo "13 sur 20"
-#/usr/bin/time -v ./solve-vm.py ./samples/sample20
+#/usr/bin/time -v ./solve-vm.py ./samples/sample20-unprotected.bin
 #
 #echo "14 sur 20"
-#/usr/bin/time -v ./solve-vm.py ./samples/sample21
+#/usr/bin/time -v ./solve-vm.py ./samples/sample21-unprotected.bin
 #
 #echo "15 sur 20"
-#/usr/bin/time -v ./solve-vm.py ./samples/sample22
+#/usr/bin/time -v ./solve-vm.py ./samples/sample22-unprotected.bin
 #
 #echo "16 sur 20"
-#/usr/bin/time -v ./solve-vm.py ./samples/sample23
+#/usr/bin/time -v ./solve-vm.py ./samples/sample23-unprotected.bin
 #
 #echo "17 sur 20"
-#/usr/bin/time -v ./solve-vm.py ./samples/sample24
+#/usr/bin/time -v ./solve-vm.py ./samples/sample24-unprotected.bin
 #
 #echo "18 sur 20"
-#/usr/bin/time -v ./solve-vm.py ./samples/sample25
+#/usr/bin/time -v ./solve-vm.py ./samples/sample25-unprotected.bin
 #
 #echo "19 sur 20"
-#/usr/bin/time -v ./solve-vm.py ./samples/sample26
+#/usr/bin/time -v ./solve-vm.py ./samples/sample26-unprotected.bin
 #
 #echo "19 sur 20"
-#/usr/bin/time -v ./solve-vm.py ./samples/sample3
+#/usr/bin/time -v ./solve-vm.py ./samples/sample3-unprotected.bin
 #
 ##----------------------------------------------------------------------------
 #
