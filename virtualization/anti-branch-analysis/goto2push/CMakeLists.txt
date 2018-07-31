@@ -1,4 +1,4 @@
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} --AntiBranchAnalysisKinds=goto2push")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -no-pie --AntiBranchAnalysisKinds=goto2push")
 
 message("-- Virtualization and anti branch analysis: goto2push")
 foreach(TIGRESS_SAMPLE ${TIGRESS_SAMPLES})
