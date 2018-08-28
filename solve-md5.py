@@ -165,9 +165,8 @@ def memcpyHandler(ctx):
     for index in range(size):
         ctx.concretizeMemory(dst + index)
         ctx.setConcreteMemoryValue(dst + index, ctx.getConcreteMemoryValue(src + index))
-        symId = ctx.getSymbolicMemoryId(src + index)
-        if symId != SYMEXPR.UNSET:
-            expr = ctx.getSymbolicExpressionFromId(symId)
+        expr = ctx.getSymbolicMemory(src + index)
+        if expr is not None:
             ctx.assignSymbolicExpressionToMemory(expr, MemoryAccess(dst + index, CPUSIZE.BYTE))
 
     return dst
