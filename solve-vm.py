@@ -491,7 +491,7 @@ def emulate(ctx, pc):
         else:
             totalUniqueInstructions[pc] = 1
 
-        if instruction.getType() == OPCODE.HLT:
+        if instruction.getType() == OPCODE.X86.HLT:
             break
 
         if ctx.isRegisterSymbolized(ctx.registers.rip) and len(condition) == 0:
