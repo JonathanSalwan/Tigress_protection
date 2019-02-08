@@ -10,13 +10,13 @@ RUN cd /tmp && \
     curl -o z3.tgz -L  https://github.com/Z3Prover/z3/archive/z3-4.5.0.tar.gz && \
     tar zxf z3.tgz && cd z3-z3-4.5.0 && \
     CC=clang CXX=clang++ python scripts/mk_make.py && cd build && make \
-    && make install && cd /tmp && rm -rf /tmp/z3-z3-4.5.0
+    && make install && cd /tmp && rm /tmp/z3.tgz && rm -rf /tmp/z3-z3-4.5.0
 
 # Install capstone
 RUN cd /tmp && \
     curl -o cap.tgz -L https://github.com/aquynh/capstone/archive/3.0.4.tar.gz && \
     tar xvf cap.tgz && cd capstone-3.0.4/ && ./make.sh install && cd /tmp && \
-    rm -rf /tmp/capstone-3.0.4
+    rm /tmp/cap.tgz && rm -rf /tmp/capstone-3.0.4
 
 
 # Install pintool
@@ -31,8 +31,10 @@ RUN cd /opt/pin-2.14-71313-gcc.4.4.7-linux/source/tools/ && \
    curl -o master.zip -L https://github.com/JonathanSalwan/Triton/archive/master.zip && unzip master.zip && cd Triton-master/ && mkdir build && cd build && \
    cmake -G "Unix Makefiles" -DPINTOOL=on -DKERNEL4=on .. && make install && cd ..
 
+# Install Tigress_protection dependencies
 RUN pip install --upgrade pip==9.0.1
 RUN pip install setuptools --upgrade
+RUN pip install llvmlite
 RUN pip install https://github.com/quarkslab/arybo/archive/master.zip
 RUN pip install https://github.com/lief-project/packages/raw/lief-master-latest/pylief-0.9.0.dev.zip
 
