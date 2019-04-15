@@ -108,6 +108,21 @@ $ ./solve-vm.py ./tigress-challenges/tigress-0-challenge-0
 Then, symbolic expressions can be found [here](symbolic_expressions), LLVM representations can be found [here](llvm_expressions)
 and recompiled binaries can be found [here](deobfuscated_binaries).
 
+Using Docker:
+
+<pre>
+$ git clone git@github.com:JonathanSalwan/Tigress_protection.git
+$ cd /path/to/Tigress_protection
+$ docker build -t image_tigress_protection . 
+$ docker run -v /path/to/Tigress_protection:/root/Tigress_protection -ti --name=tigress_protection --ulimit='stack=-1:-1' image_tigress_protection
+</pre>
+
+Test inside Docker container
+<pre>
+# cd ~/Tigress_protection
+# ./solve-vm.py tigress-challenges/tigress-0-challenge-0
+</pre>
+
 # Testing our simplified binaries
 
 As we simplified and recompiled new binaries, we must provide the same behavior of the original binaries. So, to test our binary versions we use this [script](scripts/testing_equality.py).
