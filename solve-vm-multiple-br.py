@@ -567,7 +567,7 @@ class Trace(object):
             seed.append({
                 'comment':          argc.getComment(),
                 'id':               argc.getId(),
-                'memory address':   argc.getKindValue(),
+                'memory address':   argc.getOrigin(),
                 'model result':     self.ctx.getConcreteVariableValue(argc),
                 'name':             argc.getName(),
                 'src':              None,
@@ -580,7 +580,7 @@ class Trace(object):
                 seed.append({
                     'comment':          symVar.getComment(),
                     'id':               symVar.getId(),
-                    'memory address':   symVar.getKindValue(),
+                    'memory address':   symVar.getOrigin(),
                     'model result':     v.getValue(),
                     'name':             symVar.getName(),
                     'src':              None,
@@ -863,7 +863,7 @@ class PathsExploration(object):
         for l in pc.getBranchConstraints():
             if l['isTaken'] == True:
                 if not node.src:
-                    node.condition = ctx.unrollAst(l['constraint'])
+                    node.condition = ctx.getAstContext().unrollAst(l['constraint'])
                     node.src = l['srcAddr']
                     node.dst = l['dstAddr']
                     if len(pcs):
@@ -872,7 +872,7 @@ class PathsExploration(object):
                         self._deepMerge(ctx, pcs, node.taken, ret)
                     else:
                         if not node.taken:
-                            node.taken = ExprTreeNode(ctx.unrollAst(ret))
+                            node.taken = ExprTreeNode(ctx.getAstContext().unrollAst(ret))
 
                 elif node.src == l['srcAddr'] and node.dst != l['dstAddr']:
                     if len(pcs):
@@ -882,7 +882,7 @@ class PathsExploration(object):
                     else:
                         if not node.ntaken:
                             #node.ntaken = ExprTreeNode(ret)
-                            node.ntaken = ExprTreeNode(ctx.unrollAst(ret))
+                            node.ntaken = ExprTreeNode(ctx.getAstContext().unrollAst(ret))
 
                 elif node.src == l['srcAddr'] and node.dst == l['dstAddr']:
                     self._deepMerge(ctx, pcs, node.taken, ret)
@@ -896,7 +896,7 @@ class PathsExploration(object):
         pcs = self.traces[0].getPathConstraints()
 
         if not len(pcs):
-            node = ExprTreeNode(self.traces[0].unrollAst(ret))
+            node = ExprTreeNode(self.traces[0].getAstContext().unrollAst(ret))
             return node
 
         node = IteTreeNode()
@@ -951,7 +951,7 @@ class PathsExploration(object):
                                     seed.append({
                                         'comment':          symVar.getComment(),
                                         'id':               symVar.getId(),
-                                        'memory address':   symVar.getKindValue(),
+                                        'memory address':   symVar.getOrigin(),
                                         'model result':     v.getValue(),
                                         'name':             symVar.getName(),
                                         'src':              branch['srcAddr'],
@@ -999,10 +999,10 @@ def toLLVMIR(ctx, node):
     # Used to get symvar names
     tt_vars = set()
     def deep(node):
-        if node.getKind() == AST_NODE.VARIABLE:
-            tt_vars.add(node.getValue())
-        if node.getKind() == AST_NODE.REFERENCE:
-            deep(ctx.getAstFromId(node.getValue()))
+        if node.getType() == AST_NODE.VARIABLE:
+            tt_vars.add(node.getSymbolicVariable().getName())
+        if node.getType() == AST_NODE.REFERENCE:
+            deep(node.getSymbolicExpression().getAst())
         for c in node.getChildren():
             deep(c)
 
