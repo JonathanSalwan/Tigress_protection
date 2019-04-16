@@ -1028,6 +1028,7 @@ def recompile(M, path):
     fd.close()
     os.system("clang -O2 -S -emit-llvm -o - %s > %s" %(name, nameO2))
     debug('[+] LLVM module wrote in %s' %(name))
+    debug('[+] LLVM module wrote in %s' %(nameO2))
 
     debug('[+] Recompiling deobfuscated binary...')
     dst = 'deobfuscated_binaries/%s' %(path.split('/')[-1] + '.deobfuscated')
