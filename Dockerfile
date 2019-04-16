@@ -24,10 +24,10 @@ RUN cd /opt && curl -o pin.tgz -L http://software.intel.com/sites/landingpage/pi
     tar zxf pin.tgz && rm pin.tgz
 
 # now install Triton
-# uncomment below to pull form git
- RUN cd /opt/pin-2.14-71313-gcc.4.4.7-linux/source/tools/ && git clone https://github.com/JonathanSalwan/Triton.git && \
-     cd Triton && mkdir build && cd build && cmake -G "Unix Makefiles" -DPINTOOL=on -DKERNEL4=on .. && \
-     make install && cd .. && python setup.py install
+RUN cd /opt/pin-2.14-71313-gcc.4.4.7-linux/source/tools/ && \
+    curl -o triton.zip -L https://github.com/JonathanSalwan/Triton/archive/master.zip && \
+    unzip triton.zip && rm triton.zip && cd Triton-master/ && mkdir build && cd build && \
+    cmake -G "Unix Makefiles" -DPINTOOL=on -DKERNEL4=on .. && make install && cd ..
 
 # Install Tigress_protection dependencies
 RUN pip install --upgrade pip==9.0.1
