@@ -420,8 +420,8 @@ def hookingHandler(ctx):
             # tigress user input
             if rel[0] == 'strtoul':
                 debug('[+] Symbolizing the strtoul return')
-                var1 = ctx.convertRegisterToSymbolicVariable(ctx.registers.rax)
-                var0 = ctx.getSymbolicVariableFromId(0)
+                var1 = ctx.symbolizeRegister(ctx.registers.rax)
+                var0 = ctx.getSymbolicVariable(0)
                 ctx.setConcreteVariableValue(var0, ctx.getConcreteVariableValue(var1))
                 rax = ctx.getSymbolicRegister(ctx.registers.rax)
                 ast = ctx.getAstContext()
@@ -479,12 +479,6 @@ def emulate(ctx, pc):
             break
 
         count += 1
-
-        #print instruction
-        #if count % 5000 == 0:
-        #    print "(%d, %.02f)" %(count, time.clock() - startTime)
-        #if count >= 200000:
-        #    sys.exit(0)
 
         if pc in totalUniqueInstructions:
             totalUniqueInstructions[pc] += 1
@@ -639,8 +633,8 @@ def main():
     ctx.setArchitecture(ARCH.X86_64)
 
     # Set optimization
-    ctx.enableMode(MODE.ALIGNED_MEMORY, True)
-    ctx.enableMode(MODE.ONLY_ON_SYMBOLIZED, True)
+    ctx.setMode(MODE.ALIGNED_MEMORY, True)
+    ctx.setMode(MODE.ONLY_ON_SYMBOLIZED, True)
 
     # AST representation as Python syntax
     ctx.setAstRepresentationMode(AST_REPRESENTATION.PYTHON)
