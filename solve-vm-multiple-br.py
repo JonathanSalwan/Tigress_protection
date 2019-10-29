@@ -534,7 +534,7 @@ class Trace(object):
                 # tigress user input
                 if rel[0] == 'strtoul':
                     debug('[+] Symbolizing the strtoul return')
-                    var = self.ctx.convertRegisterToSymbolicVariable(self.ctx.registers.rax)
+                    var = self.ctx.symbolizeRegister(self.ctx.registers.rax)
                     self.ctx.setConcreteVariableValue(var, VM_INPUT)
 
                 # tigress user input
@@ -563,7 +563,7 @@ class Trace(object):
         models = self.ctx.getModels(crst, 255)
         for model in models:
             seed = list()
-            argc = self.ctx.getSymbolicVariableFromId(0)
+            argc = self.ctx.getSymbolicVariable(0)
             seed.append({
                 'comment':          argc.getComment(),
                 'id':               argc.getId(),
@@ -575,7 +575,7 @@ class Trace(object):
             })
             for k,v in model.items():
                 # Get the symbolic variable assigned to the model
-                symVar = self.ctx.getSymbolicVariableFromId(k)
+                symVar = self.ctx.getSymbolicVariable(k)
                 # Save the new input as seed.
                 seed.append({
                     'comment':          symVar.getComment(),
@@ -946,7 +946,7 @@ class PathsExploration(object):
                                 seed   = list()
                                 for k, v in model.items():
                                     # Get the symbolic variable assigned to the model
-                                    symVar = trace.ctx.getSymbolicVariableFromId(k)
+                                    symVar = trace.ctx.getSymbolicVariable(k)
                                     # Save the new input as seed.
                                     seed.append({
                                         'comment':          symVar.getComment(),

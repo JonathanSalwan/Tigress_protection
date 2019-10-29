@@ -377,8 +377,8 @@ def hookingHandler(ctx):
             # tigress user input
             if rel[0] == 'strtoul':
                 debug('[+] Symbolizing the strtoul return')
-                var1 = ctx.convertRegisterToSymbolicVariable(ctx.registers.rax)
-                var0 = ctx.getSymbolicVariableFromId(0)
+                var1 = ctx.symbolizeRegister(ctx.registers.rax)
+                var0 = ctx.getSymbolicVariable(0)
                 ctx.setConcreteVariableValue(var0, ctx.getConcreteVariableValue(var1))
                 rax = ctx.getSymbolicRegister(ctx.registers.rax)
                 ast = ctx.getAstContext()
@@ -579,7 +579,7 @@ def generateSymbolicExpressions(trace, ihash):
 def generateLLVMExpressions(ctx, trace):
     debug('[+] Converting symbolic expressions to an LLVM module...')
     e = tritonexprs2arybo(trace)
-    var = tritonast2arybo(ctx.getAstContext().variable(ctx.getSymbolicVariableFromId(0)))
+    var = tritonast2arybo(ctx.getAstContext().variable(ctx.getSymbolicVariable(0)))
     M = to_llvm_function(e,[var.v], "SECRET")
     return M
 
@@ -647,22 +647,22 @@ def main():
     # ref_1461550 = (ref_1461548 & 0xFF) # md5: h14
     # ref_1461572 = (ref_1461536 & 0xFFFFFFFF) # md5: h15
 
-    h0  = ctx.getSymbolicExpressionFromId(rhash[0])
-    h1  = ctx.getSymbolicExpressionFromId(rhash[1])
-    h2  = ctx.getSymbolicExpressionFromId(rhash[2])
-    h3  = ctx.getSymbolicExpressionFromId(rhash[3])
-    h4  = ctx.getSymbolicExpressionFromId(rhash[4])
-    h5  = ctx.getSymbolicExpressionFromId(rhash[5])
-    h6  = ctx.getSymbolicExpressionFromId(rhash[6])
-    h7  = ctx.getSymbolicExpressionFromId(rhash[7])
-    h8  = ctx.getSymbolicExpressionFromId(rhash[8])
-    h9  = ctx.getSymbolicExpressionFromId(rhash[9])
-    h10 = ctx.getSymbolicExpressionFromId(rhash[10])
-    h11 = ctx.getSymbolicExpressionFromId(rhash[11])
-    h12 = ctx.getSymbolicExpressionFromId(rhash[12])
-    h13 = ctx.getSymbolicExpressionFromId(rhash[13])
-    h14 = ctx.getSymbolicExpressionFromId(rhash[14])
-    h15 = ctx.getSymbolicExpressionFromId(rhash[15])
+    h0  = ctx.getSymbolicExpression(rhash[0])
+    h1  = ctx.getSymbolicExpression(rhash[1])
+    h2  = ctx.getSymbolicExpression(rhash[2])
+    h3  = ctx.getSymbolicExpression(rhash[3])
+    h4  = ctx.getSymbolicExpression(rhash[4])
+    h5  = ctx.getSymbolicExpression(rhash[5])
+    h6  = ctx.getSymbolicExpression(rhash[6])
+    h7  = ctx.getSymbolicExpression(rhash[7])
+    h8  = ctx.getSymbolicExpression(rhash[8])
+    h9  = ctx.getSymbolicExpression(rhash[9])
+    h10 = ctx.getSymbolicExpression(rhash[10])
+    h11 = ctx.getSymbolicExpression(rhash[11])
+    h12 = ctx.getSymbolicExpression(rhash[12])
+    h13 = ctx.getSymbolicExpression(rhash[13])
+    h14 = ctx.getSymbolicExpression(rhash[14])
+    h15 = ctx.getSymbolicExpression(rhash[15])
 
     astCtx = ctx.getAstContext()
     finalAst = astCtx.concat([

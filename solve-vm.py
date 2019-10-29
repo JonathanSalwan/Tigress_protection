@@ -615,7 +615,7 @@ def generateLLVMExpressions(ctx, pathNumber):
 
     debug('[+] Converting symbolic expressions to an LLVM module...')
     e = tritonexprs2arybo(exprs)
-    var = tritonast2arybo(ctx.getAstContext().variable(ctx.getSymbolicVariableFromId(0)))
+    var = tritonast2arybo(ctx.getAstContext().variable(ctx.getSymbolicVariable(0)))
     M = to_llvm_function(e,[var.v])
 
     return M
@@ -737,7 +737,7 @@ def main():
         e1  = tritonexprs2arybo(paths[0])
         e2  = tritonexprs2arybo(paths[1])
         ast = ctx.getAstContext()
-        var = tritonast2arybo(ast.variable(ctx.getSymbolicVariableFromId(0)))
+        var = tritonast2arybo(ast.variable(ctx.getSymbolicVariable(0)))
         if condition[0][0]:
             M = to_llvm_function(ExprCond(c, e1, e2), [var.v])
         else:
