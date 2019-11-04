@@ -24,7 +24,7 @@ from arybo.lib.mba_exprs import ExprCond
 sys.setrecursionlimit(100000)
 
 # Script options
-DEBUG   = False
+DEBUG   = True
 METRICS = True
 
 # The debug function
@@ -168,6 +168,24 @@ def memcpyHandler(ctx):
         expr = ctx.getSymbolicMemory(src + index)
         if expr is not None:
             ctx.assignSymbolicExpressionToMemory(expr, MemoryAccess(dst + index, CPUSIZE.BYTE))
+
+    return dst
+
+
+# Simulate the memset() function
+def memsetHandler(ctx):
+    debug('[+] memset hooked')
+
+    dst = ctx.getConcreteRegisterValue(ctx.registers.rdi)
+    src = ctx.getConcreteRegisterValue(ctx.registers.rsi)
+    size = ctx.getConcreteRegisterValue(ctx.registers.rdx)
+
+    for index in range(size):
+        dmem = MemoryAccess(dst + index, CPUSIZE.BYTE)
+        cell = ctx.getAstContext().extract(7, 0, ctx.getRegisterAst(ctx.registers.rsi))
+        expr = ctx.newSymbolicExpression(cell, "memset byte")
+        ctx.setConcreteMemoryValue(dmem, cell.evaluate())
+        ctx.assignSymbolicExpressionToMemory(expr, dmem)
 
     return dst
 
@@ -349,12 +367,13 @@ customRelocation = [
     ('free',              freeHandler,     BASE_PLT + 4),
     ('malloc',            mallocHandler,   BASE_PLT + 5),
     ('memcpy',            memcpyHandler,   BASE_PLT + 6),
-    ('printf',            printfHandler,   BASE_PLT + 7),
-    ('raise',             raiseHandler,    BASE_PLT + 8),
-    ('rand',              randHandler,     BASE_PLT + 9),
-    ('signal',            signalHandler,   BASE_PLT + 10),
-    ('strlen',            strlenHandler,   BASE_PLT + 11),
-    ('strtoul',           strtoulHandler,  BASE_PLT + 12),
+    ('memset',            memsetHandler,   BASE_PLT + 7),
+    ('printf',            printfHandler,   BASE_PLT + 8),
+    ('raise',             raiseHandler,    BASE_PLT + 9),
+    ('rand',              randHandler,     BASE_PLT + 10),
+    ('signal',            signalHandler,   BASE_PLT + 11),
+    ('strlen',            strlenHandler,   BASE_PLT + 12),
+    ('strtoul',           strtoulHandler,  BASE_PLT + 13),
 ]
 
 
@@ -439,7 +458,7 @@ def emulate(ctx, pc):
         else:
             totalUniqueInstructions[pc] = 1
 
-        if instruction.getType() == OPCODE.HLT:
+        if instruction.getType() == OPCODE.X86.HLT:
             break
 
         if ctx.isRegisterSymbolized(ctx.registers.rip) and len(condition) == 0:
@@ -527,7 +546,8 @@ def run(ctx, binary):
 
     # Let's emulate the binary from the entry point
     debug('[+] Starting emulation.')
-    emulate(ctx, binary.entrypoint)
+    #emulate(ctx, binary.entrypoint)
+    emulate(ctx, 0x4010C4)
     debug('[+] Emulation done.')
     return
 
@@ -596,8 +616,8 @@ def main():
     ctx.setArchitecture(ARCH.X86_64)
 
     # Set optimization
-    ctx.enableMode(MODE.ALIGNED_MEMORY, True)
-    ctx.enableMode(MODE.ONLY_ON_SYMBOLIZED, True)
+    ctx.setMode(MODE.ALIGNED_MEMORY, True)
+    ctx.setMode(MODE.ONLY_ON_SYMBOLIZED, True)
 
     # AST representation as Python syntax
     ctx.setAstRepresentationMode(AST_REPRESENTATION.PYTHON)

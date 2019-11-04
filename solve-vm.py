@@ -178,6 +178,24 @@ def memcpyHandler(ctx):
     return arg1
 
 
+# Simulate the memset() function
+def memsetHandler(ctx):
+    debug('[+] memset hooked')
+
+    dst = ctx.getConcreteRegisterValue(ctx.registers.rdi)
+    src = ctx.getConcreteRegisterValue(ctx.registers.rsi)
+    size = ctx.getConcreteRegisterValue(ctx.registers.rdx)
+
+    for index in range(size):
+        dmem = MemoryAccess(dst + index, CPUSIZE.BYTE)
+        cell = ctx.getAstContext().extract(7, 0, ctx.getRegisterAst(ctx.registers.rsi))
+        expr = ctx.newSymbolicExpression(cell, "memset byte")
+        ctx.setConcreteMemoryValue(dmem, cell.evaluate())
+        ctx.assignSymbolicExpressionToMemory(expr, dmem)
+
+    return dst
+
+
 # Simulate the signal() function
 def signalHandler(ctx):
     debug('[+] signal hooked')
@@ -388,15 +406,16 @@ customRelocation = [
     ('free',              freeHandler,     BASE_PLT + 5),
     ('malloc',            mallocHandler,   BASE_PLT + 6),
     ('memcpy',            memcpyHandler,   BASE_PLT + 7),
-    ('printf',            printfHandler,   BASE_PLT + 8),
-    ('putchar',           putcharHandler,  BASE_PLT + 9),
-    ('puts',              putsHandler,     BASE_PLT + 10),
-    ('raise',             raiseHandler,    BASE_PLT + 11),
-    ('rand',              randHandler,     BASE_PLT + 12),
-    ('signal',            signalHandler,   BASE_PLT + 13),
-    ('strlen',            strlenHandler,   BASE_PLT + 14),
-    ('strtoul',           strtoulHandler,  BASE_PLT + 15),
-    ('strtoull',          strtoulHandler,  BASE_PLT + 16),
+    ('memset',            memsetHandler,   BASE_PLT + 8),
+    ('printf',            printfHandler,   BASE_PLT + 9),
+    ('putchar',           putcharHandler,  BASE_PLT + 10),
+    ('puts',              putsHandler,     BASE_PLT + 11),
+    ('raise',             raiseHandler,    BASE_PLT + 12),
+    ('rand',              randHandler,     BASE_PLT + 13),
+    ('signal',            signalHandler,   BASE_PLT + 14),
+    ('strlen',            strlenHandler,   BASE_PLT + 15),
+    ('strtoul',           strtoulHandler,  BASE_PLT + 16),
+    ('strtoull',          strtoulHandler,  BASE_PLT + 17),
 ]
 
 
@@ -477,6 +496,8 @@ def emulate(ctx, pc):
         if ctx.processing(instruction) == False:
             debug('[-] Instruction not supported: %s' %(str(instruction)))
             break
+
+        #print(instruction)
 
         count += 1
 
