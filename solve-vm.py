@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 ## -*- coding: utf-8 -*-
 ##
 ## Jonathan Salwan
@@ -30,10 +30,10 @@ OPAQUE  = False
 
 # The debug function
 def debug(s):
-    if DEBUG: print s
+    if DEBUG: print(s)
 
 # VMs input
-VM_INPUT = '1234'
+VM_INPUT = b'1234'
 
 # Multiple-paths
 condition = list()
@@ -219,7 +219,7 @@ def raiseHandler(ctx):
     signal  = ctx.getConcreteRegisterValue(ctx.registers.rdi)
     handler = sigHandlers[signal]
 
-    ctx.processing(Instruction("\x6A\x00")) # push 0
+    ctx.processing(Instruction(b"\x6A\x00")) # push 0
     emulate(ctx, handler)
 
     # Return value
@@ -247,7 +247,7 @@ def strtoulHandler(ctx):
     base   = ctx.getConcreteRegisterValue(ctx.registers.rdx)
 
     # Return value
-    return long(nptr, base)
+    return int(nptr, base)
 
 
 # Simulate the printf() function
@@ -360,8 +360,8 @@ def libcMainHandler(ctx):
     ctx.concretizeRegister(ctx.registers.rsi)
 
     argvs = [
-        sys.argv[1], # argv[0]
-        VM_INPUT,    # argv[1]
+        bytes(sys.argv[1].encode('utf-8')), # argv[0]
+        bytes(VM_INPUT),                    # argv[1]
     ]
 
     # Define argc / argv
@@ -371,7 +371,7 @@ def libcMainHandler(ctx):
     index = 0
     for argv in argvs:
         addrs.append(base)
-        ctx.setConcreteMemoryAreaValue(base, argv+'\x00')
+        ctx.setConcreteMemoryAreaValue(base, argv+b'\x00')
         base += len(argv)+1
         debug('[+] argv[%d] = %s' %(index, argv))
         index += 1
@@ -603,12 +603,12 @@ def run(ctx, binary):
 def metrics():
     global METRICS
     if METRICS:
-        print '--------------------------------------------------------------------'
-        print '->', sys.argv[1].split('/')[-1]
-        print '\tInstructions executed:', totalInstructions
-        print '\tUnique Instructions executed:', len(totalUniqueInstructions)
-        print '\tFunctions simulated:', totalFunctions
-        print '\tTime of analysis:', endTime - startTime, "seconds"
+        print('--------------------------------------------------------------------')
+        print('->', sys.argv[1].split('/')[-1])
+        print('   Instructions executed:', totalInstructions)
+        print('   Unique Instructions executed:', len(totalUniqueInstructions))
+        print('   Functions simulated:', totalFunctions)
+        print('   Time of analysis:', endTime - startTime, "seconds")
     return
 
 
@@ -703,7 +703,7 @@ def main():
         ssa_b1 += '    endb = ref_%d\n' %(last_b1)
 
         debug('[+] Asking for a new input...')
-        pcAst = ctx.getPathConstraintsAst()
+        pcAst = ctx.getPathPredicate()
         ast   = ctx.getAstContext()
         model = ctx.getModel(ast.lnot(pcAst))
         if model:
