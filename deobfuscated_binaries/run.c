@@ -16,6 +16,6 @@ int main(int argc, char** argv)
     perror("unable to represent the input as an uint64");
     return 1;
   }
-  printf("%lu\n", SECRET(n));
+  printf("%llu\n", SECRET(n));
   return 0;
 }

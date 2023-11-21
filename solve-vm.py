@@ -16,10 +16,6 @@ import lief
 from triton             import *
 from scripts.templates  import *
 
-from arybo.tools.triton_ import tritonexprs2arybo, tritonast2arybo
-from arybo.lib.exprs_asm import to_llvm_function
-from arybo.lib.mba_exprs import ExprCond
-
 # Used for nested vm
 sys.setrecursionlimit(100000)
 
@@ -371,7 +367,7 @@ def libcMainHandler(ctx):
     index = 0
     for argv in argvs:
         addrs.append(base)
-        ctx.setConcreteMemoryAreaValue(base, argv+b'\x00')
+        ctx.setConcreteMemoryAreaValue(base, list(argv+b'\x00'))
         base += len(argv)+1
         debug('[+] argv[%d] = %s' %(index, argv))
         index += 1
@@ -493,7 +489,7 @@ def emulate(ctx, pc):
         instruction.setAddress(pc)
 
         # Process
-        if ctx.processing(instruction) == False:
+        if ctx.processing(instruction) != EXCEPTION.NO_FAULT:
             debug('[-] Instruction not supported: %s' %(str(instruction)))
             break
 
@@ -535,7 +531,7 @@ def loadBinary(ctx, binary):
         size   = phdr.physical_size
         vaddr  = phdr.virtual_address
         debug('[+] Loading 0x%06x - 0x%06x' %(vaddr, vaddr+size))
-        ctx.setConcreteMemoryAreaValue(vaddr, phdr.content)
+        ctx.setConcreteMemoryAreaValue(vaddr, list(phdr.content))
     return
 
 
@@ -570,7 +566,6 @@ def recompile(M):
     name = 'llvm_expressions/%s.ll' %(sys.argv[1].split('/')[-1])
     nameO2 = 'llvm_expressions/%s.O2.ll' %(sys.argv[1].split('/')[-1])
     fd = open(name, 'w')
-    M = str(M).replace('__arybo', 'SECRET')
     M = str(M).replace('unknown-unknown-unknown', 'x86_64-pc-linux-gnu')
     fd.write(M)
     fd.close()
@@ -627,17 +622,15 @@ def generateSymbolicExpressions(pathNumber):
     fd = open(name, 'w')
     fd.write(TEMPLATE_GENERATE_HASH_SSA % (ssa, last))
     fd.close()
-    return
+    return last
 
 
-def generateLLVMExpressions(ctx, pathNumber):
+def generateLLVMExpressions(ctx, pathNumber, last):
     global paths
     exprs = paths[pathNumber]
 
     debug('[+] Converting symbolic expressions to an LLVM module...')
-    e = tritonexprs2arybo(exprs)
-    var = tritonast2arybo(ctx.getAstContext().variable(ctx.getSymbolicVariable(0)))
-    M = to_llvm_function(e,[var.v])
+    M = ctx.liftToLLVM(exprs[last], fname="SECRET", optimize=True)
 
     return M
 
@@ -679,10 +672,10 @@ def main():
     # we got 100% of code coverage (there is only one path).
     if len(condition) == 0 or OPAQUE == True:
         # Generate symbolic epxressions of the first path
-        generateSymbolicExpressions(0)
+        last = generateSymbolicExpressions(0)
 
         # Generate llvm of the first path
-        M = generateLLVMExpressions(ctx, 0)
+        M = generateLLVMExpressions(ctx, 0, last)
 
         # Recompile the LLVM-IL
         recompile(M)
@@ -711,10 +704,10 @@ def main():
         else:
             debug('[+] No model found! Opaque predicate?')
             # Generate symbolic epxressions of the first path
-            generateSymbolicExpressions(0)
+            last = generateSymbolicExpressions(0)
 
             # Generate llvm of the first path
-            M = generateLLVMExpressions(ctx, 0)
+            M = generateLLVMExpressions(ctx, 0, last)
 
             # Recompile the LLVM-IL
             recompile(M)
@@ -771,9 +764,9 @@ def main():
 
 
 if __name__ == '__main__':
-    startTime = time.clock()
+    startTime = time.time()
     retValue  = main()
-    endTime   = time.clock()
+    endTime   = time.time()
 
     metrics()
     sys.exit(retValue)
